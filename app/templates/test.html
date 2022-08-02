@@ -1,0 +1,406 @@
+{% extends "base_login_reg.html" %}
+
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="container" style="margin-top: 5%">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Create New Survey:</div>
+        <div class="panel-group">
+          <form action="" method="POST" class="form-control" id="survey-form">
+            <div>
+              <h5>Survey Title: </h5>
+              <input name="survey_title" id="survey_title" type="text" class="form-control input-group" />
+            </div>
+
+            <div>
+              <h5>Survey Published?</h5>
+              <input type="radio" name="publish" value="1" /> True
+              <input type="radio" name="publish" value="2" /> False
+            </div>
+
+            <div>
+            <h5>Instructions</h5>
+            <textarea name="instructions" id="instructions" class="form-control input-group" placeholder="Instructions for the survey"></textarea>
+            </div>
+
+            <div>
+              <h5>Range</h5>
+              <input type='number' name='range' class="form-control input-group" placeholder='Range of numbers to show on grid'/>
+              <input type='number' name='range' class="form-control input-group" placeholder='Range of numbers to show on grid'/>
+            </div>
+
+            <div>
+              <h5>Columns</h5>
+              <input type='number' name='cols' class="form-control input-group" placeholder='Number of spaces for every column in the grid'/>
+              <p id = 'cols'></p>
+              <button class="btn btn-primary" type="button" style="display: block; margin-top: 5px;" id='addcol' onclick='addColumn();'>Add Column</button>
+            </div>
+
+            <div>
+              <h5>Register</h5>
+              <input type='text' name='register' class="form-control input-group" placeholder='Register'/>
+              <p id='register'></p>
+              <button class="btn btn-primary" type="button" style="display: block; margin-top: 5px;" id='addReg' onclick='addRegister();'>Add Register</button>
+            </div>
+
+            <div>
+              <h5>Statements</h5>
+              <input type='text' name='statements' class="form-control input-group" placeholder='Statements'/>
+              <p id='statement'></p>
+              <button class="btn btn-primary" type="button" style="display: block; margin-top: 5px;" id='addState' onclick='addStatement();'>Add Statement</button>
+            </div>
+
+            <div>
+              <h5>Sorting Criteria</h5>
+              <input type='text' name='criteria' class="form-control input-group" placeholder='Criteria'/>
+              <p id='criteria'></p>
+              <button class="btn btn-primary" type="button" style="display: block; margin-top: 5px;" id='addCrit' onclick='addCriteria();'>Add Criteria</button>
+            </div>
+
+            <div>
+              <h5>Survey Questions:</h5>
+              <div id="questions">
+              </div>
+              <button class="btn btn-primary" type="button" style="display: block; margin-top: 5px;" id="addq"><span class="glyphicon glyphicon-plus"></span>Add a question</button>
+              <a href="{{ url_for('index')}}"><input type="submit" value="Submit" class="btn"></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <script src="{{url_for('static', filename='js/createsurvey.js')}}"></script> -->
+<script>
+$(document).ready(function() {
+  // Handle the user clicking on "Add a question"
+  $("#addq").click(function() {
+    // a nested function creates the HTML DOM structure.
+    smLib.surveyForms.addQuestion( $("#questions") );
+  });
+});
+
+
+$(function() {
+  window.smLib = window.smLib || {};
+  smLib.forms = smLib.forms || {
+    anchorEl: $("<a>"),
+    buttonEl: $("<input>").prop("type", "button"),
+    checkboxEl: $("<input>").prop("type", "checkbox"),
+    radioEl: $("<input>").prop("type", "radio"),
+    textEl: $("<input>").prop("type", "text"),
+    textareaEl: $("<textarea>"),
+    fieldsetEl: $("<fieldset>"),
+    labelEl: $("<label>"),
+    spanEl: $("<span>"),
+    divEl: $("<div>")
+  };
+  smLib.icons = smLib.icons || {
+    addEl: smLib.forms.spanEl.clone().prop({
+      "class": "glyphicon glyphicon-plus"
+    }),
+    removeEl: smLib.forms.spanEl.clone().prop({
+      "class": "glyphicon glyphicon-minus"
+    })
+  };
+
+  smLib.surveyForms = smLib.surveyForms || {
+
+    /**
+     * This handles the HTML DOM creation. I don't want to clog up
+     *   the main routine with all the ugly, so I've moved it here.
+     *   Purely cosmetic. The functioning is the same as the former
+     *   append() functions with the element completely spelled out.
+     **/
+    addQuestion: function(container) {
+      var that = this;
+      this.container = container;
+      var i = this.container.find(".question-container").length + 1;
+      /***
+       * When the question is  being created, it will be contained in its own element,
+       *   and the answer portion will also be contained. The answer pane will contain the
+       *   three options for an answer, whether text, radio or checkbox, as well as allowing
+       *   the creation of labels for the radio/checkbox options.
+       ***/
+
+      // First we create the question element, simply a text input wrapped in a label.
+      var newQuestionEl = smLib.forms.textEl.clone().prop({
+        "name": "q" + i,
+        "id": "q" + i,
+        "class": "form-control",
+        "name": "questionnaire"
+      });
+      var newQuestion = smLib.forms.divEl.clone().prop({
+        "class": "question-pane"
+      }).append("Question #"+i+": ", newQuestionEl);
+
+      // Next, we create an array of options to determine what type of question this is:
+      //  radio, checkbox or text.
+      var newQTypeArr = [];
+      var newQTypeRadioEl = smLib.forms.radioEl.clone().prop({
+        name: "qType" + i,
+        id: "qType" + i,
+        value: "radio",
+        class: "choices radiobox"
+      }).on("click", function() {
+        smLib.surveyForms.showOptionsPane(radioOptions);
+      });
+      newQTypeArr[0] = smLib.forms.labelEl.clone().append(newQTypeRadioEl, " Radio");
+
+      var newQTypeCheckEl = smLib.forms.radioEl.clone().prop({
+        name: "qType" + i,
+        id: "qType" + i,
+        value: "checkbox",
+        class: "choices radiobox"
+      }).on("click", function() {
+        smLib.surveyForms.showOptionsPane(checkboxOptions);
+      });
+      newQTypeArr[1] = smLib.forms.labelEl.clone().append(newQTypeCheckEl, "Checkbox");
+
+      var newQTypeTextEl = smLib.forms.radioEl.clone().prop({
+        name: "qType" + i,
+        id: "qType" + i,
+        value: "text",
+        class: "choices radiobox"
+      }).on("click", function() {
+        smLib.surveyForms.showOptionsPane(textOptions);
+      });
+      newQTypeArr[2] = smLib.forms.labelEl.clone().append(newQTypeTextEl, "Text");
+
+      var addRadioChoiceButton = smLib.forms.buttonEl.clone().prop({
+        "class": "btn btn-primary add-radio-choice answer-option",
+        "value": "Add Radio button"
+      }).append(smLib.icons.addEl.clone(), "Add choices").on("click", function() {
+        that.addRadioOptions(radioOptions);
+      });
+
+      var radioOptions = smLib.forms.divEl.clone().prop({
+        class: "radio-answer-options"
+      }).data("control-type", "radio").append(addRadioChoiceButton).on("change", function(){
+        that.updatePreview(newQuestion, newAnswerEl, previewContainerEl); 
+      }).hide();
+      this.addRadioOptions(radioOptions);
+
+      var addCheckboxChoiceButton = smLib.forms.buttonEl.clone().prop({
+        "class": "btn btn-primary add-checkbox-choice answer-option",
+        "value": "Add Checkbox"
+      }).append(smLib.icons.addEl.clone(), "Add choices").on("click", function() {
+        that.addCheckboxOptions(checkboxOptions);
+      });
+      var checkboxOptions = smLib.forms.divEl.clone().prop({
+        class: "checkbox-answer-options"
+      }).append(addCheckboxChoiceButton).on("change", function(){
+        that.updatePreview(newQuestion, newAnswerEl, previewContainerEl); 
+      }).data("control-type", "checkbox").hide();
+      this.addCheckboxOptions(checkboxOptions);
+
+      var textOptions = smLib.forms.divEl.clone().prop({
+        class: "text-answer-options"
+      }).on("change", function(){
+        that.updatePreview(newQuestion, newAnswerEl, previewContainerEl); 
+      }).data("control-type", "text").hide();
+      this.addTextOptions(textOptions);
+
+      // Answer options pane
+      var newAnswerEl = smLib.forms.divEl.clone().prop({
+        class: "answer-options-pane"
+      }).append(radioOptions, checkboxOptions, textOptions);
+
+      var newAnswer = smLib.forms.divEl.clone().prop({
+        class: "answer-pane"
+      }).append(newQTypeArr, newAnswerEl);
+      
+      var previewQuestion = smLib.forms.divEl.clone().prop({
+        class: "preview-question"
+      });
+      var previewAnswer = smLib.forms.divEl.clone().prop({
+        class: "preview-answer"
+      })
+      var previewContainerEl = smLib.forms.divEl.clone().prop({
+        class: "preview-pane"
+      }).on("click", function(){
+        that.togglePreview(previewContainerEl);
+      }).append(previewQuestion, previewAnswer).hide()
+      
+      var saveButton = smLib.forms.buttonEl.clone().prop({
+        value: "Save question"
+      }).on("click", function(){
+        that.togglePreview(previewContainerEl);
+      });
+      var deleteButton = smLib.forms.buttonEl.clone().prop({
+        value: "Remove queston"
+      }).on("click", function(){
+        if(confirm("Are you sure you want to remove this question? Action cannot be undone.") ){
+          newQContainerEl.remove();
+        }
+      })
+      var questionControls = smLib.forms.divEl.clone().prop({
+        class: "controls-pane"
+      }).append(saveButton, deleteButton);
+
+      // The question container pane will contain both the question and the answer container.
+
+      var newQContainerEl = smLib.forms.divEl.clone().prop({
+        class: "question-container",
+      }).append(newQuestion, newAnswer, previewContainerEl, questionControls);
+
+      this.container.append(newQContainerEl);
+
+    }, //end addQuestion()
+    addRadioOptions: function(radioPane) {
+      /***
+       * Another DOM element creation function. This creates the radio
+       *   button text option, and if it's the first, a button to add
+       *   more options. 
+       ***/
+
+      // We want to get the length of the current choices, 
+      //  as this will give us an index for the new option
+
+      var radioChoice = radioPane.find(".radio-choice");
+      var choice_c = radioChoice.length;
+
+      var radioTempEl = smLib.forms.radioEl.clone().prop({
+        "class": "answer-option radio-choice"
+      });
+
+      var radioChoiceTextEl = smLib.forms.textEl.clone().prop({
+        "class": "form-control answer-option radio-choice radiochoice"+choice_c,
+        "name": "radiochoice" + choice_c,
+      });
+
+      var radioChoiceEl = smLib.forms.labelEl.clone().append(radioTempEl, radioChoiceTextEl);
+      // Make sure to add the new text element BEFORE the 
+      //    add more button.
+      radioPane.find(".add-radio-choice").before(radioChoiceEl);
+    },
+    addTextOptions: function(textPane) {
+      this.textPane = textPane;
+
+      var textChoiceTextEl = smLib.forms.textEl.clone().prop({
+        "class": "form-control answer-option text-choice",
+        "name": "text-placeholder",
+      });
+
+      var textChoiceEl = smLib.forms.labelEl.clone().append("Placeholder text: ", textChoiceTextEl);
+      textPane.append(textChoiceEl);
+    },
+    addCheckboxOptions: function(checkboxPane) {
+      // We want to get the length of the current choices, 
+      //  as this will give us an index for the new option
+
+      var checkboxChoice = checkboxPane.find(".checkbox-choice");
+      var choice_c = checkboxChoice.length;
+
+      var checkboxTempEl = smLib.forms.checkboxEl.clone().prop({
+        "class": "answer-option checkbox-choice"
+      });
+      var checkboxChoiceTextEl = smLib.forms.textEl.clone().prop({
+        "class": "form-control answer-option checkbox-choice checkboxchoice"+choice_c,
+        "name": "checkboxchoice" + choice_c,
+      });
+
+      var checkboxChoiceEl = smLib.forms.labelEl.clone().append(checkboxTempEl, checkboxChoiceTextEl);
+      // Make sure to add the new text element BEFORE the 
+      //    add more button.
+      checkboxPane.find(".add-checkbox-choice").before(checkboxChoiceEl);
+    },
+    showOptionsPane: function(optionsPane) {
+      if (optionsPane.not(":visible")) optionsPane.slideDown().siblings().slideUp();
+    },
+    updatePreview: function(questionPane, answerPane, previewPane){
+      
+      var previewQuestion = previewPane.find(".preview-question").empty();
+      var previewAnswer = previewPane.find(".preview-answer").empty();
+      
+      var question = questionPane.text() + questionPane.find("input[type='text']").val();
+      var answerOption = answerPane.find(":visible");
+      var answers = answerOption.find("input[type='text']" );
+
+      previewQuestion.text(question);
+
+      switch(answerOption.data("control-type") ){
+        case "radio":
+          answers.each(function(){
+            var labelText = $(this).val();
+            var rbEl = smLib.forms.radioEl.clone();
+            var answerLabelEl = smLib.forms.labelEl.clone()
+                               .append(rbEl, labelText );
+            previewAnswer.append(answerLabelEl);
+          });
+          break;
+        case "checkbox":
+          answers.each(function(){
+            var cbEl = smLib.forms.checkboxEl.clone();
+            var answerLabelEl = smLib.forms.labelEl.clone()
+                               .append(cbEl, $(this).val() );
+            previewAnswer.append(answerLabelEl);
+          });
+          break;
+        case "text":
+          answers.each(function(){
+            var textblockEl = smLib.forms.textEl.clone().attr({
+              placeholder: $(this).val()
+            });
+            previewAnswer.append(textblockEl);
+          });
+          break;
+        }
+    },
+    togglePreview: function(previewPane){
+      if(previewPane.is(":visible") ) {
+        previewPane.hide().siblings().show();
+      } else {
+        previewPane.show().siblings().hide();
+      }
+    }
+  };
+});
+
+function addRegister(){
+    var total_register=document.getElementsByClassName("input_register");
+    total_register=total_register.length+1;
+    document.getElementById("register").innerHTML=document.getElementById("register").innerHTML+
+    "<p id='register'></p><p id='input_register"+total_register+"_wrapper'><input type='text' class='input_register form-control input-group' name='register' id='input_register"+total_register+"' placeholder='Enter Register'><input type='button' value='Remove' onclick=remove_register('input_register"+total_register+"');></p>";
+}
+function remove_register(id){
+    document.getElementById(id+"_wrapper").innerHTML="";
+}
+
+function addStatement(){
+    var total_statement=document.getElementsByClassName("input_statement");
+    total_statement=total_statement.length+1;
+    document.getElementById("statement").innerHTML=document.getElementById("statement").innerHTML+
+    "<p id='statement'></p><p id='input_statement"+total_statement+"_wrapper'><input type='text' class='input_statement form-control input-group' name='statements' id='input_statement"+total_statement+"' placeholder='Enter Statement'><input type='button' value='Remove' onclick=remove_statement('input_statement"+total_statement+"');></p>";
+}
+function remove_statement(id){
+    document.getElementById(id+"_wrapper").innerHTML="";
+}
+
+function addColumn(){
+    var total_columns=document.getElementsByClassName("cols");
+    total_columns=total_columns.length+1;
+    document.getElementById("cols").innerHTML=document.getElementById("cols").innerHTML+
+    "<p id='cols'></p><p id='cols"+total_columns+"_wrapper'><input type='number' id='cols"+total_columns+"' class='form-control input-group' name='cols' placeholder='Number of spaces for every column in the grid'/><input type='button' id='addcol' value='Remove Column' onclick=remove_column('cols"+total_columns+"');></p>";
+}    
+function remove_column(id){
+    document.getElementById(id+"_wrapper").innerHTML="";
+}
+
+function addCriteria(){
+    var total_criteria=document.getElementsByClassName("input_criteria");
+    total_criteria=total_criteria.length+1;
+    document.getElementById("criteria").innerHTML=document.getElementById("criteria").innerHTML+
+    "<p id='criteria'></p><p id='input_criteria"+total_criteria+"_wrapper'><input type='text' class='input_criteria form-control input-group' name='criteria' id='input_criteria"+total_criteria+"' placeholder='Enter Criteria'><input type='button' value='Remove' onclick=remove_criteria('input_criteria"+total_criteria+"');></p>";
+}
+function remove_criteria(id){
+    document.getElementById(id+"_wrapper").innerHTML="";
+}
+</script>
+
+<!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/createsurvey.css') }}"> -->
+
+{% endblock %}

@@ -1,0 +1,329 @@
+{% extends "base_survey.html" %} {% block content %}
+<main role="main">
+  <div id="survey-start" class="container survey-section">
+    <div class="card">
+      <div class="card-header">
+        <h2>{{title}}</h2>
+      </div>
+      <div class="card-body">
+        <div class="justify-content-center">
+          <button
+            type="button"
+            class="btn btn-dark btn-block text-center"
+            onclick="new_survey()"
+          >
+            Start New
+          </button>
+          <br />
+          <input
+            type="text"
+            id="survey-start-code"
+            class="form-control"
+            placeholder="Insert response ID here"
+          />
+          <button
+            type="button"
+            id="survey-resume"
+            class="btn btn-outline-dark btn-block text-center"
+            onclick="resume_survey()"
+          >
+            Resume survey
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form>
+    <!-- Part One -->
+    <div id="personal-information" class="container survey-section">
+      {% for question in registration %} {% if question|length == 1 %}
+      <div class="form-group mb-4 mx-5">
+        <label for="reg{{loop.index}}"> {{ question[0] }} </label>
+        <textarea
+          class="form-control"
+          id="reg{{loop.index}}"
+          rows="5"
+        ></textarea>
+      </div>
+
+      {% else %}
+
+      <div class="form-group mb-4 mx-5">
+        <label for="reg{{loop.index}}"> {{ question[0] }} </label>
+        <select class="form-control" id="reg{{loop.index}}">
+          <option selected disabled hidden style="display: none"></option>
+          {% for answer in question[1:] %}
+          <option> {{ answer }} </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      {% endif %} {% endfor %}
+    </div>
+    <!-- Part Two -->
+    <div id="statements-sort" class="survey-section">
+      <!-- Question -->
+      <div id="gallery" class="jumbotron">
+        {% for statement in statement_list %}
+        <div
+          id="statement{{loop.index}}"
+          class="container unselectable"
+          draggable="true"
+          ondragstart="drag_handler(event)"
+        >
+          <!--Added a class name -Sprint3-->
+          <p>{{ statement }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      <div id="gallery-control" class="row justify-content-center">
+        <div class="btn-group">
+          <button
+            class="btn btn-light"
+            type="button"
+            onclick="previous_statement()"
+          >
+            <
+          </button>
+          <div id="statement-counter" class="btn btn-light disabled">
+            1 / {{statement_list|length}}
+          </div>
+          <button
+            class="btn btn-light"
+            type="button"
+            onclick="next_statement()"
+          >
+            >
+          </button>
+        </div>
+      </div>
+      <!-- End question -->
+      {% if condition|length > 0  %}
+      <div class="condition-container">
+        <p class="condition">{{condition[0]}}</p>
+      </div>
+      {% endif %}
+      <!-- Answers -->
+      <div class="container">
+        <div id="sort-container" class="row">
+          <!--changed each div classes name by adding numbers at the end-->
+          <!--Each button has a new onclick function-->
+          <div
+            class="col-md-4 drop-container1"
+            ondrop="drop_handler(event)"
+            ondragover="dragover_handler(event)"
+          >
+            <button
+              type="button"
+              class="btn btn-block btn-danger"
+              onclick="move(this.parentElement)"
+            >
+              {{ criteria[0] }}
+            </button>
+          </div>
+          <div
+            class="col-md-4 drop-container2"
+            ondrop="drop_handler(event)"
+            ondragover="dragover_handler(event)"
+          >
+            <button
+              type="button"
+              class="btn btn-block btn-warning"
+              onclick="move(this.parentElement)"
+            >
+              {{ criteria[1] }}
+            </button>
+          </div>
+          <div
+            class="col-md-4 drop-container3"
+            ondrop="drop_handler(event)"
+            ondragover="dragover_handler(event)"
+          >
+            <button
+              type="button"
+              class="btn btn-block btn-success"
+              onclick="move(this.parentElement)"
+            >
+              {{ criteria[2] }}
+            </button>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <!-- End answers -->
+    </div>
+    <!-- Part Three -->
+    <div id="grid-sort" class="survey-section">
+        {% if condition|length > 0  %}
+        <div class="condition-container2">
+          <p class="condition">{{condition[0]}}</p>
+        </div>
+        {% endif %}
+      <!-- Grid -->
+      <div id="qsort-area">
+        <div class=" row justify-content-center">
+          <div class="table">
+            <divd>
+              <!--The header row-->
+              <div style=' display: grid;
+              grid-template-columns: {{frames}};' class="header-row">
+                <!--loop through cols array-->
+                {% for r in rows %}
+                <div id="column-name">
+                  <!--create a new cell-->
+                  <div id="c{{loop.index}}" style="justify-content:center">
+                    <div class="cell drop-container" style="text-align:center">
+                      <p>{{r}}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              {% set counter=namespace(count=0) %}
+              <div
+                class="grid"
+                style="display:grid;grid-template-columns: {{frames}}; grid-gap: 5px;"
+              >
+                {% for c in cols %}
+                <div
+                  style="display: flex;
+                flex-direction: column;
+                justify-content: flex-end;"
+                  id="tablerow-stuff{{c}}"
+                >
+                  {% for n in range(c) %}
+                  <div
+                  class="block"
+                  id="b{{counter.count}}"
+                  style="overflow:hidden;height: 50px;border-radius:5px;margin-top:5px;
+                  border: 1px solid grey;"
+                  ondragover="dragOver(event)" 
+                  ondrop="drop(event, this.id)"  
+                  ondragleave="dragLeave(event)" 
+                  ondragenter="dragEnter(event)"
+                  onmouseover="mouseOver(event)"
+                  id="b{{n}}"
+                  ></div>
+                  {% set counter.count=counter.count+1 %}
+                  {% endfor %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div style="display: grid!important;grid-template-columns: 1fr 5fr 1fr;padding-left:15px !important;padding-right:15px !important">
+           <p> {{ criteria[0] }}</p>
+            <p style="width: 600px;
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+            margin: auto;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;" class="text-hovered"></p>
+            <p style="text-align: right;"> {{ criteria[2] }}</p>
+            </div>
+        
+        </div>
+        <!-- Answers -->
+        <!--changed here for each class above button type line-->
+        <div class="container">
+          <div id="sorted-container-grid" class="row">
+            <div
+              class="col-md-4 drop-container d-container"
+              draggable="true"
+              ondragstart="drag_handler(event)"
+            >
+              <button type="button" class="btn btn-block btn-danger">
+                {{ criteria[0] }}
+              </button>
+            </div>
+            <div
+              class="col-md-4 drop-container d-container"
+              draggable="true"
+              ondragstart="drag_handler(event)"
+            >
+              <button type="button" class="btn btn-block btn-warning">
+                {{ criteria[1] }}
+              </button>
+            </div>
+            <div
+              class="col-md-4 drop-container d-container"
+              draggable="true"
+              ondragstart="drag_handler(event)"
+            >
+              <button type="button" class="btn btn-block btn-success">
+                {{ criteria[2] }}
+              </button>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <!-- End answers -->
+      </div>
+    </div>
+
+    <!-- Part Four -->
+    <div id="questionnaire" class="container survey-section">
+      {% for question in questionnaire %}
+
+      <div class="form-group mb-4 mx-5">
+        <!-- {% if question[1] == "most agree" %} -->
+        <div class="card bg-success">
+          <div class="card-header">
+              Statements with the highest rating
+          </div>
+          <ul class="list-group list-group-flush most-agree"></ul>
+        </div>
+        <!-- {% endif %} {% if question[1] == "least agree" %} -->
+        <div class="card bg-danger">
+          <div class="card-header">
+              Statements with the lowest rating
+          </div>
+          <ul class="list-group list-group-flush least-agree"></ul>
+        </div>
+        <!-- {% endif %} -->
+
+        <label for="input1"> {{ question[0] }} </label>
+        <textarea class="form-control" id="input1" rows="5"></textarea>
+      </div>
+
+      {% endfor %}
+    </div>
+
+    <div class="container">
+      <button
+        id="survey-submit"
+        type="button"
+        class="btn btn-success float-right mb-4 mx-5"
+        onclick="next_button()"
+      >
+        Next
+      </button>
+    </div>
+  </form>
+</main>
+{% endblock %} {% block scripts %}
+<!-- For initialising variables -->
+<script type="text/javascript">
+  let nStatements = {{statement_list|length}};
+  //the above was giving me errors -Liz
+  //let nStatements= statement_list.length;
+  let survey_id = "{{survey_id}}"
+  let instructions = {{instructions|safe}}
+</script>
+<script src="{{url_for('static', filename='js/survey.js')}}"></script>
+<script>
+  display_page(-1);
+  display_statement(0);
+  $("#instructions-modal").on("hidden.bs.modal", modal_button);
+  $("#survey-start-code").keyup(event => {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      $("#survey-resume").click();
+    }
+  });
+</script>
+{% endblock %}

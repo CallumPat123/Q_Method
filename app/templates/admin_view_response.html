@@ -1,0 +1,102 @@
+{% extends "base_admin.html" %} {% block content %}
+
+<script
+  type="text/javascript"
+  src="{{ url_for('static',filename='js/admin_downloads.js') }}"
+  charset="UTF-8"
+></script>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static',filename='styles/admin_downloads.css') }}"
+/>
+
+<div class="container">
+  <div class="row"><h2>Response ID</h2></div>
+
+  <div class="row"><p>{{response.id}}</p></div>
+
+  <div class="row"><h2>Register Answers</h2></div>
+
+  {% for ans in response.register_ans %}
+  <div class="row"><h5>{{survey.register[loop.index0][0]}}</h5></div>
+  <div class="row"><p>{{ans}}</p></div>
+  {% endfor %}
+
+  <div class="row"><h2>Sort Agree</h2></div>
+  {%for agree in response.sort_agree%}
+  <div class="row"><p>{{agree}}</p></div>
+  {% endfor%}
+  <div class="row"><h2>Sort Neutral</h2></div>
+
+  {%for neutral in response.sort_neutral%}
+  <div class="row"><p>{{neutral}}</p></div>
+  {% endfor%}
+  <div class="row"><h2>Sort Disagree</h2></div>
+
+  {%for disagree in response.sort_disagree%}
+  <div class="row"><p>{{disagree}}</p></div>
+  {% endfor%}
+
+  <div class="row"><h2>Q-sort</h2></div>
+  <table>
+    {% for value in survey_range %}
+    <th style="text-align: center;">{{value}}</th>
+    {%endfor%} {%for row in matrix %}
+    <tr>
+      {% for element in row %} {%if element|length%}
+      <!--Apply border only to cells with data-->
+      <td style="border: 1px solid black;padding:5px">
+        <p>{{element}}</p>
+      </td>
+      {% else %}
+      <td><p>{{element}}</p></td>
+      {%endif%} {%endfor%}
+    </tr>
+
+    {% endfor %}
+  </table>
+
+  <div class="row"><h2>Post Sort Questions</h2></div>
+  {% for ans in response.question_ans %} {%if
+  survey.questionnaire[loop.index0][1] == "most agree" %}
+  <h6>Question choice of most positive statement</h6>
+  <div class="row">
+    <h5>Question :{{survey.questionnaire[loop.index0][0]}}</h5>
+  </div>
+  <div class="row"><p>Answer: {{ans}}</p></div>
+  <br />
+
+  {%elif survey.questionnaire[loop.index0][1] == "least agree"%}
+  <h6>Question choice of least positive statement</h6>
+  <div class="row">
+    <h5>Question :{{survey.questionnaire[loop.index0][0]}}</h5>
+  </div>
+  <div class="row"><p>Answer: {{ans}}</p></div>
+  <br />
+
+  {%else%}
+  <div class="row"><h5>{{survey.questionnaire[loop.index0][0]}}</h5></div>
+  <div class="row"><p>{{ans}}</p></div>
+  <br />
+  {%endif%} {% endfor %}
+
+  <div class="row"><h2>Time Spent</h2></div>
+
+  <div class="row"><p>{{response.timespent}}</p></div>
+
+  <div class="row"><h2>Time Start</h2></div>
+
+  <div class="row"><p>{{response.timestart}}</p></div>
+
+  <div class="row"><h2>Time End</h2></div>
+
+  <div class="row"><p>{{response.timeend}}</p></div>
+
+  <div class="row">
+    <button type="button" class="btn btn-info" onclick="print()">
+      Print Response
+    </button>
+  </div>
+</div>
+
+{% endblock %}

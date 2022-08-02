@@ -1,0 +1,63 @@
+{% extends "base_admin.html" %}
+
+{% block content %}
+{% for result in result %}
+<div id='createsurveyresult'>
+    <form action="/submit" method="POST">
+        <div class="form-group">
+          <h3>Survey ID</h3>
+        </div>
+        <div class="form-group">
+            <h3>User ID</h3>
+            <!-- Get ID from user who is creating the survey -->
+        </div>
+        <div class="form-group">
+            <h3>Survey Published?</h3>
+            <p>{{result.publish}}</p>
+            <!-- Get ID from user who is creating the survey -->
+        </div>
+        <div class="form-group">
+            <h3>Survey Title</h3>
+            <p>{{result.survey_name}}</p>
+        </div>
+        <div class="form-group">
+            <h3>Instructions</h3>
+            <textarea name="instructions" id="instructions" cols="30" rows="10" placeholder="{{result.instructions}}"></textarea>
+        </div>
+        <div class="form-group">
+            <h3>Range</h3>
+            <!-- Range of numbers to show on grid -->
+            <p>Range of numbers to show on grid: {{result.range}}</p>
+        </div>
+        <div class="form-group">
+            <h3>Columns</h3>
+            <!-- Number of spaces for columns in the grid -->
+            <p>Number of spaces for columns in the grid: {{result.cols}}</p>
+        </div>
+        <div class="form-group">
+            <h3>Register</h3>
+            {{result.register}}
+            <p id='register'></p>
+        </div>
+        <div class="form-group">
+            <h3>Statements</h3>
+            {{result.statements}}
+            <p id='statement'></p>
+        </div>
+        <div  class="form-group">
+            <h3>Questionnaire</h3>
+            <!-- Maybe use JS to add more questions -->
+            {{result.questionnaire}}
+            <p id='question'></p>>
+        </div>
+        <div  class="form-group">
+            <h3>Sorting Criteria</h3>
+            <!-- Maybe use JS to add more criterias -->
+            {{result.criteria}}
+            <p id='criteria'></p>
+        </div>
+        <a href="{{ url_for('index') }}"><input type="submit" value="Return Home" class="btn" /></a>
+      </form>
+</div>
+{% endfor %}
+{% endblock %}

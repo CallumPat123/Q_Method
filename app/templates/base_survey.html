@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='styles/survey.css') }}"
+    />
+    <title>{{title}}</title>
+    <style>
+      .block.unselectable{
+        padding:0;
+
+      }
+        .block p{
+          padding-top: 11px;
+          margin:auto;
+          padding-left: 2px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width:{{width}}px
+
+         }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <button
+        type="button"
+        data-toggle="modal"
+        data-target="#instructions-modal"
+        id="modal-btn"
+        class="btn btn-outline-success my-2 my-sm-0"
+      >
+        Instructions
+      </button>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <p id="response-id-display"></p>
+        </li>
+      </ul>
+    </nav>
+
+    <hr />
+
+    <div id="instructions-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Instructions:</h4>
+          </div>
+          <div class="modal-body" id="instructions-content"></div>
+          <div class="modal-footer">
+            <button
+              id="instructions-close"
+              type="button"
+              class="btn btn-default"
+              data-dismiss="modal"
+            >
+              Ok
+            </button>
+            <button
+              id="instructions-agree"
+              type="button"
+              class="btn btn-primary btn-block"
+              onclick="agree_button()"
+            >
+              Agree
+            </button>
+            <button
+              id="instructions-dismiss"
+              type="button"
+              class="btn btn-default"
+              onclick="dismiss_button()"
+            >
+              Ok
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% block content %}{% endblock %}
+    <!-- JavaScript at the end of the document so the pages load faster -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

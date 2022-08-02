@@ -1,0 +1,17 @@
+{% extends "base_survey.html" %}
+
+{% block content %}
+    <h1 style="font-family: museo-sans,Trebuchet MS,tahoma,arial,sans-serif;font-size: 50px;text-align: center;">Page Not Found<br>404 </h1>
+
+    <div style="font-family: museo-sans,Trebuchet MS,tahoma,arial,sans-serif;font-size: 20px; text-align: center;">
+        <p> If you're looking for a survey, please enter the survey ID below:</p>
+        <form action="/redirect/survey" method="POST" class="col-lg-6 offset-lg-3">
+            <div class="input-group mb-2">
+                <input type="text" name="survey-id" class="form-control" placeholder="Input survey ID here">
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit"> Go to survey </button>
+                </div>
+              </div>
+        </form>
+    </div>
+{% endblock %}

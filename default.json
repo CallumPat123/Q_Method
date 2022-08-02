@@ -1,0 +1,36 @@
+{
+  "instructions": [
+    [""],
+    [
+      "Please keep a record of the following information.",
+      "In particular, your user ID is required if you wish to exit the survey and resume completion later or delete your data from the survey's dataset."
+    ],
+    [
+      "Please answer the following questions.",
+      "Press the 'Next' button after you have filled in ALL the questions."
+    ],
+    [],
+    [
+      "You will now see a list of statements. Please read all the statements then sort each into one of the three criteria given.",
+      "Use the arrow buttons below the statement card to scroll through the statements.",
+      "You may drag and drop the statements or click on the group to insert the selected statement into the group."
+    ],
+    [
+      "You will now see the statements again, sorted according to your previous step.",
+      "Sort each statement into an empty spot on the grid. Only one statement may occupy a single spot on the grid.",
+      "Statements sorted into the same column will have the same value indicated above the column. The order within a column does not matter."
+    ],
+    [
+      "Please answer the following questions regarding your response in the previous sort."
+    ],
+    [
+      "By clicking OK you acknowledge that you have read all relevant permission forms and agree to the terms and conditions"
+    ]
+  ],
+  "criteria": ["Disagree", "Neutral", "Agree"],
+  "range": [-3, 3],
+  "questionnaire": [
+    "Please explain why you rated the statements above as the lowest.",
+    "Please explain why you rated the statements above as the highest."
+  ]
+}

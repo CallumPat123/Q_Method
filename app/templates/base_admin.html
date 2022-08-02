@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='styles/login_reg.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <title>Q-Methodology</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <a href="{{ url_for('index') }}" class="navbar-brand mb-0 p-2"
+          >Q-Methodology</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a
+                href="{{ url_for('admin_view_surveys') }}"
+                class="nav-link btn active"
+                >View Surveys</a
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a
+                href="{{ url_for('createSurvey') }}"
+                class="nav-link btn active"
+                >Create Survey</a
+              >
+            </li>
+          </ul>
+          {% if current_user.username == "TU" %}
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a
+                href="{{ url_for('master_admin_view_surveys') }}"
+                class="nav-link btn active"
+                >View all Surveys</a
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a href="/admin/" class="nav-link btn active">Admin Interface</a>
+            </li>
+          </ul>
+          {%endif%}
+        </div>
+
+        <div class="col">
+          <a href="{{url_for('logout')}}">
+            <button class="btn btn-outline-danger my-2 my-sm-0 float-right">
+              Logout
+            </button>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <hr />
+    {% block content %}{% endblock %}
+    <footer>
+      <div style="padding:30px;padding-top:60px;margin:auto">
+        <p style="text-align: center;">
+          The creation of this data collection instrument was supported by the
+          Core University Program for Korean Studies through the Ministry of
+          Education of the Republic of Korea and the Korean Studies Promotion
+          Service of the Academy of Korean Studies (AKS ‐2020 ‐OLU ‐20200039)
+        </p>
+      </div>
+    </footer>
+    <script src="{{url_for('static', filename='js/createsurvey.js')}}"></script>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"
+  ></script>
+</html>

@@ -1,0 +1,9 @@
+{% extends "base_login_reg.html" %}
+
+{% block content %}
+    <h1>Hello World</h1>
+    {% if message %}
+    <p class="message">{{message | safe}}</p>
+    {% endif %}
+
+{% endblock %}

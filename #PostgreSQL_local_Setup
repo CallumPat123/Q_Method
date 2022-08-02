@@ -1,0 +1,60 @@
+# PostgreSQL local Setup
+## Leigh, 15/09/2021
+
+
+Please note: this guide was writted for WSL systems (Linux, on a windows machine)
+
+1. Delete any versions of PostgreSQL you may have 
+(I had a windows version and a WSL verion, I had to remove windows version to make WSL version work)
+2. In bash, run $ sudo apt-get update
+3. In bash, run $ sudo apt-get install postgresql postgresql-contrib
+
+4. In bash, run "$ ls /etc/postgresql", to determine the version number
+5. In bash, run "$ls /etc/postgresql/VERSION_NUMBER/main" to access config files
+(not necessary, but can help trouble shooting later,)
+(This command is done just to verify install.)
+(Files should include :"conf.d", "environment", "pg_ctl.conf", "pg_hba.conf", 
+"pg_ident.conf", "postgresql.conf" and "start.conf")
+
+6.  In bash, run "$ service postgresql", to see command options
+7.  In bash, run "$ service postgresql status", to see server status
+8.  If server is down, run "$ service postgresql status" 
+9. (For this project, the local DB password needs to be set to 123456, 
+the helpful video below shows how to do this)
+
+Server should be set up and running
+
+# TODO
+I don't think the DB is fully setup yet, the link below could prove handy 
+https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/  
+
+# Helpful Tips
+
+## Changing Port of Postgre Server
+ 1. In bash, run "$ls /etc/postgresql/VERSION_NUMBER/main" to access config files
+ 2. open "postgresql.conf" with a text editor
+ 3. scroll to line 64
+ 4. edit port variable to port of your choice
+ 5. save file
+ 6. exit editor
+ 7. restart Server
+
+ (For good luck, restart machine between steps 6 and 7)
+
+
+
+
+# Helpful videos
+
+## How to Install and configuration PostgreSQL on Ubuntu Linux
+ https://www.youtube.com/watch?v=-LwI4HMR_Eg
+
+# Helpful StackOverflows/ Links
+
+## How to check open ports in Linux using the CLI
+ https://www.cyberciti.biz/faq/how-to-check-open-ports-in-linux-using-the-cli/
+
+## PostgreSQL: Why psql can't connect to server?
+ https://stackoverflow.com/questions/31645550/postgresql-why-psql-cant-connect-to-server 
+
+

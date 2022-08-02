@@ -1,0 +1,156 @@
+{% extends "base_admin.html" %} {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+  type="text/javascript"
+  src="{{ url_for('static',filename='js/admin_downloads.js') }}"
+  charset="UTF-8"
+></script>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static',filename='styles/admin_downloads.css') }}"
+/>
+
+<div class="container">
+  <div class="row">
+    {% for info in surveysDB %}
+    <h2>User Results for {{info.survey_name}}</h2>
+    {% endfor %}
+
+    <div class="ml-auto">
+      <h3>Bulk Download</h3>
+      <form
+        method="post"
+        action="{{ url_for('admin_bulk_download_survey_responses', survey_id=surveysDB[0].survey_id, rows=1) }}"
+      >
+        <input
+          type="submit"
+          class="btn btn-primary"
+          value="Rows - Statement values"
+        />
+      </form>
+      <form
+        method="post"
+        action="{{ url_for('admin_bulk_download_survey_responses', survey_id=surveysDB[0].survey_id, rows=2) }}"
+      >
+        <input
+          type="submit"
+          class="btn btn-primary"
+          value="Rows - Statement IDs"
+        />
+      </form>
+      <form
+        method="post"
+        action="{{ url_for('admin_bulk_download_survey_responses', survey_id=surveysDB[0].survey_id, rows=3) }}"
+      >
+        <input
+          type="submit"
+          class="btn btn-primary"
+          value="Rows - Register Questions"
+        />
+      </form>
+      <form
+        method="post"
+        action="{{ url_for('admin_bulk_download_survey_responses', survey_id=surveysDB[0].survey_id, rows=4) }}"
+      >
+        <input
+          type="submit"
+          class="btn btn-primary"
+          value="Rows - Post Survey Questions"
+        />
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <table id="table" class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Survey ID</th>
+          <!-- WE DON'T NEED THIS RIGHT? -->
+          <th scope="col">Response ID</th>
+          <th scope="col">
+            <!-- Select all boxes -->
+            Export
+          </th>
+          <th scope="col">Time Spent</th>
+          <th scope="col">
+            <!-- Select all boxes -->
+            Delete
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for response in responses %}
+        <tr>
+          <td>
+            {% if response.progress == 4 %}
+            <a
+              href="{{url_for('admin_view_response', survey_id = response.surveyid, response_id = response.id)}}"
+              >{{response.surveyid}}</a
+            >
+            {% else %} {{response.surveyid}} {% endif %}
+          </td>
+          <td>
+            {{response.id}}
+          </td>
+          <td>
+            {% if response.progress == 4 %}
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="window.location.href= '{{url_for('admin_download_survey_response', survey_id = response.surveyid, response_id = response.id)}}';"
+            >
+              Download Response
+            </button>
+            {% else %} Response incomplete {% endif %}
+          </td>
+
+          <td>{{response.timespent}}</td>
+          <td>
+            <form
+              method="post"
+              action="{{url_for('Delete_Response', survey_id = response.surveyid, response_id = response.id)}}"
+            >
+              <input
+                type="submit"
+                class="btn btn-danger"
+                value="Delete Response"
+                name="Delete Response"
+              />
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <h2>Statement - ID List</h2>
+  <table id="table" class="table table-striped">
+    <th>Statement</th>
+    <th>ID</th>
+    {% for statement, id in statement_id_dict.items() %}
+    <tr>
+      <td>{{statement}}</td>
+      <td>{{id}}</td>
+    </tr>
+
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
+<!-- JavaScript at the end of the document so the pages load faster -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>

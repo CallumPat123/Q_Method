@@ -1,0 +1,29 @@
+{% extends "base_admin.html" %}
+<!--Page to Display Admin status/ Mainly for debug use-->
+{% block content %}
+<script
+  type="text/javascript"
+  src="{{ url_for('static',filename='js/admin_downloads.js') }}"
+  charset="UTF-8"
+></script>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static',filename='styles/admin_downloads.css') }}"
+/>
+
+<h2>Username</h2>
+<p>{{ current_user.username }}</p>
+
+<h2>Email</h2>
+<p>{{current_user.email}}</p>
+
+<h2>First Name</h2>
+<p>{{current_user.first_name}}</p>
+
+<h2>Last Name</h2>
+<p>{{current_user.last_name}}</p>
+
+<h2>User ID</h2>
+<p>{{current_user.id}}</p>
+
+{% endblock %}

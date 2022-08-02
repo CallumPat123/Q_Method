@@ -1,0 +1,2960 @@
+commit 2c978cbdf66777ee0d4c9e13ff3e05ac87b2989b
+Merge: f7dc254 93d263d
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Mon Oct 18 14:38:54 2021 +0800
+
+    Merge pull request #74 from lab2823/edit-survey-validation
+    
+    Last minute fixes and added survey validation for edit survey
+
+commit 93d263de2db169347829db310ff531133b4bc965
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Mon Oct 18 14:35:39 2021 +0800
+
+    Last minute fixes and added survey validation for edit survey
+
+commit f7dc254cac7a97d0d5d849239e15a91d822791ec
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 18 13:56:15 2021 +0800
+
+    fixed errors and add buttons for master admin
+
+commit 64f880c0613e3dec5373ee4b7405524ee2d6978e
+Merge: e13e5f1 2eb522b
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 18 13:36:14 2021 +0800
+
+    Merge branch 'dev' of https://github.com/lab2823/QMethodology_CITS3200 into dev
+
+commit e13e5f1f30e0b36fa8b73feccd8a6616b0087c60
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 18 13:35:47 2021 +0800
+
+    bug fix
+
+commit 2eb522befb18f9fd740c8a7a7f717147d14e8dfc
+Merge: bf8e8c8 e3e4389
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Oct 17 20:06:56 2021 +0800
+
+    Merge branch 'dev' of https://github.com/lab2823/QMethodology_CITS3200 into dev
+
+commit bf8e8c887595582e6c0200ae1c7bcb37c4dacda9
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Oct 17 20:06:53 2021 +0800
+
+    Createsurvey.html typo fix
+
+commit e3e4389f98aa71afc160cc66f9133dfec80eeb88
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 19:57:58 2021 +0800
+
+    removed a typo (coloumn from these files)
+
+commit af8681ff0a3391d176e73c6185469f15a34d36dd
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Oct 17 19:31:32 2021 +0800
+
+    Move <script> from base_login_reg to into base_admin
+
+commit e521151f04e9b6a63a24ab786be2ac52e7329e0f
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Oct 17 19:07:28 2021 +0800
+
+    Remove 'register' link
+
+commit 62cd4339d4e6843c7bc769417f18d035c4dba726
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Oct 17 19:03:07 2021 +0800
+
+    Navbar fix for signin and admin pages
+
+commit 17f08ed865ba8e8018cd3d6ecf46f4503c921197
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Oct 17 16:43:52 2021 +0800
+
+    Commented unreachable code
+
+commit 735423ea5c7927d0b50c2d4d04bd7e6e2cface85
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Oct 17 16:30:36 2021 +0800
+
+    Fixed bug where changes to instructions was not being saved
+
+commit 8f176bd259651b208ad39ff88a61b53ebbeaecdf
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 14:23:00 2021 +0800
+
+    changed models from limitied strings to text
+
+commit a1d3b091ef7e86646c7ba6c3300d858b29d267b4
+Merge: b478d13 c8c4c9b
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 14:19:19 2021 +0800
+
+    Merge branch 'dev' of https://github.com/lab2823/QMethodology_CITS3200 into dev
+
+commit c8c4c9b4648c67bccfe5ef2f58419936b97354c5
+Merge: 2d7c180 7f6df59
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sun Oct 17 14:18:35 2021 +0800
+
+    Merge pull request #72 from lab2823/surveydbtest
+    
+    Surveydbtest
+
+commit b478d13988c98dc6c6e4a0be1ba06e89eed51c5a
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 14:17:58 2021 +0800
+
+    added print for single response
+
+commit 44cf71037c85de40b36ec5be0ae57e4785eebc98
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 14:17:47 2021 +0800
+
+    added buttons on view instrufcsions on edit survey
+
+commit 492d1821ef76279ea2771be9a3ff8fd511737396
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 14:09:08 2021 +0800
+
+    added time spent to view user response
+
+commit 449fe5c35ba8ffcf060ea8e9d3e95fa96999f890
+Merge: 2d7c180 7f6df59
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 14:04:59 2021 +0800
+
+    Merge branch 'surveydbtest' into dev
+    for testing pr
+
+commit 2d7c18043622856fa430eafd1510e0cc1cb2b2f2
+Merge: 35ce927 4d4ca5f
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sun Oct 17 14:01:59 2021 +0800
+
+    Merge pull request #71 from lab2823/final-additions-aij
+    
+    Final additions aij
+
+commit 7f6df59004e069013fcee018709b20ca2db803ee
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 14:01:33 2021 +0800
+
+    last minute fixes
+
+commit cebd942ce3f44ba3bf66b63ce15d92be9d7e86dc
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 13:08:32 2021 +0800
+
+    fix questionnair erroe
+
+commit ced9142418dd422fce9f5f32a77b07c659889706
+Merge: 19007c3 4d4ca5f
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 12:57:50 2021 +0800
+
+    Merge branch 'final-additions-aij' into surveydbtest
+    merging edit survey with final additions aij to test it works
+
+commit 19007c31b92694f13fc0f29e473533e37a62d99f
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 01:50:11 2021 +0800
+
+    fixed edit survey
+
+commit 4d4ca5f658f2b9e5b726f1c7147ea5b1853bc390
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Oct 17 01:40:24 2021 +0800
+
+    Added validation for survey creation
+
+commit 0975b257704fc561f3dad1550634b5808327558b
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 17 00:09:29 2021 +0800
+
+    fixed instructions not storing
+
+commit 3fc9ca8d34f772877feed3bc1ded1d53f85d9676
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Oct 16 23:26:54 2021 +0800
+
+    Added counter for how many statements
+
+commit b284faa459a65a50ef6ac4455625e23d84af1ab1
+Merge: 578570f ab2eb20
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Oct 16 23:03:09 2021 +0800
+
+    Merge branch 'final-additions-aij' of https://github.com/lab2823/QMethodology_CITS3200 into final-additions-aij
+
+commit ab2eb2044fa78fb276343a1a59cab87e130d589b
+Author: lee <leeblag@gmail.com>
+Date:   Sat Oct 16 23:00:02 2021 +0800
+
+    relocating test script
+
+commit d75b0b15c77d12cfbb031c5841a2976a39e0dce8
+Author: lee <leeblag@gmail.com>
+Date:   Sat Oct 16 22:57:18 2021 +0800
+
+    remove sample survey from test script
+
+commit 578570fe7cf5c15face298a610f62784d79b25f5
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Oct 16 22:53:24 2021 +0800
+
+    Spaced out instructions a bit more by default
+
+commit b130e10d2b83c1eedabc4955514da6531b09db97
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Oct 16 22:53:15 2021 +0800
+
+    Upon finishing survey, page now reloads when dismissing alert
+
+commit 9e8ba8c681cc67cc7e9b2295dd8919489f716ed2
+Author: lee <leeblag@gmail.com>
+Date:   Sat Oct 16 22:49:43 2021 +0800
+
+    added a master admin view all surveys function
+
+commit 80294eeb9200142a3925be134d0c83920918b040
+Author: lee <leeblag@gmail.com>
+Date:   Sat Oct 16 22:37:21 2021 +0800
+
+    fixed jinja bug
+
+commit 7645bf987be514418194c334f888a4f13cb4d667
+Merge: bdfeb70 94b5c77
+Author: lee <leeblag@gmail.com>
+Date:   Sat Oct 16 22:33:01 2021 +0800
+
+    Merge branch 'final-additions-aij' of https://github.com/lab2823/QMethodology_CITS3200 into final-additions-aij
+
+commit bdfeb704a89c83826b980595a6042e1f25d09b6e
+Author: lee <leeblag@gmail.com>
+Date:   Sat Oct 16 22:31:13 2021 +0800
+
+    added response incomplete if response incomplete, cannot download file
+
+commit 94b5c776565a9dc95a63b9faf45c352be24851d9
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Oct 16 22:29:00 2021 +0800
+
+    User can no longer start a completed survey
+
+commit 2f9f7ca5a564b923305c86b7256824f3b1bd02d9
+Author: lee <leeblag@gmail.com>
+Date:   Sat Oct 16 22:26:32 2021 +0800
+
+    added error checking on bulk download button
+
+commit dd4acc6953e8c6005c6275199edb917b7461c572
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Oct 16 21:46:42 2021 +0800
+
+    Fixed survey input error message
+    
+    NOTE: this update may have broken a few things with the survey, not sure
+
+commit 6c282442d0ba099b837b0daa5d5f93f243e444c8
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Oct 16 21:25:51 2021 +0800
+
+    Updated 404 to be able to redirect to surveys
+    
+    - Removed Rick Roll link
+    - Added form to input survey ID
+
+commit 7b9b64bafdced82ed06a5f890e06970be0e29064
+Merge: 4cc09a5 29a8ddb
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Sat Oct 16 19:14:28 2021 +0800
+
+    Merge pull request #70 from lab2823/reworking_createsurvey
+    
+    grabbing new changes
+
+commit 070f6dce9c6e3af085c82b6d95ff8230e92d9c91
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Sat Oct 16 00:04:46 2021 +0800
+
+    editsurvey should work now
+    
+    hopefully
+
+commit d90ede76a6f384e41057b369cffc5392eaf33439
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Fri Oct 15 18:39:19 2021 +0800
+
+    update editsurvey to include tables from createsurvey
+
+commit 322c0b671bd84c098a97c68e463552d5acbbabc6
+Merge: 1c6c0a8 35ce927
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Fri Oct 15 17:34:36 2021 +0800
+
+    Merge branch 'dev' into surveydbtest
+
+commit 29a8ddbc66a292ab055e97b20c5ddf6a4e3c50e2
+Author: lee <leeblag@gmail.com>
+Date:   Fri Oct 15 14:37:44 2021 +0800
+
+    added db cascade
+
+commit a76b7ffa0950b8ab1939eab6d5ec62e904454e0a
+Author: lee <leeblag@gmail.com>
+Date:   Fri Oct 15 14:29:43 2021 +0800
+
+    removed unneccessary anchor tag
+
+commit ab76acc4ff7c5cfd36f05417df49e2c2e02ac7aa
+Author: lee <leeblag@gmail.com>
+Date:   Fri Oct 15 14:27:05 2021 +0800
+
+    added survey name to bulk downloaded file
+
+commit 16e913cdd4f5826196b05eab18dda144ece39362
+Author: lee <leeblag@gmail.com>
+Date:   Fri Oct 15 14:22:58 2021 +0800
+
+    added a published column to admin view surveys
+
+commit d926e448fae6af331e22319925b0b926502fc427
+Merge: 73c79ed 35ce927
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Fri Oct 15 13:06:37 2021 +0800
+
+    Merge pull request #69 from lab2823/dev
+    
+    mentor meeting
+
+commit 73c79edeb704cb1185dd34e0f569d2fb09eea37b
+Merge: 564b521 4cc09a5
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Fri Oct 15 13:04:18 2021 +0800
+
+    Merge pull request #68 from lab2823/final-additions-aij
+    
+    Some bug fixes and changed how remove/add cols works
+
+commit 4cc09a5655f1f54b4035e14eb22c1ff0ccad970d
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Fri Oct 15 12:54:08 2021 +0800
+
+    Fixed bug where page crashes when inputting a negative number as cols/rows
+
+commit 78c4081910edb9082b90ffdbd6f8a22dcd8738a1
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Fri Oct 15 12:53:52 2021 +0800
+
+    Remade column/rows input
+
+commit 1d2edbb2d08ef69c2370ca85758c85d833b0061f
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Fri Oct 15 11:37:03 2021 +0800
+
+    Finishing creating a survey now redirects to the view survey page
+
+commit c57e9c98a3ac3181b4760223886eae0638fbf1a8
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Fri Oct 15 11:36:28 2021 +0800
+
+    Reverted bootstrap link
+
+commit 35ce927e87823c792a1adab37b971f3545f7ee1b
+Merge: 27d6a4d 2b4e0c0
+Author: lee <leeblag@gmail.com>
+Date:   Fri Oct 15 11:22:38 2021 +0800
+
+    Merge branch 'dev' of https://github.com/lab2823/QMethodology_CITS3200 into dev
+
+commit 27d6a4d11105b3ad3bbf665e86d6ad385cfba903
+Author: lee <leeblag@gmail.com>
+Date:   Fri Oct 15 11:22:08 2021 +0800
+
+    added copy link button to surveys page
+
+commit 2b4e0c06445a1f5e1fcb095ef3eb71d8e7e41e37
+Merge: c5f0aee 587f0ce
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Fri Oct 15 11:19:43 2021 +0800
+
+    Merge pull request #67 from lab2823/survey-bugfix-statement-click
+    
+    Bug fixed where clicking to move a statement does not move the currently selected statement on the gallery
+
+commit 587f0ce4a9251190aca6585aab5c4c9cd7682e90
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Fri Oct 15 11:18:19 2021 +0800
+
+    Bug fixed where clicking to move a statement does not move the currently selected statement on the gallery.
+
+commit 1c6c0a8dd432f3a8430e1618b953f9f343152418
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Thu Oct 14 23:18:27 2021 +0800
+
+    update to edit survey, update part not working yet
+
+commit 564b521ec37262f58da7d14ce418a68304addcb8
+Merge: 9424aff cf8c046
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Thu Oct 14 21:03:49 2021 +0800
+
+    Merge pull request #66 from lab2823/navbar
+    
+    navbar
+
+commit cf8c046a8fa69b35b36c259153611c9a30216f95
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Thu Oct 14 20:28:34 2021 +0800
+
+    navbar
+
+commit 9424afffd5bc5eff2bee4359258a10dde27788cb
+Merge: c74bb80 87bd4d2
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Thu Oct 14 19:40:27 2021 +0800
+
+    Merge pull request #65 from lab2823/instructions
+    
+    Merging two of my branches into one
+
+commit 87bd4d2a0e17ee8b2711af4fc9fa3f44ba1fb15f
+Merge: 5e2322e c5f0aee
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Thu Oct 14 19:19:30 2021 +0800
+
+    Merge pull request #64 from lab2823/dev
+    
+    Pulling dev into branch
+
+commit c5f0aee76b93eb06680796bdccd43285778a4824
+Merge: 4c3da32 5e2322e
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Thu Oct 14 19:15:28 2021 +0800
+
+    Merge branch 'instructions' into dev
+
+commit c74bb80673c39585c6648a2afc18085d37af3e9c
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 19:11:42 2021 +0800
+
+    Fixed minor issues with scripts in generating table
+
+commit 4c3da32402f825cabdc70ad52b1ea8598f730397
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 18:55:43 2021 +0800
+
+    Model_test no longer hashes the password
+
+commit 5b3f9b050978f89a8ee08e506a92167483d43889
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 18:47:19 2021 +0800
+
+    Added redirect to login when not logged in
+
+commit 479fda5c430d7f9a977634c0c4b2091262408ff5
+Merge: 0226cd4 d8d1c18
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Thu Oct 14 18:30:53 2021 +0800
+
+    Merge pull request #63 from lab2823/buttons
+
+commit d8d1c18090a9216fb3ce50c83a9d94dd8f84fde0
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Thu Oct 14 18:20:37 2021 +0800
+
+    Update admin_survey_list_responses.html
+    
+    removed test data saying pog
+
+commit af22d9c24fc7de529aaf2d3c8d0b2af19a7916f0
+Merge: dfa753b e2cf91e
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Thu Oct 14 18:13:05 2021 +0800
+
+    Merge pull request #62 from lab2823/surveycreategrid
+    
+    im pulling anyway
+
+commit 6796e087b056ef78cd2c99fabbbdc714b1d4283f
+Author: lee <leeblag@gmail.com>
+Date:   Thu Oct 14 18:12:27 2021 +0800
+
+    added delete survey button
+
+commit e2cf91ef3b2715c9232a7df7b03736c0c119583b
+Merge: f0660af dfa753b
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Thu Oct 14 18:10:56 2021 +0800
+
+    Merge branch 'reworking_createsurvey' into surveycreategrid
+
+commit ac3eeb7b2e9e3f1371cc59181d736bf6177b3438
+Author: lee <leeblag@gmail.com>
+Date:   Thu Oct 14 18:09:18 2021 +0800
+
+    added route for survey delete
+
+commit b7e204954fe436ccaf909f7b7cdbb53de41bde23
+Author: lee <leeblag@gmail.com>
+Date:   Thu Oct 14 18:04:10 2021 +0800
+
+    added buttons to user response pages
+
+commit dfa753b6d0b0babef1fc9b98479c67d0d2fe4120
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 17:42:16 2021 +0800
+
+    Updated instructions to be text instead of string
+
+commit 7e7f3269d8cdf9706a7ded67e0cdc96d1ee989aa
+Merge: 5a31d69 0226cd4
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Thu Oct 14 17:24:24 2021 +0800
+
+    Merge pull request #61 from lab2823/dev
+    
+    merged dev into branch
+
+commit 5a31d6915e1d7ab454b483e8af63e9fe20f44f01
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 17:19:40 2021 +0800
+
+    Added default values
+
+commit 5e2322ebb0e43e4799087b3032236e54b8819eca
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 15:35:33 2021 +0800
+
+    Fixed bug where instructions was not showing up properly when continuing a survey
+
+commit 04c260c341c5441ae2f52a464d3c85953c3460a8
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Thu Oct 14 15:27:39 2021 +0800
+
+    update to editsurvey, routes and merge dev into surveydbtest
+
+commit 3aafedaf1354042d8509a6a6d6bf4d66b4056bc6
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 14:54:51 2021 +0800
+
+    Added support for showing your most agreed/least agreed statements from Q-Sort in Questionnaire
+
+commit d2bf31a737a02a1457d92aeaa78f6b78e210e7e4
+Merge: 06f8808 0226cd4
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Thu Oct 14 12:15:18 2021 +0800
+
+    Merge branch 'dev' into surveydbtest
+
+commit 91a583a5f80f412084e2f5e8e18835fa8cc4caa8
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 05:58:59 2021 +0800
+
+    Editted to display new lines properly
+
+commit 35339b7e984cce3b97f5a9bfaecd5049866c83d7
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 05:51:46 2021 +0800
+
+    Fixed minor issues with instructions and publish
+
+commit c8046e7a4be74b386a8cc958ffaa022c05b57c1a
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Oct 14 05:39:49 2021 +0800
+
+    Redesign of survey creation
+
+commit 06f880810638ef411dde45f9f547339569a03f30
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Thu Oct 14 00:03:25 2021 +0800
+
+    added function to separate elements in arrays, incomplete
+    
+    needs sth to call function for diff arrays, needs to update according to changes on createsurvey
+
+commit f0660aff6aa26ab3f44b96239f494dbb5975fe0b
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Wed Oct 13 15:42:01 2021 +0800
+
+    fixed error messages, clean up of grid generation code
+
+commit e2084c26924db45f22433aa7b68fb9767e2823f0
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Wed Oct 13 15:03:26 2021 +0800
+
+    grid generation on survey creation process
+
+commit ba3d941cf759a1d0ba76832cc2fc85bfcc920e01
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Tue Oct 12 22:46:56 2021 +0800
+
+    minor edit survey route update
+
+commit eac4362e170c138a327ac9177419b19ce01d0f39
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Tue Oct 12 22:33:50 2021 +0800
+
+    display checked answer functionality and minor name mistake in route
+    
+    Not tested yet
+
+commit 0226cd4e0adef5b110aa61a418bac7599a91f2d9
+Author: lee <leeblag@gmail.com>
+Date:   Tue Oct 12 15:50:09 2021 +0800
+
+    fixed a logical error when the button should be displayed
+
+commit 567048ab47e27ca216814448f336ff3859cb4292
+Author: lee <leeblag@gmail.com>
+Date:   Tue Oct 12 15:49:21 2021 +0800
+
+    changed button to bootstrap button
+
+commit 10fa885b4d7b12103b2062614d46f4e1eed8c4a1
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Tue Oct 12 14:02:22 2021 +0800
+
+    work in progress
+
+commit 04f0f18ed90e28504e992c7c6e95eb161b0e0c5e
+Author: lee <leeblag@gmail.com>
+Date:   Tue Oct 12 13:12:12 2021 +0800
+
+    made edit survey button only appear if the survey is not published
+
+commit f125099a2062f5255f5d520a94caaffaba59af51
+Author: lee <leeblag@gmail.com>
+Date:   Tue Oct 12 12:54:28 2021 +0800
+
+    Added edit survey button
+
+commit 93ad42750e7cb8eb9616eab8786b0d5ceb7d730a
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 23:41:45 2021 +0800
+
+    added statement -id list on the survey page so admins can see what statement is mapped to what id
+
+commit 40cb8dfb0bca14f6e6c00967757da34bc8112d4b
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 22:55:39 2021 +0800
+
+    fixed introduced error in bulk download button
+
+commit a782bca134a6759509510ec0b4753cbe1aee3669
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 22:38:26 2021 +0800
+
+    fixed error where survey id was not passed to page, meaning admins could not view user responses
+
+commit 9fc20d8d2678930f3972ed766fb43e640547fe80
+Merge: acfc3e4 5a83fef
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Oct 11 21:57:11 2021 +0800
+
+    Merge pull request #58 from lab2823/surveydbtest
+    
+    Timer function
+
+commit 5a83fef1ddf5115358d6bf1d30c27c8ca23c8870
+Merge: 0d5b632 51327ed
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 21:53:57 2021 +0800
+
+    Merge branch 'surveydbtest' of https://github.com/lab2823/QMethodology_CITS3200 into surveydbtest
+
+commit 51327edfbb90a8f23bd5dc11ea2f0f46f38c6f5d
+Author: biancacelebrado <82673954+biancacelebrado@users.noreply.github.com>
+Date:   Mon Oct 11 21:49:26 2021 +0800
+
+    Update routes.py
+    
+    Remove error
+
+commit 0d5b632ab2db627921a81d7523e5aaf097afac4c
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 21:47:52 2021 +0800
+
+    added migration file for time spent col on user response table
+
+commit d1a36434007080a5b99a0cb932390c79a810d294
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 21:46:28 2021 +0800
+
+    removed type annotation from editsurvey and bookdelete
+
+commit 853fb58cc24db84f38a35268e58727d280559777
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 21:44:16 2021 +0800
+
+    closed a div
+
+commit 3b95f48ac3706fe2118c7cef085b794689bf8776
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 21:25:49 2021 +0800
+
+    removed dead link
+
+commit adaa84f1af912d222831af2f8cdad487a933200c
+Merge: 894f1a3 acfc3e4
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Oct 11 21:18:29 2021 +0800
+
+    Merge branch 'dev' into surveydbtest
+
+commit acfc3e492db68ef4cd6d7c441c5a851c846b3223
+Merge: a6f04c0 58cddcd
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Oct 11 21:11:01 2021 +0800
+
+    Merge pull request #57 from lab2823/heroku_work
+    
+    Heroku work
+
+commit a6f04c054be3d9e31659ce3678ddeef3b7c3eb29
+Merge: 7d61b3d ae5d0e5
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Oct 11 21:10:47 2021 +0800
+
+    Merge pull request #56 from lab2823/flask_admin
+    
+    Flask admin
+
+commit 894f1a3ad65d08dcf4c93d84760f042bafbdee0d
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Mon Oct 11 20:36:14 2021 +0800
+
+    added incomplete editsurvey
+    
+    Needs update on routes, update rendered pages, get values in arrays in their own input box, radio options to display selected option.
+
+commit 58cddcd8069a70a20513f5ed0f9f58244c7ce9c9
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 20:25:08 2021 +0800
+
+    removed all reference to super user
+
+commit 9cec6913e6e2d0d1de9e2e99da750a8cded13830
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 20:24:49 2021 +0800
+
+    fixed flask env error
+
+commit 4079b998c45701f5009da38af667ec2fabaf48dd
+Merge: 82a585d 7d61b3d
+Author: biancacelebrado <82673954+biancacelebrado@users.noreply.github.com>
+Date:   Mon Oct 11 18:07:22 2021 +0800
+
+    Merge branch 'dev' into surveydbtest
+
+commit dcc5956ceba1817a3184bd1f57660b94af132243
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Mon Oct 11 17:42:25 2021 +0800
+
+    Added toggle to display different instruction inputs
+
+commit 60479add0cafb0a544d448684b337458f253bc7d
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Mon Oct 11 17:00:52 2021 +0800
+
+    Instructions now show upon starting every page
+
+commit 25a023deb509a9080d051a9984600578d6cdc1b9
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 11:55:49 2021 +0800
+
+    fixed a spelling error
+
+commit 778e89b01fa357eec6f5bdceb6e6b6fb9db1d6a7
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 11:53:05 2021 +0800
+
+    added a forgoten colon
+
+commit 866b57ddbfd5a6e3c6198d2ea11573270dd55e78
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 11 11:52:42 2021 +0800
+
+    increased code verbosity, added inital alternative_db_url to fix uild errors
+
+commit c372a3a298ece48c3f4b5400f95531f650dfd462
+Merge: 11bcada ae5d0e5
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 20:25:50 2021 +0800
+
+    Merge branch 'flask_admin' into heroku_work
+
+commit ae5d0e502235caeb9f2982f84a786164c8974792
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 20:25:20 2021 +0800
+
+    modified is_accessible function to use is_superadmin field
+
+commit 09f2e59fd6080dd1758d534c224427c29a2a1ba4
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 20:24:26 2021 +0800
+
+    added superuser field to db
+
+commit f1ce7e062c70d21985c4caca06e0e2bb16358662
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 20:20:38 2021 +0800
+
+    edited migrations pipeline
+
+commit 1920e027de03690d059a2b8abaf017a13fe04407
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 20:00:14 2021 +0800
+
+    added import to fix undefinded function
+
+commit d66cdad9c1ffcf13246d695aee40ec565d6eb440
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 19:54:36 2021 +0800
+
+    added import to fix undefinded function
+
+commit 11bcada119a8583bce622bcd89d58c468762520f
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 19:00:19 2021 +0800
+
+    added uri variable to fixed heroku error
+
+commit cbcba0b0be03fbe489c2ce6b7d4f746ee145fc2f
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 18:51:19 2021 +0800
+
+    changed code order to prevent string concat with none type variable
+
+commit d86a5fcf74820e26211b4874524e3d635d50f9fd
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 18:49:16 2021 +0800
+
+    fixed an error where the word production was a variable and not a string
+
+commit ca2731e978c27daa5cba51eac965d9c6ac08bb17
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 18:44:41 2021 +0800
+
+    fixed a db connection error
+
+commit 130c1efc1eef1d9bd863e593bf0447f14f3b426b
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 18:43:19 2021 +0800
+
+    added production db url connection, if a dot env file is not loaded
+
+commit 94e214f81534668b075324cc38741238149faa54
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 18:29:23 2021 +0800
+
+    changed uri to url for consistency with heroku
+
+commit 9eae731c2549fbed869b83afee02ca07a6c13155
+Author: lee <leeblag@gmail.com>
+Date:   Sun Oct 10 16:51:28 2021 +0800
+
+    added is_accessible function, which returns a boolean, if true, that user can access the admin panel
+
+commit 05927987235d45618fed305b2a2fc2716e6950cb
+Author: lee <leeblag@gmail.com>
+Date:   Sat Oct 9 11:23:28 2021 +0800
+
+    changed model/db to hold the password instead of the hash
+
+commit 82a585d78bd4de1eb1185dad8e02d1aa61965b4e
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sat Oct 9 02:25:08 2021 +0800
+
+    Merging issues
+
+commit 08e83a49b55af2d71157606b33d119a83a177960
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sat Oct 9 02:23:56 2021 +0800
+
+    Revert "Merging issues"
+    
+    This reverts commit 936798dfcbc599353dda0ec0f7d9afb6b0b6a6cb.
+
+commit 7d61b3dc832c24e3f49141142ad5e55580792763
+Merge: 35a07c7 dcbd072
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Fri Oct 8 20:03:54 2021 +0800
+
+    Merge pull request #55 from lab2823/drag_functions
+    
+    Drag functions: adds the following features
+    
+    First sort will work with button clicks, swaps if a statement is dragged to a cell which already has a statement and statement enlarges on hover.
+
+commit 48a657bcd9c390661c98bf5a9ce2854eff87435e
+Author: lee <leeblag@gmail.com>
+Date:   Thu Oct 7 22:26:26 2021 +0800
+
+    added requirement for gunicorn so heroku can deploy
+
+commit 35a07c7d6f2b79b93c55e82ea7839eda14ab6fa2
+Author: lee <leeblag@gmail.com>
+Date:   Thu Oct 7 22:08:58 2021 +0800
+
+    changed admin view response html page so that the grid has borders
+
+commit 1f9e68ff9e9ee6f2ea696dccd715dbca3dd3f7dc
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Oct 5 02:15:33 2021 +0800
+
+    Merging issues
+
+commit d39695314c55db76a7624716a7f9f9c5522ac175
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Oct 5 02:14:14 2021 +0800
+
+    Revert "Merging issues"
+    
+    This reverts commit 936798dfcbc599353dda0ec0f7d9afb6b0b6a6cb.
+
+commit 936798dfcbc599353dda0ec0f7d9afb6b0b6a6cb
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sat Oct 9 00:00:52 2021 +0800
+
+    Merging issues
+    
+    Remove unnecessary code
+
+commit 3196499a354b7464bb93dcffcb19ad8c4b3c95f3
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Oct 5 01:44:32 2021 +0800
+
+    Remove milliseconds on timespent
+
+commit ffe62a1c88ee10407b879496242c3f5b805f38c0
+Merge: 7c28bcb 87821c9
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Oct 5 01:11:02 2021 +0800
+
+    Merge branch 'timer' into surveydbtest
+
+commit 87821c90bac6be5b2e5e3729579fe3de52a0e489
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Oct 5 01:10:43 2021 +0800
+
+    Timer function
+    
+    Final. Tested for scenarios such as user leaving during a section.
+
+commit 460c974134c6c0c1716df7acb2d3ae4781b97ebc
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Oct 5 00:17:23 2021 +0800
+
+    Timer function
+
+commit 7c28bcbcc1db3bc60fd3d5c480e89de0acb10211
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Oct 5 00:13:53 2021 +0800
+
+    Timespent function
+    
+    Timespent column tested on different scenarios and fixed issues. Eg. If user left at a certain section, database should calculate time spent correctly
+
+commit 21aa072fb3d43f303857f8c113066f8db36fae30
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 4 21:44:25 2021 +0800
+
+    added sample user response id
+
+commit d3691519d86a1911deacfb4172194b2e439bd476
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 4 21:39:42 2021 +0800
+
+    added more default params
+
+commit c36692d76de3d0073fa03ea37cfcb36515d04f77
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 4 21:35:51 2021 +0800
+
+    .
+
+commit 6309164bdbec8aaf0741751c51f69b95a8eea8c5
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 4 21:33:56 2021 +0800
+
+    added default params to surveyFin constructor
+
+commit 5595fd4254d4e3ae247b60f760810141152718f5
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 4 21:15:42 2021 +0800
+
+    updated params in model_test function to work with updated model
+
+commit 3b37a5d2c33e10893a2643e455a3876e4f273d0c
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Mon Oct 4 21:08:49 2021 +0800
+
+    Added textboxes for individual instruction inputs
+
+commit 2dfb55f42a7473b79497e8029e798c67eccfaab4
+Merge: a8fc658 f0f32b7
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 4 20:26:46 2021 +0800
+
+    Merge branch 'dev' of https://github.com/lab2823/QMethodology_CITS3200 into dev
+
+commit a8fc658127881b20fbea2d2ec7bf2865b47dbb2c
+Author: lee <leeblag@gmail.com>
+Date:   Mon Oct 4 20:26:39 2021 +0800
+
+    fixes none in bulk downloads
+
+commit f0f32b7f87830b01d08af3aeaffd627b66f217b4
+Merge: 14453f9 4d138d7
+Author: LizP27 <82749554+LizP27@users.noreply.github.com>
+Date:   Mon Oct 4 20:20:06 2021 +0800
+
+    Merge pull request #54 from lab2823/login_page
+    
+    changed landing page to login or surveys page
+
+commit 6cf1e568c823c4c17a668322b4768bf0fd377893
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Mon Oct 4 19:15:59 2021 +0800
+
+    Now displays the initial page of the survey when clicking 'Start New'
+
+commit c9635220e0c4a585a636202cae8479c0b1f9d03c
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Mon Oct 4 19:10:59 2021 +0800
+
+    Response ID and Survey ID is now shown after submitting first part of survey
+
+commit 162b19b09f325d3a31e180a8b19ab564ab4d586a
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Mon Oct 4 16:56:17 2021 +0800
+
+    Instructions button now correctly displays what it is supposed to after closing
+
+commit dcbd07273c8a3a5869a3c084be1fc1a1312d4b2a
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Mon Oct 4 11:05:38 2021 +0800
+
+    text enlarges on hover
+
+commit 90394f6656abe991046fad40cec2f441bb59399b
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Mon Oct 4 10:40:30 2021 +0800
+
+    drag swap function implemented, fixed errors
+
+commit 8d432336232a9fa12fe228a589104b79edb9761c
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Sun Oct 3 20:35:56 2021 +0800
+
+    fixed errors, qsort divs can no longer have multiple statements
+
+commit 43edf58a42f31cfd569ec2de4dc8579c5eae84eb
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Sun Oct 3 19:56:24 2021 +0800
+
+    clicking function with drag and drop
+
+commit 4a9ca7f9282c75879d11cc53b0e89794a51325e4
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Fri Oct 1 15:00:59 2021 +0800
+
+    Changed timespent column type
+
+commit 4012f82404b090990f4d0b2c20002888a33833fa
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Fri Oct 1 04:03:23 2021 +0800
+
+    Timer function implemented
+    
+    Not tested for when a user leaves the survey and comes back.
+
+commit 6548e3a66cecc7e31a30bba2bc93dd1544fe0b08
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Sep 30 18:27:05 2021 +0800
+
+    Changed around register with questionnaire
+
+commit fd9f5fce3ddd968acb0787fc168c22de0cf49d4c
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Thu Sep 30 16:27:49 2021 +0800
+
+    Create example.json
+
+commit 14453f9ec6725eac9464bad444f2ef24a41ccc8c
+Merge: 9e8cefd 591d5f1
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Wed Sep 29 12:28:26 2021 +0800
+
+    Merge pull request #53 from lab2823/admin_view_response
+    
+    Admin view response
+
+commit 36f9d0352c7f242596c8372d63102a3451ea7f00
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Wed Sep 29 09:15:30 2021 +0800
+
+    update on routing
+    
+    not 100% if this is correct
+
+commit 4d138d7c9344fd741259cef866e8782feeda9ec4
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 22:52:29 2021 +0800
+
+    changed landing page to login or surveys page
+
+commit 591d5f16904efbcd9dcf2b4fee91a5de07db67a8
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 22:25:16 2021 +0800
+
+    added grid to response viewing
+
+commit a55005c44b63bad9174ae8279705e07b5f11f652
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Mon Sep 27 22:17:49 2021 +0800
+
+    Added mcq functionality and modified other createsurvey functionality. Needs routing update
+    
+    Currently on test page, will have to move to createsurvey after completing.
+
+commit 1c6bc0bd7a18b16a22af9f9d5b967f42ab85c6ca
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Mon Sep 27 19:59:51 2021 +0800
+
+    Added instructions via modals
+
+commit fd8e5986a26215196beadc50d2fc9e656b8371ff
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 19:52:37 2021 +0800
+
+    added more data to response page
+
+commit 0076938c9a8ff9362f9a5ab2af637e355c061b94
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 19:52:15 2021 +0800
+
+    added link to view response page
+
+commit e4a3dfea45753b04e6d88fe4bd9636c6c3d38d56
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 19:51:49 2021 +0800
+
+    added route for viewing response
+
+commit 2ce6050fdf9fca3a3bd393dfa9efa4d4888cb351
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 19:51:30 2021 +0800
+
+    adding comments
+
+commit b6f3f5abfd2c7d23f2bb8f7909f0d85e469fd11a
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 18:59:56 2021 +0800
+
+    expanded view response template
+
+commit 5f5147d4fc4a87d51839c6fae84bb07e2795a336
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 18:59:44 2021 +0800
+
+    changed route name/url
+
+commit daa8f6a7d58db90017a6e3db65585760666e4853
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 13:27:22 2021 +0800
+
+    '
+
+commit 8c921f33afbfca80c3741ebbba2b3d6b06a21f64
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 27 13:25:38 2021 +0800
+
+    added bulk download button
+
+commit 3393246ec31ea5147cc4e8bc83bd84e408bb5ee0
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 25 14:03:39 2021 +0800
+
+    added bulk survey route {no front end access yet}
+
+commit b6b9523554a170025de1666b8c48affd05d721e8
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 25 14:03:19 2021 +0800
+
+    python module for excel methods
+
+commit 9ca9c52cc5744e521c40b97210ba3d556a9e0134
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 25 12:09:45 2021 +0800
+
+    began bulk download routing
+
+commit 0ca1c88a5c342803879357deb40897ba838970b6
+Author: lee <leeblag@gmail.com>
+Date:   Fri Sep 24 22:39:40 2021 +0800
+
+    remove some empty lines
+
+commit 61a7e3e6aeeb6bff43207a669caf9df6e8216e8e
+Author: lee <leeblag@gmail.com>
+Date:   Fri Sep 24 22:37:45 2021 +0800
+
+    added individual excel downloading
+
+commit fd4256d1e45c27dd3469f6265b8616e7b2ed4f92
+Author: lee <leeblag@gmail.com>
+Date:   Fri Sep 24 17:53:24 2021 +0800
+
+    added comment
+
+commit b34541620cf436b00a31db5babe41e2b2f2be214
+Author: lee <leeblag@gmail.com>
+Date:   Fri Sep 24 17:52:15 2021 +0800
+
+    added dependcies for excel requirements and test route
+
+commit 1b74aad420d08238b69ad424a1bbcaf0c7d44f81
+Author: lee <leeblag@gmail.com>
+Date:   Fri Sep 24 17:51:56 2021 +0800
+
+    added requirements for excel downloads
+
+commit 465a83adf479c18bea016905989c67c222619a60
+Merge: e8ccb90 96d72f6
+Author: biancacelebrado <82673954+biancacelebrado@users.noreply.github.com>
+Date:   Thu Sep 23 23:22:59 2021 +0800
+
+    Merge pull request #52 from lab2823/non_survey_pages
+    
+    Non survey pages
+
+commit d888db7308d7965dbfe386c325f646f3c95a0680
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 23 21:22:05 2021 +0800
+
+    added flask_excel to requirements
+
+commit 758cf5a7e7b6214595a150687aca4e50f7117378
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 23 21:21:46 2021 +0800
+
+    added setup for flask_Excel
+
+commit 3aa53890346276f067fbdd97d5095963d37d062e
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 23 20:53:03 2021 +0800
+
+    commented out broken code
+
+commit 0e4afe52352574e21ae530a9366d1955011c138e
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 23 20:52:37 2021 +0800
+
+    sample user_response view page
+
+commit 428e27289decea98ffa65600a107ffa1db5fbe41
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 23 20:51:54 2021 +0800
+
+    fixed query error
+
+commit 0a6d8fbac413d3c1af59bdd1404ebf21198f40b0
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 21 18:07:47 2021 +0800
+
+    .
+
+commit 1cf4840df487f2d033cda6b49a93c93aac58df70
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 21 18:07:38 2021 +0800
+
+    added routing to response page
+
+commit 591a98e3f0b249b13dd4394c7412a5af245d39dc
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 21 17:45:51 2021 +0800
+
+    added routes to view response pages
+
+commit e88be28d6c68b163937fb84360ffc0dfa3355921
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 21 17:43:14 2021 +0800
+
+    a page to view list of responses to survey
+
+commit 47adee21ad2256a450209cac779a0dde97badca2
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 21 17:33:05 2021 +0800
+
+    empty route for viewing responses
+
+commit 8bab0563da6a3b888f3c46836b7f393ce5299097
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 21 17:32:46 2021 +0800
+
+    empty html page for viewing responses
+
+commit e8ccb90c27e11962c0147e55a4774761bf53250e
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Mon Sep 20 12:23:52 2021 +0800
+
+    Temporary fix to registration and questionnaire creation
+
+commit 96d72f675192ba3101a418ac578787bbe73df9b6
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Sep 19 22:02:18 2021 +0800
+
+    Update admin_downloads.js
+
+commit fa8eb49c6c8f2c5727be094e597a18a70c7e046f
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Sep 19 21:41:51 2021 +0800
+
+    Delete row from admin_downloads
+    
+    Front-end implementation
+
+commit 77a8fa2db45e3e4978424da7950d6e25815f0764
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 20:35:42 2021 +0800
+
+    Added ability to make more columns in form
+
+commit ee2dccc4cc7d49aa57fec1fa1ea72ae3db7f409e
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 20:35:21 2021 +0800
+
+    added more form parameters in the createSurvey Route
+
+commit 7661f98b4db458fb158704c0b0905547e909b810
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 20:34:42 2021 +0800
+
+    added id back into user_response table
+
+commit 959f45ce7f41c17ce8acd3bb7274d0a7d0362de9
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 17:44:05 2021 +0800
+
+    removed survey_id constructor, creates survey_id internally
+
+commit 4c16c4fa1e2a147f8d2909fd8896b30aaea44718
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 17:36:50 2021 +0800
+
+    import UUID for ID generation
+
+commit f162cd987aadcba89b05786447e9f8e72c090f4b
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 17:23:29 2021 +0800
+
+    removing time data from survey creation
+
+commit b9885feaf0b3a23d6990e7fd869e8404f53804e5
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 17:04:22 2021 +0800
+
+    adjusted script to reflect new models
+
+commit 9c9501eb188a0b2dd51008fc3778d0a5905ec420
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 17:04:00 2021 +0800
+
+    removed id from model constructor (this should be asisgned by db)
+
+commit 509debdf7ca7441ebc2442649546c9b53a1e214e
+Merge: 5278af0 9e8cefd
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Sun Sep 19 15:16:48 2021 +0800
+
+    Merge branch 'dev' into surveydbtest
+
+commit 5278af0e97e6b2b57fc6d08d4d1922d30cd28a7d
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Sun Sep 19 15:14:09 2021 +0800
+
+    create survey and routes
+
+commit 9e8cefdafc06f0c1d003ee5b0a555eae6a17ee97
+Merge: f9502b1 4317786
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sun Sep 19 14:59:51 2021 +0800
+
+    Merge pull request #47 from lab2823/non_survey_pages
+    
+    Non survey pages
+
+commit 4317786f23bc45f66b78201002b3d681e6b08866
+Merge: 925c6d6 f9502b1
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 14:41:31 2021 +0800
+
+    Merge branch 'dev' into non_survey_pages
+
+commit f9502b181d92218d7b07429d9311886253bcb9c8
+Merge: 7dc1aac 71b42b2
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Sun Sep 19 14:39:54 2021 +0800
+
+    Merge pull request #44 from lab2823/survey_pages
+    
+    Fixed issue with Models and implemented routing for survey input
+
+commit 71b42b25cd0e1b94da1c4bccc6fd47d4d0692d6c
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Sep 19 14:39:09 2021 +0800
+
+    Completed routing of Qsort Grid
+
+commit 1b2fc1f3d044ccc36b9e705a2cc755c70db490ec
+Merge: 31c8f59 86f0365
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Sun Sep 19 13:46:43 2021 +0800
+
+    Merge pull request #46 from lab2823/qsort
+    
+    added qsort grid functionalities
+
+commit 86f03652a3ccfdefa05d301c613fbb2e11c70aa7
+Merge: 235fe28 31c8f59
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Sun Sep 19 13:46:28 2021 +0800
+
+    Merge branch 'survey_pages' into qsort
+
+commit 925c6d636d76b75bdad47e95e429a856b929cf88
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 13:38:43 2021 +0800
+
+    added user ID to profile page
+
+commit 8545265a54415f23b1dd065da82f9d4e09afc731
+Author: lee <leeblag@gmail.com>
+Date:   Sun Sep 19 13:38:18 2021 +0800
+
+    fixed a bug with wrong ID displaying
+
+commit 31c8f59023ed0232df7a9a1891a8e2db186493c4
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Sep 19 12:10:32 2021 +0800
+
+    Survey can now be loaded when given proper response ID
+
+commit 235fe28ccab9ed1c1c4ff50f6014caf810fd7519
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Sun Sep 19 10:52:24 2021 +0800
+
+    added qsort grid functionalities
+
+commit cdcf700b268f3f9218138c2c22c5790437e575e6
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Sep 19 09:10:24 2021 +0800
+
+    Fixed issue with models and implemented routing for sending survey
+
+commit 73f83b204ae4acc0be12f1f3a95a2e7b5e80c3f6
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Sep 19 09:06:24 2021 +0800
+
+    Fixed various issues with models
+
+commit 5a8af0a9efc3e272cdfbc1673851d4613aad2f9d
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Sep 19 08:45:47 2021 +0800
+
+    Updated Constructor
+
+commit 9a17f0fb1dfb6cf039e09c0a78b6abd5304809b9
+Merge: 9589ab0 6d203c6
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Sep 19 08:42:23 2021 +0800
+
+    Merge branch 'survey_pages' of https://github.com/lab2823/QMethodology_CITS3200 into survey_pages
+
+commit 9589ab02b6677cab5254a7cc4d701569ae4acf43
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Sep 19 08:40:28 2021 +0800
+
+    Partially Implemented routing for survey input
+
+commit 6d203c6e0b49ebdb93bf9c71c653d23743b5400f
+Merge: 1176d4e 7dc1aac
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Sun Sep 19 08:39:14 2021 +0800
+
+    Merge pull request #43 from lab2823/dev
+    
+    Pull request for latest changes to models.py
+
+commit 1176d4e77574724473f4168b05e4084b300c2630
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Sep 19 01:36:50 2021 +0800
+
+    Added initial page of survey
+
+commit 9a200790178e2a6cce4fdfb23fd6d85f2815381c
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sun Sep 19 00:20:29 2021 +0800
+
+    Survey now sends information to server
+
+commit 7dc1aac2b108e78b07739dee4122736c59b10a53
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 23:54:52 2021 +0800
+
+    added todo comment
+
+commit 14c5dd7c632ca7931777d692ab90e4b50e46b2a3
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 23:53:19 2021 +0800
+
+    removed commented out code
+
+commit 7fc519c188a159504cf76848beae3623c553a105
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 23:52:19 2021 +0800
+
+    implemented logout
+
+commit b56f13f7b9716aa5411c808ad525d23781374d42
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 23:48:33 2021 +0800
+
+    changed out redirect
+
+commit 48fbc70d617fdb447bc9712c5a88bc3491cd58fd
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 23:47:24 2021 +0800
+
+    changed login redirect
+
+commit 7654ca8abb3604316f7bfb2856248ef9881b7bf8
+Merge: 80a8e5b 50344e1
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 18 22:46:02 2021 +0800
+
+    Merge pull request #42 from lab2823/non_survey_pages
+    
+    Non survey pages
+
+commit 30da8effcd9b98e81272b94bbf290667a1fd8110
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Sep 18 22:11:39 2021 +0800
+
+    Now saves survey_id as a javascript variable
+
+commit dd30e4483618df7dd156b2c9e4ebc315058f79eb
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Sep 18 22:11:19 2021 +0800
+
+    Changed version of JQuery
+
+commit 50344e1f41b7e5d52ae47af0bb7489991b59a6cc
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 21:54:14 2021 +0800
+
+    removed .html to fix routing
+
+commit fbc79e6a67a7128e889a99ac6b5e4ee37bc8a07b
+Merge: 7eab950 95d7c4b
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 21:47:17 2021 +0800
+
+    Merge branch 'non_survey_pages' of https://github.com/lab2823/QMethodology_CITS3200 into non_survey_pages
+
+commit 7eab950d5cf64031497c86d27dbe5db8619c8b21
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 21:47:06 2021 +0800
+
+    adjusted for vvisual clarity
+
+commit cfae7c25aaadb3b891023e2a4e54b43ff28f14a4
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 21:46:57 2021 +0800
+
+    imporved sample script
+
+commit 2cb92a5d71afa4da174cc5130824ece9888bc3bb
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 21:46:49 2021 +0800
+
+    fixed constructor error in model
+
+commit 95d7c4b8c77f59dfac385c82c65adb6e12847da6
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sat Sep 18 21:32:23 2021 +0800
+
+    Admin_view_surveys HTML clean up
+    
+    Add admin_view_surveys link to navbar temporarily. Remove downloads and delete columns in admin_view_surveys
+
+commit 95a6a8c1af951c0d0c11441434e92242e414c256
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 21:26:08 2021 +0800
+
+    fixes directory mishap
+
+commit d56c5acab73b0c01a80e877d400508627e65c7d8
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 20:28:09 2021 +0800
+
+    NOTE: THIS HANGS ON LOCAL,
+    added test user response
+
+commit 4ea1a3fab03eb5b11a30b57dfcc8ff90ea275cf8
+Merge: 8b84c69 34eb18c
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 18 19:44:57 2021 +0800
+
+    Merge pull request #40 from lab2823/db_test_script
+    
+    Db test script
+
+commit 34eb18cec3d8fcf1ae161c62103db9504cf43ac6
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 19:37:32 2021 +0800
+
+    deleted some white space
+
+commit 1c9141a5bb26c261e3df51868cbc19b7cfedca3b
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 19:32:25 2021 +0800
+
+    adjusted user response routes to use jinja
+
+commit 706b9ad2d0b53b80ed646d427a35396d33bef29b
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 18:36:25 2021 +0800
+
+    fixing local error
+
+commit 80a8e5b4e663625884aee12a20940bee24d4ac02
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Sat Sep 18 18:07:06 2021 +0800
+
+    Fixed config.py to actually use generated URI (#41)
+
+commit b75084a942ee1052afb7d8199e835aa761de2c59
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Sep 18 18:05:44 2021 +0800
+
+    Fixed config.py to actually use generated URI
+
+commit 121bb8a4e0a12b08f1ec00acc3f9e1c7debad05a
+Merge: 2e5369a 8891f89
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Sat Sep 18 17:58:31 2021 +0800
+
+    Merge pull request #39 from lab2823/dev
+    
+    get dot env changes from dev
+
+commit 5a9b72b76ddb51fc3fb3d0f2cc5adfc0b1cc9821
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 17:22:32 2021 +0800
+
+    added admin user page to show user details
+
+commit 11fe87c17938d6ccece71316dd3aeb5e30d64a41
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 17:22:18 2021 +0800
+
+    fixed bug to show creator name
+
+commit 25b96c7ab1e6a254cc3ebf81debf57abffd395f5
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 16:59:31 2021 +0800
+
+    removed it making error
+
+commit 466e41b2dd84d4ac573f5fb17850969e96e27399
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 16:17:01 2021 +0800
+
+    removedd errors
+
+commit 3890b57705dadf4ae8a3b7894ae4d040553086b9
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 16:16:47 2021 +0800
+
+    added constructor for survey model for internal use
+
+commit 6c0a3005234c8304327a0c79aebaa445965be55a
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 16:16:27 2021 +0800
+
+    updated test script to include survey and allow for repeatibility
+
+commit db742b72998a429de1b0bb2222e81f6af3fb4a22
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Sat Sep 18 15:06:03 2021 +0800
+
+    Survey creation page
+
+commit 3e67f79297085743719fadda9fb5711a07429749
+Merge: bb62bd1 8b84c69
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 13:07:38 2021 +0800
+
+    Merge branch 'non_survey_pages' into db_test_script (for testing pueposes)
+
+commit bb62bd1c36559522c5fdb62038b30b66407fd872
+Merge: 46032c9 8891f89
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 13:04:03 2021 +0800
+
+    Merge branch 'dev' into db_test_script
+
+commit 8b84c69a73d5cab3cd01ba03120e858c3369bd41
+Author: lee <leeblag@gmail.com>
+Date:   Sat Sep 18 12:57:40 2021 +0800
+
+    added admin view page and corresponding route
+
+commit 8891f89640a9c617d798945c413cc0bb23b4bffd
+Author: lee <leeblag@gmail.com>
+Date:   Fri Sep 17 22:50:26 2021 +0800
+
+    modified code to suit .env
+
+commit 37417fbf207a60c61947dce9176853134f4b58aa
+Merge: acb7c1b 2e5369a
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Fri Sep 17 21:42:50 2021 +0800
+
+    Merge pull request #38 from lab2823/survey_pages
+    
+    Fixed Issue with models and added .env to .gitignore
+
+commit 2e5369a400dadafc6760129252f7cd20af7ac35e
+Merge: 066539f acb7c1b
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Fri Sep 17 21:38:07 2021 +0800
+
+    Merge pull request #37 from lab2823/dev
+    
+    pulled in recent version of dev
+
+commit 066539f0335483f3e449afe7deab05e1668fbdf7
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Fri Sep 17 21:29:29 2021 +0800
+
+    Added env to .gitignore
+
+commit 09325f435c1601c874b3746ec6cbb411bc84703e
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Fri Sep 17 21:29:21 2021 +0800
+
+    Fixed issue with Models
+
+commit 46032c97d85d35a1993ea444e62b9ec7ebc271b4
+Author: lee <leeblag@gmail.com>
+Date:   Fri Sep 17 21:17:18 2021 +0800
+
+    calls test function in index routes
+
+commit 5f0b48b1944ffc7b2cd4218e020062de1d5f0bb8
+Author: lee <leeblag@gmail.com>
+Date:   Fri Sep 17 21:08:19 2021 +0800
+
+    added model script
+
+commit acb7c1bf917e389fbb323faef8789c7557cbb081
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Fri Sep 17 20:05:03 2021 +0800
+
+    Clean up of admin_downloads and moved js files into one folder
+
+commit 877234741e4364ed7c011e8eec21b1d4dc834898
+Merge: f97a241 f80d061
+Author: biancacelebrado <82673954+biancacelebrado@users.noreply.github.com>
+Date:   Fri Sep 17 19:39:17 2021 +0800
+
+    Merge pull request #36 from lab2823/non_survey_pages
+    
+    Non survey pages
+
+commit 7a6755616d29d0abf2f150de3a404ba692480525
+Merge: 712ac0c f97a241
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Fri Sep 17 18:46:07 2021 +0800
+
+    Merge pull request #35 from lab2823/dev
+    
+    slight updates to models
+
+commit f97a241cd38653b8bd60e580bf1dbffca7ec77c7
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Fri Sep 17 14:59:30 2021 +0800
+
+    slight updates to models
+
+commit 712ac0c158777532f2d1f937736a0995275b8334
+Merge: 08e0f82 bb9730e
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Fri Sep 17 10:33:26 2021 +0800
+
+    Merge pull request #34 from lab2823/dev
+    
+    pull dev updates
+
+commit 15c39a374dcec193c4a86255ebdd2a891b8e32cf
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 16 19:19:11 2021 +0800
+
+    strated a test script
+
+commit e7fdbf65de8327a78d83024935426e0c88497882
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 16 19:19:00 2021 +0800
+
+    added init for role class
+
+commit 9f59a27ddfd004220bb4adb52c974f800e519205
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 16 19:17:03 2021 +0800
+
+    added user contructor for test purposes
+
+commit f80d061f89383aad387d1d9b8682c95bca54bcb5
+Merge: 18eb008 bb9730e
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 16 18:32:28 2021 +0800
+
+    Merge branch 'dev' of  into non_survey_pages (bring in new updates)
+
+commit bb9730e1231a7a446dbc9a1ba1f5ac6bd4b3aeaa
+Merge: 602b2d6 62b049b
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Thu Sep 16 18:26:17 2021 +0800
+
+    Merge pull request #33 from lab2823/useradmin
+    
+    Useradmin
+
+commit 62b049be5eed45cf19eb105acf4c9497cfd47239
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 16 18:20:13 2021 +0800
+
+    fixed a typo
+
+commit 18eb008adcc5ff61346688006686ae0c28822545
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 16 18:19:41 2021 +0800
+
+    changed a stray login to login_manager
+
+commit 8988e576092f281dc1af199cbf268eae4f305331
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 16 18:13:02 2021 +0800
+
+    changed tabs to spaces to fix compile error
+
+commit 1defd36a3edd5e8190a73ac9681450293c48bf00
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 16 17:58:54 2021 +0800
+
+    update postgre local set up doc
+
+commit 602b2d6668c3eb45b5b2a594c078c1e5bee28416
+Merge: a6ba695 08e0f82
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Thu Sep 16 13:10:18 2021 +0800
+
+    Merge pull request #32 from lab2823/survey_pages
+    
+    Implemented front-end of survey page
+
+commit 08e0f829c40999e23f55c746c509aea6380659e3
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Wed Sep 15 20:46:20 2021 +0800
+
+    Now moves sorted statements to then next page to sort onto grid
+
+commit b671d1eaea46f32bd744e7b636f7955700da5901
+Author: lee <leeblag@gmail.com>
+Date:   Wed Sep 15 20:36:19 2021 +0800
+
+    added a TODO
+
+commit ed3662d94afec348ea6924deca852ec66304be21
+Author: lee <leeblag@gmail.com>
+Date:   Wed Sep 15 20:34:21 2021 +0800
+
+    added small guide to setup up postgresql on local
+
+commit a1ec285352574ca1d92ddfe5c1c2297fdb2550b7
+Author: lee <leeblag@gmail.com>
+Date:   Wed Sep 15 20:19:39 2021 +0800
+
+    added requirements for postgre server
+
+commit a6ec4446f9a8a0c5b23891ff4ded0c5196e3def7
+Author: lee <leeblag@gmail.com>
+Date:   Wed Sep 15 20:19:27 2021 +0800
+
+    updated config to be porperly setup for postgre server
+
+commit 9715b7db6c10caed77c3c99659f7472e77edb156
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Wed Sep 15 19:59:48 2021 +0800
+
+    Implemented validation for initial sort
+
+commit 8219e8a59e1fd8d74be038cfd093d1127f44b9be
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Wed Sep 15 18:47:54 2021 +0800
+
+    Added validation for Q/A pages
+
+commit 295b7e9a0543ce04e4befc761dbd9b3525e47604
+Author: lee <leeblag@gmail.com>
+Date:   Wed Sep 15 18:05:43 2021 +0800
+
+    added flask admin to reqs
+
+commit f5751343e3967c32ef78d33637b0121d898418b5
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Wed Sep 15 11:10:26 2021 +0800
+
+    Implemented next page button
+
+commit 77d46a277d402e9c4d5acedddf9929cb96cbc936
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Wed Sep 15 11:03:48 2021 +0800
+
+    pulling dev into branch (#31)
+    
+    * Revert "Remove venv"
+    
+    This reverts commit a4c1995e034888af4a3867cbb7124a0f44b52fff.
+    
+    * NameError: name 'login' is not defined fixed
+    
+    * fixed survey import error
+    
+    * removed deprecaed routes
+    
+    Co-authored-by: biancacelebrado <22710894@student.uwa.edu.au>
+    Co-authored-by: lee <leeblag@gmail.com>
+
+commit 48605c6401a2c9347a59f791e1059ac3ea9033f9
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Tue Sep 14 20:36:46 2021 +0800
+
+    new user classes and relationships
+
+commit a6ba695706b77693b675f1e05839904046aaf2fd
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 14 17:58:37 2021 +0800
+
+    removed deprecaed routes
+
+commit 88c82c3ce1cf0810936c1dcaac9d9444f4e027f8
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 14 17:46:17 2021 +0800
+
+    fixed survey import error
+
+commit a9eb146b0691575d4334165631378c264b8325d3
+Merge: a581a69 8dc0bd2
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 14 17:43:51 2021 +0800
+
+    Merge branch 'dev' of https://github.com/lab2823/QMethodology_CITS3200 into dev
+
+commit a581a6967f8ec37aa61c98fecaf5fb54e6c6c248
+Author: lee <leeblag@gmail.com>
+Date:   Tue Sep 14 17:43:42 2021 +0800
+
+    NameError: name 'login' is not defined fixed
+
+commit 75d0066ad47113385b9d2513103fc5324e3a601c
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 14 16:53:28 2021 +0800
+
+    Revert "Merge branch 'dev' into survey_pages"
+    
+    This reverts commit 7ca672e5826a29a6ecc422618ffa83d41e285f9f, reversing
+    changes made to f7a442a3f781215d05ee6035242f59bb1b7c45ba.
+
+commit 8dc0bd21359ea86f558cd9f1063b732201273bc1
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 14 16:52:54 2021 +0800
+
+    Revert "Remove venv"
+    
+    This reverts commit a4c1995e034888af4a3867cbb7124a0f44b52fff.
+
+commit 8e63bb45b01b6e4281d4ec44e3ad62353b4cb849
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 14 16:51:29 2021 +0800
+
+    Remove venv
+
+commit 7ca672e5826a29a6ecc422618ffa83d41e285f9f
+Merge: f7a442a a4c1995
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 14 16:50:19 2021 +0800
+
+    Merge branch 'dev' into survey_pages
+
+commit a4c1995e034888af4a3867cbb7124a0f44b52fff
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 14 16:49:37 2021 +0800
+
+    Remove venv
+
+commit 8e82c6ab876350197fd8b55c15bf55ad2587479a
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 14 16:36:53 2021 +0800
+
+    Admin_downloads table
+
+commit f7a442a3f781215d05ee6035242f59bb1b7c45ba
+Merge: 7468afb 1eeb3d9
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 14 13:17:51 2021 +0800
+
+    Merge branch 'survey_pages' of https://github.com/lab2823/QMethodology_CITS3200 into survey_pages
+
+commit 7468afb2ec0f9215e9afee38fcca6a25e587c3af
+Merge: 9aa7acb 6685558
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 13 22:27:44 2021 +0800
+
+    Merge branch 'surveydbtest' into dev
+
+commit 66855581021e7ec97d466e42a0c85b6c5f67a12f
+Merge: 8c7d735 9aa7acb
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 13 22:27:07 2021 +0800
+
+    Merge branch 'dev' into surveydbtest
+
+commit 8c7d735c3583aded2844718a72f12f30591dd0c1
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Sat Sep 11 20:20:45 2021 +0800
+
+    updated models and requirements
+    
+    added more postgresql stuff
+
+commit 1eeb3d9d4471db20aba633107e3361a1b3fa0c01
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Sep 11 18:16:09 2021 +0800
+
+    Implemented gallery for statements
+
+commit 73fb76d5c80c48720fd6ee0ed0aab29ac109e017
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Sep 11 18:15:46 2021 +0800
+
+    Temporary routing changes
+
+commit 4d4943f1d7f3790a3a7759588e7fcb60a89f6a6b
+Author: 滑板鞋 <aijm73@gmail.com>
+Date:   Sat Sep 11 16:38:13 2021 +0800
+
+    Added scripts support in survey template
+
+commit d7caac69bfcef676a8312544024947bb7380e67e
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Sat Sep 11 16:13:31 2021 +0800
+
+    Merging survey branches into one (#29)
+    
+    * Update survey.html
+    
+    * Survey now displays template based on survey data
+    
+    * Implemented Drag and Drop
+    
+    * Updating branch from survey_pages to merge into (#28)
+    
+    * fixed errors in __init__.py, models.py and requirements.txt
+    
+    * Update requirements.txt
+    
+    * Update requirements.txt
+    
+    * Update requirements.txt
+    
+    * Update requirements.txt
+    
+    * Update requirements.txt
+    
+    * Update requirements.txt
+    
+    * updated actions to "hopefully" install OS packages dependencies and fix build error
+    
+    * fixed syntax error
+    
+    * made package install SUDO to fix build error
+    
+    * added package dependcy to try fix build error
+    
+    * removed ufw=0.36 from reqs.txt
+    
+    * added more package dependcies :(
+    
+    * added note to action file
+    
+    * removed bad req
+    
+    * updated requirement to fix build error
+    
+    * changed req to fix build error
+    
+    * added OS dependency
+    
+    * added more OS dependencies to try fix build errors
+    
+    * updated OS packages
+    
+    * added a comment to reqs.txt
+    
+    * removed deprecated requirements
+    
+    * added package dependency to fix build error
+    
+    * added TODO comment
+    
+    * updated requirements
+    
+    * updated requirements.txt
+    
+    * Updated bases
+    
+    * Update README.md
+    
+    updated to the latest
+    
+    * Update app.py
+    
+    merging issues
+    
+    * Update config.py
+    
+    merging issues
+    
+    * Update .gitignore
+    
+    merging issues
+    
+    * Reverted .gitignore changes
+    
+    * removed broken tests
+    
+    * modified proc file to try fix heroku
+    
+    * updates recs and removed broken tests
+    
+    * changed cases of flask migrate to test for case sensitivity
+    
+    * set flask_migrate back to lower case
+    
+    Co-authored-by: LizP27 <22724088@student.uwa.edu.au>
+    Co-authored-by: LizP27 <82749554+LizP27@users.noreply.github.com>
+    Co-authored-by: lab2823 <49686616+lab2823@users.noreply.github.com>
+    Co-authored-by: lee <leeblag@gmail.com>
+    Co-authored-by: biancacelebrado <22710894@student.uwa.edu.au>
+    Co-authored-by: biancacelebrado <82673954+biancacelebrado@users.noreply.github.com>
+    
+    Co-authored-by: LizP27 <22724088@student.uwa.edu.au>
+    Co-authored-by: LizP27 <82749554+LizP27@users.noreply.github.com>
+    Co-authored-by: lab2823 <49686616+lab2823@users.noreply.github.com>
+    Co-authored-by: lee <leeblag@gmail.com>
+    Co-authored-by: biancacelebrado <22710894@student.uwa.edu.au>
+    Co-authored-by: biancacelebrado <82673954+biancacelebrado@users.noreply.github.com>
+
+commit 9aa7acb55b48fd56526f433c9aab5562a9fd63b5
+Merge: 7697b7c 0eb80c7
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 11 13:37:00 2021 +0800
+
+    Merge pull request #27 from lab2823/heroku_bug
+    
+    Heroku bug
+
+commit 7697b7cf75753c018ea1bb51412e8829f5f8ddc7
+Merge: 1ea8f0c ae6582c
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 11 13:36:49 2021 +0800
+
+    Merge pull request #26 from lab2823/survey_pages
+    
+    Pages update
+
+commit ae6582c435a79f6689d4275606fa5be888c07af4
+Merge: 1907a88 1ea8f0c
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 11 13:36:37 2021 +0800
+
+    Merge branch 'dev' into survey_pages
+
+commit ecf9232a6a0e9bc575cf33e3636998888748ca59
+Author: Andrew Tan <andrewtan1616@gmail.com>
+Date:   Fri Sep 10 21:23:44 2021 +0800
+
+    added postgresql stuff in models
+    
+    still incomplete and untested
+
+commit 0eb80c7a772ddece7c4a045030db2c414150f4a9
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 9 17:17:27 2021 +0800
+
+    deleted pipfiles
+
+commit 5bcb492d2abd58bb2ef420d72615d2a3e3eb5a35
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 9 16:54:56 2021 +0800
+
+    changed order of flask imports
+
+commit 1ea8f0c9900906d1dcd8ff323e1ec8d3505a4077
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 9 16:51:38 2021 +0800
+
+    set flask_migrate back to lower case
+
+commit df8ca423c71583c339413d797a90edde93dfff0f
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 9 16:46:00 2021 +0800
+
+    changed cases of flask migrate to test for case sensitivity
+
+commit 5f0c8d65ce38d716482e5edb6ef753ac39afc448
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 9 16:40:17 2021 +0800
+
+    updates recs and removed broken tests
+
+commit 2530f0650ada2754a60e6e37e328e03303afc6e8
+Author: lee <leeblag@gmail.com>
+Date:   Thu Sep 9 16:20:40 2021 +0800
+
+    modified proc file to try fix heroku
+
+commit 2f4a5aee91f362e4f1a44175cbf7eb2ca1a6e51d
+Author: lee <leeblag@gmail.com>
+Date:   Wed Sep 8 19:39:43 2021 +0800
+
+    removed broken tests
+
+commit 1907a881a0fe8ff21e84e3a5c248d76521bfc484
+Author: 滑板鞋 <62235014+jiekelove7@users.noreply.github.com>
+Date:   Wed Sep 8 19:30:27 2021 +0800
+
+    Reverted .gitignore changes
+
+commit 7eda6087d431fe27c22a673fa922fa0c8ad4d7cd
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Wed Sep 8 19:04:01 2021 +0800
+
+    admin model
+    
+    forgot to push
+
+commit 1603ce130cff1e9e769ac0fbb3d5e497c4674be9
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 7 00:22:29 2021 +0800
+
+    Update .gitignore
+    
+    merging issues
+
+commit c3fcb974d92a356f55d5099fc4880a7f5d8c0420
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 7 00:17:58 2021 +0800
+
+    Update config.py
+    
+    merging issues
+
+commit 28363b6787980f924b0df2efc1be9b02f8819fe9
+Merge: 2266920 4cd5555
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 7 00:13:59 2021 +0800
+
+    Merge branch 'survey_pages' of https://github.com/lab2823/QMethodology_CITS3200 into survey_pages
+
+commit 22669200e8c27b4bfb31753e08226492e6e967fb
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 7 00:13:33 2021 +0800
+
+    Update app.py
+    
+    merging issues
+
+commit 4cd5555aa248e72c38e7c1b01b425040e7f14e1b
+Author: biancacelebrado <82673954+biancacelebrado@users.noreply.github.com>
+Date:   Tue Sep 7 00:06:41 2021 +0800
+
+    Update README.md
+    
+    updated to the latest
+
+commit 7d475e684faf061846bc6d2ce8d4b2390481c004
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Tue Sep 7 00:01:24 2021 +0800
+
+    Updated bases
+
+commit dff225790370262c6181af9cc387ab43396190e9
+Merge: 4589cec 78df823
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Mon Sep 6 23:16:55 2021 +0800
+
+    Merge branch 'dev' into non_survey_pages
+
+commit 78df823ada9c6819de37089caedf7c0635098fdf
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 6 20:43:09 2021 +0800
+
+    updated requirements.txt
+
+commit 704c061ad890358861b6613f4e3bd228b6551ded
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 6 20:39:39 2021 +0800
+
+    updated requirements
+
+commit fef289e1f8e8f32fc05562f9e67a431b9318192f
+Merge: 333ddc5 d30c979
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 19:45:57 2021 +0800
+
+    Merge pull request #23 from lab2823/flask_issues
+    
+    Flask issues
+
+commit d30c979b01520b6029620cb9ebb6daf435e9c6ad
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 6 19:42:01 2021 +0800
+
+    added TODO comment
+
+commit ff22169cbc33116f14b753ad0ad88781f4ccecfb
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 6 19:35:47 2021 +0800
+
+    added package dependency to fix build error
+
+commit 93b9fa88011fb8c9e7ea8991f50e6c25f541cefb
+Author: lee <leeblag@gmail.com>
+Date:   Mon Sep 6 19:35:27 2021 +0800
+
+    removed deprecated requirements
+
+commit b9f5cb0da1b25f6cabbc55711754bd5af73c477b
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 18:32:04 2021 +0800
+
+    added a comment to reqs.txt
+
+commit f1bbf7ea421700900279b64667939d8e7b8f4ef8
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 17:20:03 2021 +0800
+
+    updated OS packages
+
+commit 2fba0249a525042faacc3ec3eb601d47d9774159
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 17:15:18 2021 +0800
+
+    added more OS dependencies to try fix build errors
+
+commit 5a746fd0bb101726db0fa3834bbfcef550e9caec
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 17:09:55 2021 +0800
+
+    added OS dependency
+
+commit f6cfd15bce06ad13078d8efd27f121f8d6978c0a
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 17:07:38 2021 +0800
+
+    changed req to fix build error
+
+commit 37291e0cc1d509b643368740bf61f90ee4b3db37
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 17:03:49 2021 +0800
+
+    updated requirement to fix build error
+
+commit 0fa77b55cce285aea292ccddbca01405419ac422
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 16:58:30 2021 +0800
+
+    removed bad req
+
+commit 900d0b9ea6e24f85c800bf38cb3240f538f16b76
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 16:58:24 2021 +0800
+
+    added note to action file
+
+commit 1738079d0d7edc66a364a7bad1fd9cf93706d675
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 16:39:21 2021 +0800
+
+    added more package dependcies :(
+
+commit ca7e02717c6e2e4d8235ac0895c7a5f89391f367
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 16:36:39 2021 +0800
+
+    removed ufw=0.36 from reqs.txt
+
+commit 40654a1af78575280f39b8ce3712c5f4ddffa9bc
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 16:28:22 2021 +0800
+
+    added package dependcy to try fix build error
+
+commit 575d67c90c150d8bae6b9f2e8cb023e7b81eb057
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 16:24:19 2021 +0800
+
+    made package install SUDO to fix build error
+
+commit 68023769aba440ec86577ce0de93f65b00fa41e6
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 16:17:19 2021 +0800
+
+    fixed syntax error
+
+commit 040f3be8b5e9845b7e0146ebc1b993671bf71a15
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Sep 6 16:15:53 2021 +0800
+
+    updated actions to "hopefully" install OS packages dependencies and fix build error
+
+commit 81c324afc1ccd1c239afedd258767e1b7fccc689
+Author: LizP27 <82749554+LizP27@users.noreply.github.com>
+Date:   Mon Sep 6 11:44:45 2021 +0800
+
+    Update requirements.txt
+
+commit 03815ada27153b5ca767792a9bd10d0ed8f23bd7
+Author: LizP27 <82749554+LizP27@users.noreply.github.com>
+Date:   Mon Sep 6 11:38:55 2021 +0800
+
+    Update requirements.txt
+
+commit cd49095e7c2d390e9d80b05445301dfc4f120e3c
+Author: LizP27 <82749554+LizP27@users.noreply.github.com>
+Date:   Mon Sep 6 11:33:35 2021 +0800
+
+    Update requirements.txt
+
+commit 4718ef2f44e72ce9b17fcc30ca2aa0e198672503
+Author: LizP27 <82749554+LizP27@users.noreply.github.com>
+Date:   Mon Sep 6 11:29:52 2021 +0800
+
+    Update requirements.txt
+
+commit e479e37599ecf22e9ac608d8fd92fbdf833bc725
+Author: LizP27 <82749554+LizP27@users.noreply.github.com>
+Date:   Mon Sep 6 11:27:28 2021 +0800
+
+    Update requirements.txt
+
+commit 3998c7e65967aa9ef6603225cdedf69a4abc4730
+Author: LizP27 <82749554+LizP27@users.noreply.github.com>
+Date:   Mon Sep 6 11:22:48 2021 +0800
+
+    Update requirements.txt
+
+commit 65151bf2779739b091daf80a8611bce8f002823a
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Mon Sep 6 11:03:51 2021 +0800
+
+    fixed errors in __init__.py, models.py and requirements.txt
+
+commit 4589cec1e3519dbc409438bc5e5ce57b104a44f0
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Sep 5 11:01:36 2021 +0800
+
+    Login, register, admin downloads page update
+
+commit a7da5b3d82fe468706f74e76f64e2e6fb49c8893
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Sep 5 09:53:43 2021 +0800
+
+    Revert "Merge remote-tracking branch 'origin/dev' into survey_pages"
+    
+    This reverts commit 75f3b97e400e4fe9ca4b74e753329dbc3ae78058, reversing
+    changes made to 2295b81b4bf227eb7b9d5002537339ec28dc79bf.
+
+commit 0ab0f2cd5b90fba1aa431a0bffcd3c4e04479ebd
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sun Sep 5 09:53:37 2021 +0800
+
+    Revert "Merge branch 'dev' into survey_pages"
+    
+    This reverts commit 09962165ae0d88a2dc134d9118220a3a68253cbe, reversing
+    changes made to 75f3b97e400e4fe9ca4b74e753329dbc3ae78058.
+
+commit 09962165ae0d88a2dc134d9118220a3a68253cbe
+Merge: 75f3b97 333ddc5
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sat Sep 4 15:14:08 2021 +0800
+
+    Merge branch 'dev' into survey_pages
+
+commit 75f3b97e400e4fe9ca4b74e753329dbc3ae78058
+Merge: 2295b81 e2bd455
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Sat Sep 4 15:11:07 2021 +0800
+
+    Merge remote-tracking branch 'origin/dev' into survey_pages
+
+commit 333ddc5e1ccae9375e815b32430e6df7f30af4ec
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 4 13:17:15 2021 +0800
+
+    Update requirements.txt
+    
+    readded apturl==0.5.2
+
+commit a74ab30255916ecf67ed264493551b02e2f06087
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 4 13:16:06 2021 +0800
+
+    Update requirements.txt
+    
+    removing apturl to see if it fixes it
+
+commit fca7f3eab742a03c9f0f298efcac88a9d3f6ca3d
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 4 13:14:34 2021 +0800
+
+    Update requirements.txt
+    
+    it couldnt find apturl==0.5.2, so im changing to 0.5.1 to test
+
+commit e1b45c3d6defd2eb5e81b753fa201b125bed91a9
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 4 13:05:25 2021 +0800
+
+    updated requirements
+
+commit 9eff64485f28cdcd2000c46ae6909701e73815ec
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Sep 4 12:21:35 2021 +0800
+
+    updated requirements.txt
+
+commit 4399474e05b79b6c524d515a23f3f3dc8616b4f5
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Fri Sep 3 16:32:44 2021 +0800
+
+    temp user response model
+
+commit 4da556724a87d5503113fe2184d2f4301a78625a
+Author: LizP27 <82749554+LizP27@users.noreply.github.com>
+Date:   Fri Sep 3 15:49:56 2021 +0800
+
+    Update routes.py
+
+commit 1fb570469218bf8298c5400bcd37b2c8c8718398
+Author: LizP27 <82749554+LizP27@users.noreply.github.com>
+Date:   Fri Sep 3 15:19:51 2021 +0800
+
+    Update routes.py
+
+commit 0acb8a01a88969c0fa739ce1c7379b520ca68283
+Merge: b29ed30 a2db262
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Fri Sep 3 15:14:28 2021 +0800
+
+    Merge pull request #22 from lab2823/multiple_users
+    
+    QMethodology Users
+
+commit a2db2623b653dbb99fff0cf746b7da69eaf34441
+Merge: bdb6d2b b29ed30
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Fri Sep 3 15:13:16 2021 +0800
+
+    Merge branch 'dev' into multiple_users
+
+commit 3a37472e9b284d3ef7cbfe6dc8e1a3d9a19ea0df
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Fri Sep 3 10:56:47 2021 +0800
+
+    Added db models most likely for final use
+
+commit bdb6d2ba3d08583d99836dd76b1e6dc09d031ce3
+Author: LizP27 <22724088@student.uwa.edu.au>
+Date:   Thu Sep 2 21:10:05 2021 +0800
+
+    User models (models.py), admin hierarchy and permissions (models.py), only admin can create users (routes.py) and registerable disabled (app.py)
+
+commit b29ed30967e70ef4c80460ddb8de3c6e2960274c
+Author: lab2823 <leeblag@gmail.com>
+Date:   Wed Sep 1 19:37:12 2021 +0800
+
+     removed heroku run from actions
+
+commit f4effae94c86104178571d81e388b8d6926f491a
+Merge: 64827be 5fbb155
+Author: lab2823 <leeblag@gmail.com>
+Date:   Wed Sep 1 19:31:33 2021 +0800
+
+    Merge branch 'dev' of https://github.com/lab2823/QMethodology_CITS3200 into dev
+
+commit 64827bee9b9aa8a9ac146180b3402251a97cd5cb
+Author: lab2823 <leeblag@gmail.com>
+Date:   Wed Sep 1 19:30:03 2021 +0800
+
+    removed heroku run from actions
+
+commit 5fbb155334d954f664845edb80bde330d435bd39
+Merge: e2bd455 f8538cc
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Wed Sep 1 17:12:24 2021 +0800
+
+    Merge pull request #21 from lab2823/main
+    
+    Pulling changes from main into dev
+
+commit f8538cc13b204d0fe8e1be9bced02d7a7f001624
+Merge: 912ab66 e2bd455
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Wed Sep 1 17:11:47 2021 +0800
+
+    Merge branch 'dev' into main
+
+commit 912ab66b67321907214a67efec1fd8666aea5eb0
+Merge: f3d2647 2295b81
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Wed Sep 1 17:02:32 2021 +0800
+
+    Merge pull request #20 from lab2823/survey_pages
+    
+    Sample survey page created
+
+commit 2295b81b4bf227eb7b9d5002537339ec28dc79bf
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Wed Sep 1 06:23:41 2021 +0800
+
+    Survey page created
+    
+    Sample survey page with disagree, neutral and agree boxes
+
+commit f135adbce546646be4d2f830817eeb95149d0dfa
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Wed Sep 1 04:40:01 2021 +0800
+
+    venv removed
+
+commit c44ec239dfa9279c81379dd6168e39e719f2393c
+Merge: 268d599 f3d2647
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Wed Sep 1 04:39:36 2021 +0800
+
+    venv removed
+
+commit f3d26477bb49eafed2036eb04cda87c5e8bad957
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Wed Sep 1 04:37:46 2021 +0800
+
+    venv removed
+
+commit 268d599ce345578fb9d268ab3bcf0e18c8813088
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Wed Sep 1 04:36:30 2021 +0800
+
+    Update .gitignore
+
+commit f33bbf0523559b4d7b96ecaf6f50c68c5c40e114
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Wed Sep 1 04:30:38 2021 +0800
+
+    venv removed
+
+commit 1bbff8a0e4b5f4ea91c2832f854a74ddec209fbe
+Author: biancacelebrado <22710894@student.uwa.edu.au>
+Date:   Wed Sep 1 04:25:39 2021 +0800
+
+    .flaskenv and .gitignore updated
+    
+    .flaskenv so you don't have to set the FLASK_APP environment variable when you open a new terminal window
+
+commit e2bd455ed2780912e881a9fe8013d53dc5c9d253
+Merge: 34c2023 9dc20d0
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Tue Aug 31 17:11:32 2021 +0800
+
+    Merge pull request #19 from lab2823/pytest
+    
+    Pytest
+
+commit 9dc20d0a859b87fe9eced42e47dbd50d5eb02ebd
+Author: lab2823 <leeblag@gmail.com>
+Date:   Tue Aug 31 17:10:41 2021 +0800
+
+    updated actions to fix import error
+
+commit 609aa8d261ee1f78882425d83f78bbafb6790243
+Author: lab2823 <leeblag@gmail.com>
+Date:   Tue Aug 31 16:40:30 2021 +0800
+
+    added a dummy test and removed broken password tests
+
+commit 9c7d5b539c894c14eb854b2ef14596f093e941b5
+Author: lab2823 <leeblag@gmail.com>
+Date:   Tue Aug 31 15:52:18 2021 +0800
+
+    updated test_model to fix parameter errors
+
+commit 2f5ddceb4eba5d06621eb51871f395212f0b3db5
+Author: lab2823 <leeblag@gmail.com>
+Date:   Tue Aug 31 15:51:35 2021 +0800
+
+    updated readme to include pytest command
+
+commit 02bae66f1445625ab73376552786ad8561264f03
+Author: lab2823 <leeblag@gmail.com>
+Date:   Tue Aug 31 15:51:16 2021 +0800
+
+    updated sql alchemy requirement to remove flask run error
+
+commit 14f9805d9ba4917176435ca29035e85779021c3e
+Author: lab2823 <leeblag@gmail.com>
+Date:   Tue Aug 31 15:35:07 2021 +0800
+
+    created basic unit test for user model
+
+commit 314456d978d3bab832bbdfab72acea3de06e1ac9
+Author: lab2823 <leeblag@gmail.com>
+Date:   Tue Aug 31 15:22:58 2021 +0800
+
+    update requirement.txt to include pytest
+
+commit 34c2023f9f08d2b9a72bd3286b1b37a9a878eed1
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 17:57:06 2021 +0800
+
+    told linter to ignore venv file
+
+commit f4631eeee6ffd9c9e88ecb9d276c96575cd1476d
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 17:55:50 2021 +0800
+
+    added venv deactivation to readme
+
+commit 5e9866a1650ecbf1a98fd93fc749e48dd6862c6a
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 17:24:40 2021 +0800
+
+    added venvs to git ignore
+
+commit a012d9635d3928d6771de9ad79742fff980f3a09
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 17:20:49 2021 +0800
+
+    updated readme and git ignore
+
+commit c7f97365a9719f80e9177f0c1c6a2124bcdf1b01
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 17:07:40 2021 +0800
+
+    updated readme
+
+commit 443240077f518e18158a6ba2d42c2176f735d566
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 16:53:57 2021 +0800
+
+    updated requirements to fix testing
+
+commit a229fe5d7663a4cdff7aef266297d3dfc5abef90
+Merge: aea91df 6147536
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Aug 30 16:47:29 2021 +0800
+
+    Merge pull request #17 from lab2823/CI/CD
+    
+    changed development to dev in workflow
+
+commit 6147536615c15751c2eb1e6a6cad1562af299518
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 16:46:14 2021 +0800
+
+    changed development to dev in workflow
+
+commit aea91df2c7c5c1be06c0265a14881fe776cbef36
+Merge: dcb37fd b025716
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Mon Aug 30 16:41:05 2021 +0800
+
+    Merge pull request #16 from lab2823/CI/CD
+    
+    CI/CD
+
+commit b025716cd393cc708c63ef278e3a7127866d4aa9
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 16:38:47 2021 +0800
+
+    set up automated testing
+
+commit 710092356964a293fa39510e9f99ab0b907c01c1
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 16:26:26 2021 +0800
+
+    created a templated yml file for CI/CD
+
+commit dcb37fd61c1bbcfd9eaa58c17bd3d2fe1325bd7a
+Author: lab2823 <leeblag@gmail.com>
+Date:   Mon Aug 30 16:22:51 2021 +0800
+
+    added some comments
+
+commit b8b6c480d0ac0ef87474b0c6d12a56d1c557f269
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Sun Aug 29 21:24:30 2021 +0800
+
+    Database stuff, displaying results from db
+    
+    Needs more work. Displays incorrectly.
+
+commit 5a8d2b4243a821c5afe9ca498f9f8acd8c980c0e
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Fri Aug 27 22:31:41 2021 +0800
+
+    database models and etc
+    
+    Able to store results from a form into a db, but unable to return properly yet. Will work on it tomorrow
+
+commit c3ae08debb4685e50e35d7ed5a5ce7fde5fa847f
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Fri Aug 27 17:42:11 2021 +0800
+
+    routes to collect data from form
+
+commit 96d653ad46f579b43cede55c3dbfe060e73b59a5
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Thu Aug 26 23:06:53 2021 +0800
+
+    form submission
+    
+    still incomplete, gotta figure out how to store and then get the info submitted
+
+commit a327bfa186e5450ee2dabf70c2ba985f9136758c
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Mon Aug 23 21:29:25 2021 +0800
+
+    Minor typo
+
+commit f319a164b456055e7fbae632c1dd1e0f4f997e3e
+Author: Pogtan <andrewtan1616@gmail.com>
+Date:   Sun Aug 22 21:59:41 2021 +0800
+
+    Added basic templates, database, etc
+    
+    Added basic flask stuff like routes and models, SQLAlchemy database, login and registration functionality, and basic templates up to Chapter 5 of Flask Mega-Tutorial from webdev unit
+
+commit 41d9b21d584d13708a920d0d032810a8a52bf3f6
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:44:45 2021 +0800
+
+    updated prod URI
+
+commit f05156c2ce2a880dac1d6e87c55257d25864a725
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:24:38 2021 +0800
+
+    updated python runtime version
+
+commit c26fa81e6d9fbde41046d945864bbcf1c03dd77b
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:20:07 2021 +0800
+
+    changed runtime version to be heroku compatible
+
+commit 4b32d7f51a07aa0ad77a67b91026791e6a4ff306
+Merge: 13972a5 34dbab7
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Sat Aug 14 16:16:12 2021 +0800
+
+    Merge pull request #3 from lab2823/basic_app
+    
+    Basic app
+
+commit 34dbab71664b2c52f422b516f0b5cf247d8dc120
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:13:23 2021 +0800
+
+    moved index to templates folder
+
+commit dc97378565c0ce805b188800ef701a093a583822
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:13:01 2021 +0800
+
+    added gitignore
+
+commit 486b1e69da4b4dcb2c3fd595f832f0e650903ade
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:12:39 2021 +0800
+
+    changed env from dev to pro
+
+commit 2c21bfa730b5752b588680f0c71fb99de8cf7f20
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:12:25 2021 +0800
+
+    added runtime.txt
+
+commit ac0369c85a2d14236279e655b06a6ee82e5fd7be
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:10:32 2021 +0800
+
+    added procfile
+
+commit 3345f1674642c3a2b72b38332fdad7400040960c
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:09:44 2021 +0800
+
+    added requirements.txt
+
+commit 5ad95171026c7ed9149cffcb024b4066c45fa557
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 16:02:40 2021 +0800
+
+    Template app for feedback form
+
+commit a970b46abb566b415fe784cdb8f633c85bafa9dc
+Author: lab2823 <leeblag@gmail.com>
+Date:   Sat Aug 14 14:20:48 2021 +0800
+
+    basic HTML form
+
+commit 13972a5f23cdd36e14f362f13b12c73a2d25f625
+Merge: 95ee487 2cd3754
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Thu Aug 12 13:44:03 2021 +0800
+
+    Merge pull request #1 from lab2823/test
+    
+    Intial commit /hello world
+
+commit 2cd3754936af49883f90b8c7468b3fab0139318a
+Author: lab2823 <leeblag@gmail.com>
+Date:   Thu Aug 12 13:30:20 2021 +0800
+
+    Intial commit /hello world
+
+commit 95ee487c95d042a4d77f1cdb50e1081f7d7db211
+Author: lab2823 <49686616+lab2823@users.noreply.github.com>
+Date:   Tue Aug 10 21:50:37 2021 +0800
+
+    Initial commit

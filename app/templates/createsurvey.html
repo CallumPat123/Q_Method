@@ -1,0 +1,1065 @@
+{% extends "base_admin.html" %} {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="container" style="min-width:1000px;margin-top: 5%">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 style="margin-bottom:20px" text-align="center">
+            Create New Survey:
+          </h2>
+        </div>
+
+        <div class="panel-group">
+          <form
+            action=""
+            method="POST"
+            class="form-control"
+            id="survey-form"
+            autocomplete="off"
+            onsubmit="return validate_fields();"
+          >
+            <div>
+              <!--new-->
+              <div class="header">
+                <h5 style="padding-top:5px">Survey Title:</h5>
+
+                <!--new-->
+              </div>
+              <input
+                name="survey_name"
+                id="survey_name"
+                type="text"
+                class="form-control input-group"
+                required
+              />
+            </div>
+
+            <!--new-->
+
+            <!--new-->
+            <div>
+              <h5 style="margin-top:15px">Survey Published?</h5>
+              <input type="radio" name="publish" value="1" /> True
+              <input type="radio" name="publish" value="2" checked="true" />
+              False
+            </div>
+
+            <h5 style="margin-top:15px">Instructions</h5>
+
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="display_instruction(0)"
+              >
+                Start
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="display_instruction(1)"
+              >
+                ID Information
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="display_instruction(2)"
+              >
+                Part 1
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="display_instruction(3)"
+              >
+                Condition of Instruction
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="display_instruction(4)"
+              >
+                Part 2
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="display_instruction(5)"
+              >
+                Part 3
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="display_instruction(6)"
+              >
+                Part 4
+              </button>
+            </div>
+
+            <div class="instruction-input">
+              <h5 style="margin-top:15px">Start</h5>
+              <textarea
+                name="instructions-start"
+                id="instructions-start"
+                class="form-control input-group"
+                placeholder="Initial instructions for survey"
+              >
+                {%- for line in instructions[0] -%}
+                  {%- if loop.index != 1 -%}
+                    &#013; &#013;
+                  {%- endif -%}  
+                  {{line}}
+                {%- endfor -%}
+              </textarea>
+            </div>
+
+            <div class="instruction-input">
+              <h6>SURVEY ID INFORMATION</h6>
+              <textarea
+                name="instructions-id"
+                id="instructions-id"
+                class="form-control input-group"
+                placeholder="Instructions for their IDs"
+              >
+                {%- for line in instructions[1] -%}
+                  {%- if loop.index != 1 -%}
+                    &#013; &#013;
+                  {%- endif -%}  
+                  {{line}}
+                {%- endfor -%}
+              </textarea>
+            </div>
+
+            <div class="instruction-input">
+              <h6>PAGE 1</h6>
+              <textarea
+                name="instructions-1"
+                id="instructions-1"
+                class="form-control input-group"
+                placeholder="Instructions for their registration questions"
+              >
+                {%- for line in instructions[2] -%}
+                {%- if loop.index != 1 -%}
+                  &#013; &#013;
+                {%- endif -%}  
+                {{line}}
+              {%- endfor -%}
+              </textarea>
+            </div>
+            <div class="instruction-input">
+              <h6>Condition of Instruction</h6>
+              <textarea
+                name="instructions-2"
+                id="instructions-2"
+                class="form-control input-group"
+                placeholder="Conditions of instructions"
+              >
+                {%- for line in instructions[3] -%}
+                {%- if loop.index != 1 -%}
+                  &#013; &#013;
+                {%- endif -%}  
+                {{line}}
+              {%- endfor -%}
+              </textarea>
+            </div>
+
+            <div class="instruction-input">
+              <h6>PAGE 2</h6>
+              <textarea
+                name="instructions-3"
+                id="instructions-3"
+                class="form-control input-group"
+                placeholder="Instructions for the initial sort"
+              >
+                {%- for line in instructions[4] -%}
+                {%- if loop.index != 1 -%}
+                  &#013; &#013;
+                {%- endif -%}  
+                {{line}}
+              {%- endfor -%}
+              </textarea>
+            </div>
+
+            <div class="instruction-input">
+              <h6>PAGE 3</h6>
+              <textarea
+                name="instructions-4"
+                id="instructions-4"
+                class="form-control input-group"
+                placeholder="Instructions for Q-Sort"
+              >
+                {%- for line in instructions[5] -%}
+                {%- if loop.index != 1 -%}
+                  &#013; &#013;
+                {%- endif -%}  
+                {{line}}
+              {%- endfor -%}
+              </textarea>
+            </div>
+
+            <div class="instruction-input">
+              <h6>PAGE 4</h6>
+              <textarea
+                name="instructions-5"
+                id="instructions-5"
+                class="form-control input-group"
+                placeholder="Instructions for the questionnaire"
+              >
+                {%- for line in instructions[6] -%}
+                {%- if loop.index != 1 -%}
+                  &#013; &#013;
+                {%- endif -%}  
+                {{line}}
+              {%- endfor -%}
+              </textarea>
+            </div>
+
+            <div>
+              <h5 style="margin-top:15px">Range</h5>
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="number"
+                    name="range"
+                    id="rangemin"
+                    class="form-control input-group num-in"
+                    placeholder="Lower Range"
+                    value="{{range[0]}}"
+                    required
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="number"
+                    name="range"
+                    id="rangemax"
+                    class="form-control input-group num-in"
+                    placeholder="Upper Range"
+                    value="{{range[1]}}"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!--the grid-->
+            <div>
+              <div class="header">
+                <h5>Table generated from given values</h5>
+              </div>
+              <botton
+                class="btn btn-primary"
+                type="button"
+                style="display: block; margin-top: 5px;"
+                id="qsorttable"
+                onclick="generateqsort()"
+                >Generate Table</botton
+              ><br />
+              <div class="current-qsort">
+                <div id="currentsort"></div>
+
+                <div style="display:flex;margin-top:10px">
+                  <p>
+                    Number of boxes:
+                  </p>
+                  <p style="margin-left:3px" id="grid-count">
+                    0
+                  </p>
+                </div>
+
+                <div class="cols"></div>
+              </div>
+            </div>
+
+            <div>
+              <h5>Registration Questions:</h5>
+              <p>
+                To create a multiple choice question, enter each option on a new
+                line after the question.
+              </p>
+              <div id="register">
+                <textarea
+                  id="reg0"
+                  class="form-control input-group"
+                  name="register"
+                  required
+                ></textarea>
+                <button
+                  id="reg0-remove"
+                  class="btn btn-danger remove-reg"
+                  type="button"
+                  onclick="removeRegister(0)"
+                >
+                  Remove Question
+                </button>
+              </div>
+              <!--<button class="btn btn-primary" type="button" style="display: block; margin-top: 5px;" id="addq"><span class="glyphicon glyphicon-plus"></span>Add a question</button> -->
+              <button
+                class="btn btn-primary"
+                type="button"
+                style="display: block; margin-top: 5px;"
+                onclick="addRegister()"
+              >
+                Add Question
+              </button>
+            </div>
+
+            <!--new-->
+            <div>
+              <h5 style="margin-top:15px">Statements</h5>
+              <p>
+                Please input all statements here separated each by a new line.
+                It may be easier to write all the statements in a separate
+                document before copy and pasting here.
+              </p>
+              <p class="text-right">
+                Number of statements: <span id="statements-notice">0</span>
+              </p>
+              <textarea
+                id="statements-input"
+                name="statements"
+                class="form-control input-group"
+                placeholder="Statements"
+                required
+              ></textarea>
+            </div>
+
+            <!--new-->
+            <div>
+              <h5 style="margin-top:15px">Sorting Criteria</h5>
+              <input
+                type="text"
+                name="criteria-negative"
+                class="form-control input-group"
+                style="border-color: red;"
+                value="{{criteria[0]}}"
+                required
+              />
+              <input
+                type="text"
+                name="criteria-neutral"
+                class="form-control input-group"
+                style="border-color: rgb(116, 116, 0);"
+                value="{{criteria[1]}}"
+                required
+              />
+              <input
+                type="text"
+                name="criteria-positive"
+                class="form-control input-group"
+                style="border-color: green;"
+                value="{{criteria[2]}}"
+                required
+              />
+            </div>
+
+            <!--new-->
+            <div>
+              <h5 style="margin-top:15px">Questionnaire</h5>
+              <p>
+                Leave the fields blank if you do not wish to ask on their
+                Q-sort. Additional short answer questions can be made by
+                clicking 'Add Question'
+              </p>
+              <div id="questionnaire">
+                <input
+                  type="text"
+                  name="least-questionnaire"
+                  class="form-control input-group"
+                  style="border-color: red;"
+                  value="{{questionnaire[0]}}"
+                  placeholder="Question their choice of negative sort"
+                />
+                <input
+                  type="text"
+                  name="most-questionnaire"
+                  class="form-control input-group"
+                  style="border-color: green;"
+                  value="{{questionnaire[1]}}"
+                  placeholder="Question their choice of positive sort"
+                />
+              </div>
+              <button
+                class="btn btn-primary"
+                type="button"
+                style="display: block; margin-top: 5px;"
+                id="addQue"
+                onclick="addQuestionnaire();"
+              >
+                Add Question
+              </button>
+            </div>
+
+            <input type="submit" value="Submit" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+    display_instruction(0);
+    // Handle the user clicking on "Add a question"
+    $("#addq").click(function() {
+      // a nested function creates the HTML DOM structure.
+      smLib.surveyForms.addQuestion($("#register"));
+    });
+  });
+
+  $(function() {
+    window.smLib = window.smLib || {};
+    smLib.forms = smLib.forms || {
+      anchorEl: $("<a>"),
+      buttonEl: $("<input>").prop("type", "button"),
+      checkboxEl: $("<input>").prop("type", "checkbox"),
+      radioEl: $("<input>").prop("type", "radio"),
+      textEl: $("<input>").prop("type", "text"),
+      textareaEl: $("<textarea>"),
+      fieldsetEl: $("<fieldset>"),
+      labelEl: $("<label>"),
+      spanEl: $("<span>"),
+      divEl: $("<div>")
+    };
+    smLib.icons = smLib.icons || {
+      addEl: smLib.forms.spanEl.clone().prop({
+        class: "glyphicon glyphicon-plus"
+      }),
+      removeEl: smLib.forms.spanEl.clone().prop({
+        class: "glyphicon glyphicon-minus"
+      })
+    };
+
+    smLib.surveyForms = smLib.surveyForms || {
+      //Handles DOM Creation//
+      addQuestion: function(container) {
+        var that = this;
+        this.container = container;
+        var i = this.container.find(".question-container").length + 1;
+        /***
+         * When the question is  being created, it will be contained in its own element,
+         *   and the answer portion will also be contained. The answer pane will contain the
+         *   three options for an answer, whether text, radio or checkbox, as well as allowing
+         *   the creation of labels for the radio/checkbox options.
+         ***/
+
+        // Create question element, simply a text input wrapped in a label.
+        var newQuestionEl = smLib.forms.textEl.clone().prop({
+          name: "q" + i,
+          id: "q" + i,
+          class: "form-control",
+          name: "register"
+        });
+        var newQuestion = smLib.forms.divEl
+          .clone()
+          .prop({
+            class: "question-pane"
+          })
+          .append("Question #" + i + ": ", newQuestionEl);
+
+        // Create an array of options to determine what type of question this is:
+        var newQTypeArr = [];
+        var newQTypeRadioEl = smLib.forms.radioEl
+          .clone()
+          .prop({
+            name: "qType" + i,
+            id: "qType" + i,
+            value: "radio",
+            class: "choices radiobox"
+          })
+          .on("click", function() {
+            smLib.surveyForms.showOptionsPane(radioOptions);
+          });
+        newQTypeArr[0] = smLib.forms.labelEl
+          .clone()
+          .append(newQTypeRadioEl, " Radio");
+
+        var newQTypeCheckEl = smLib.forms.radioEl
+          .clone()
+          .prop({
+            name: "qType" + i,
+            id: "qType" + i,
+            value: "checkbox",
+            class: "choices radiobox"
+          })
+          .on("click", function() {
+            smLib.surveyForms.showOptionsPane(checkboxOptions);
+          });
+        newQTypeArr[1] = smLib.forms.labelEl
+          .clone()
+          .append(newQTypeCheckEl, "Checkbox");
+
+        var newQTypeTextEl = smLib.forms.radioEl
+          .clone()
+          .prop({
+            name: "qType" + i,
+            id: "qType" + i,
+            value: "text",
+            class: "choices radiobox"
+          })
+          .on("click", function() {
+            smLib.surveyForms.showOptionsPane(textOptions);
+          });
+        newQTypeArr[2] = smLib.forms.labelEl
+          .clone()
+          .append(newQTypeTextEl, "Text");
+
+        //MCQ
+        var addRadioChoiceButton = smLib.forms.buttonEl
+          .clone()
+          .prop({
+            class: "btn btn-primary add-radio-choice answer-option",
+            value: "Add Radio button"
+          })
+          .append(smLib.icons.addEl.clone(), "Add choices")
+          .on("click", function() {
+            that.addRadioOptions(radioOptions);
+          });
+
+        var radioOptions = smLib.forms.divEl
+          .clone()
+          .prop({
+            class: "radio-answer-options"
+          })
+          .data("control-type", "radio")
+          .append(addRadioChoiceButton)
+          .on("change", function() {
+            that.updatePreview(newQuestion, newAnswerEl, previewContainerEl);
+          })
+          .hide();
+        this.addRadioOptions(radioOptions);
+
+        //Checkbox
+        var addCheckboxChoiceButton = smLib.forms.buttonEl
+          .clone()
+          .prop({
+            class: "btn btn-primary add-checkbox-choice answer-option",
+            value: "Add Checkbox"
+          })
+          .append(smLib.icons.addEl.clone(), "Add choices")
+          .on("click", function() {
+            that.addCheckboxOptions(checkboxOptions);
+          });
+        var checkboxOptions = smLib.forms.divEl
+          .clone()
+          .prop({
+            class: "checkbox-answer-options"
+          })
+          .append(addCheckboxChoiceButton)
+          .on("change", function() {
+            that.updatePreview(newQuestion, newAnswerEl, previewContainerEl);
+          })
+          .data("control-type", "checkbox")
+          .hide();
+        this.addCheckboxOptions(checkboxOptions);
+
+        //Text
+        var textOptions = smLib.forms.divEl
+          .clone()
+          .prop({
+            class: "text-answer-options"
+          })
+          .on("change", function() {
+            that.updatePreview(newQuestion, newAnswerEl, previewContainerEl);
+          })
+          .data("control-type", "text")
+          .hide();
+        this.addTextOptions(textOptions);
+
+        // Answer options pane
+        var newAnswerEl = smLib.forms.divEl
+          .clone()
+          .prop({
+            class: "answer-options-pane"
+          })
+          .append(radioOptions, checkboxOptions, textOptions);
+
+        var newAnswer = smLib.forms.divEl
+          .clone()
+          .prop({
+            class: "answer-pane"
+          })
+          .append(newQTypeArr, newAnswerEl);
+
+        var previewQuestion = smLib.forms.divEl.clone().prop({
+          class: "preview-question"
+        });
+        var previewAnswer = smLib.forms.divEl.clone().prop({
+          class: "preview-answer"
+        });
+        var previewContainerEl = smLib.forms.divEl
+          .clone()
+          .prop({
+            class: "preview-pane"
+          })
+          .on("click", function() {
+            that.togglePreview(previewContainerEl);
+          })
+          .append(previewQuestion, previewAnswer)
+          .hide();
+
+        var saveButton = smLib.forms.buttonEl
+          .clone()
+          .prop({
+            value: "Save question"
+          })
+          .on("click", function() {
+            that.togglePreview(previewContainerEl);
+          });
+        var deleteButton = smLib.forms.buttonEl
+          .clone()
+          .prop({
+            value: "Remove queston"
+          })
+          .on("click", function() {
+            if (
+              confirm(
+                "Are you sure you want to remove this question? Action cannot be undone."
+              )
+            ) {
+              newQContainerEl.remove();
+            }
+          });
+        var questionControls = smLib.forms.divEl
+          .clone()
+          .prop({
+            class: "controls-pane"
+          })
+          .append(saveButton, deleteButton);
+
+        // The question container pane will contain both the question and the answer container.
+
+        var newQContainerEl = smLib.forms.divEl
+          .clone()
+          .prop({
+            class: "question-container"
+          })
+          .append(newQuestion, newAnswer, previewContainerEl, questionControls);
+
+        this.container.append(newQContainerEl);
+      }, //end addQuestion()
+      addRadioOptions: function(radioPane) {
+        /***
+         * Another DOM element creation function. This creates the radio
+         *   button text option, and if it's the first, a button to add
+         *   more options.
+         ***/
+
+        // We want to get the length of the current choices,
+        //  as this will give us an index for the new option
+
+        var radioChoice = radioPane.find(".radio-choice");
+        var choice_c = radioChoice.length;
+
+        var radioTempEl = smLib.forms.radioEl.clone().prop({
+          class: "answer-option radio-choice"
+        });
+
+        var radioChoiceTextEl = smLib.forms.textEl.clone().prop({
+          class:
+            "form-control answer-option radio-choice radiochoice" + choice_c,
+          name: "register"
+          //"name": "radiochoice" + choice_c,
+        });
+
+        var radioChoiceEl = smLib.forms.labelEl
+          .clone()
+          .append(radioTempEl, radioChoiceTextEl);
+        // Make sure to add the new text element BEFORE the
+        //    add more button.
+        radioPane.find(".add-radio-choice").before(radioChoiceEl);
+      },
+      addTextOptions: function(textPane) {
+        this.textPane = textPane;
+
+        var textChoiceTextEl = smLib.forms.textEl.clone().prop({
+          class: "form-control answer-option text-choice",
+          name: "register"
+          //"name": "text-placeholder",
+        });
+
+        var textChoiceEl = smLib.forms.labelEl
+          .clone()
+          .append("Placeholder text: ", textChoiceTextEl);
+        textPane.append(textChoiceEl);
+      },
+      addCheckboxOptions: function(checkboxPane) {
+        // We want to get the length of the current choices,
+        //  as this will give us an index for the new option
+
+        var checkboxChoice = checkboxPane.find(".checkbox-choice");
+        var choice_c = checkboxChoice.length;
+
+        var checkboxTempEl = smLib.forms.checkboxEl.clone().prop({
+          class: "answer-option checkbox-choice"
+        });
+        var checkboxChoiceTextEl = smLib.forms.textEl.clone().prop({
+          class:
+            "form-control answer-option checkbox-choice checkboxchoice" +
+            choice_c,
+          name: "register"
+          //"name": "checkboxchoice" + choice_c,
+        });
+
+        var checkboxChoiceEl = smLib.forms.labelEl
+          .clone()
+          .append(checkboxTempEl, checkboxChoiceTextEl);
+        // Make sure to add the new text element BEFORE the add more button.
+        checkboxPane.find(".add-checkbox-choice").before(checkboxChoiceEl);
+      },
+      showOptionsPane: function(optionsPane) {
+        if (optionsPane.not(":visible"))
+          optionsPane
+            .slideDown()
+            .siblings()
+            .slideUp();
+      },
+      updatePreview: function(questionPane, answerPane, previewPane) {
+        var previewQuestion = previewPane.find(".preview-question").empty();
+        var previewAnswer = previewPane.find(".preview-answer").empty();
+
+        var question =
+          questionPane.text() + questionPane.find("input[type='text']").val();
+        var answerOption = answerPane.find(":visible");
+        var answers = answerOption.find("input[type='text']");
+
+        previewQuestion.text(question);
+
+        switch (answerOption.data("control-type")) {
+          case "radio":
+            answers.each(function() {
+              var labelText = $(this).val();
+              var rbEl = smLib.forms.radioEl.clone();
+              var answerLabelEl = smLib.forms.labelEl
+                .clone()
+                .append(rbEl, labelText);
+              previewAnswer.append(answerLabelEl);
+            });
+            break;
+          case "checkbox":
+            answers.each(function() {
+              var cbEl = smLib.forms.checkboxEl.clone();
+              var answerLabelEl = smLib.forms.labelEl
+                .clone()
+                .append(cbEl, $(this).val());
+              previewAnswer.append(answerLabelEl);
+            });
+            break;
+          case "text":
+            answers.each(function() {
+              var textblockEl = smLib.forms.textEl.clone().attr({
+                placeholder: $(this).val()
+              });
+              previewAnswer.append(textblockEl);
+            });
+            break;
+        }
+      },
+      togglePreview: function(previewPane) {
+        if (previewPane.is(":visible")) {
+          previewPane
+            .hide()
+            .siblings()
+            .show();
+        } else {
+          previewPane
+            .show()
+            .siblings()
+            .hide();
+        }
+      }
+    };
+  });
+
+  function minusRow(i, min, add) {
+    const index = i + Math.abs(min);
+    const table = document.querySelector(".block-container");
+    const count = document.getElementById("grid-count");
+    if (add) {
+      const newCount = parseInt(count.innerHTML) + 1;
+      count.innerHTML = newCount;
+      table.children[index].children[0].insertAdjacentHTML(
+        "beforebegin",
+        ` <div style="
+            height: 30px;
+            background-color: #ecf0f1;
+            border: 1px solid grey;
+             border-radius: 5px;
+             margin-bottom:5px;
+          "></div>`
+      );
+    } else {
+      if (table.children[index].children.length > 1) {
+        const newCount = parseInt(count.innerHTML) - 1;
+        count.innerHTML = newCount;
+        table.children[index].children[0].remove();
+      }
+    }
+  }
+
+  //new-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  function generateqsort() {
+    var rangemin = +document.getElementById("rangemin").value;
+    var rangemax = +document.getElementById("rangemax").value;
+
+    const min = document.getElementById("rangemin").value;
+    const max = document.getElementById("rangemax").value;
+
+    document.getElementById("grid-count").innerHTML = max - min + 1;
+
+    var a = 1;
+
+    if (rangemax < 0) {
+      const message = `<div style="width:450px; padding:10px;background-color:red;border-radius:5px"><p style="color: white;height: 25px;margin-bottom: 0;width: 406px;">The right input must contain a positive number. </p></div>`;
+      document.getElementById("currentsort").innerHTML = message;
+    } else if (rangemax - rangemin > 20) {
+      const message = `<div style="width:450px; padding:10px;background-color:red;border-radius:5px"><p style="color: white;height: 25px;margin-bottom: 0;width: 417px;margin-left: 8px;">The maximum number of columns allowed is 20. You currently have ${rangemax -
+        rangemin} columns.</p></div>`;
+      document.getElementById("currentsort").innerHTML = message;
+    } else {
+      while (rangemin != rangemax) {
+        rangemin = rangemin + 1;
+        a = a + 1;
+      }
+
+      var frames = "";
+      for (i = min; i <= max; i++) {
+        frames += "1fr ";
+      }
+      var table = "";
+
+      // Add table cells body
+      table += `<div class="block-container" style="min-width:400px;grid-area: blocks;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: ${frames};
+    justify-content: space-evenly;;
+          margin-bottom:5px">`;
+      for (i = min; i <= max; i++) {
+        table += `
+        <div style="
+          width: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;"
+        >
+          <div style="
+            height: 30px;
+            background-color: #ecf0f1;
+            border: 1px solid grey;
+             border-radius: 5px;
+             
+          "></div>
+        </div>`;
+      }
+
+      table += "</div>";
+
+      // Add plus/minus buttons
+
+      table += `<div style="min-width:400px;grid-area: plus-minus;
+    display: grid;;
+    margin-bottom:5px;
+    grid-gap: 5px;
+    grid-template-columns: ${frames};">`;
+
+      for (i = min; i <= max; i++) {
+        table += `
+        <div style = "
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          text-align: center;
+          height: 30px;
+          width: auto;
+          border-radius: 5px;
+          "
+          > 
+            <div onClick="minusRow(${i}, ${min})" style="
+              background-color: #d4d8d8;
+              border: 1px solid grey;
+              border-radius: 5px;
+              width: 50%;" 
+             >
+             <i style="color:white;margin-top: 6px;" class="fa fa-minus"></i>
+             </div>
+            <div 
+            onClick="minusRow(${i}, ${min}, ${true})"
+              style="
+              background-color: #d4d8d8;
+              border: 1px solid grey;
+              border-radius: 5px;
+              width: 50%;
+              margin-left:4px"
+            >
+            <i style="color: white;margin-top: 6px;" class="fa fa-plus"></i>
+            </div>
+          </div>`;
+      }
+
+      table += "</div>";
+
+      // Add index numbers
+      table += `<div style="min-width:400px;grid-area: numbers;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: ${frames};
+    justify-content: space-evenly;
+    width: 100%;;
+    margin-bottom:5px">`;
+
+      for (i = min; i <= max; i++) {
+        table += `<h5 style="color:#495057;width: auto;
+    text-align: center;">${i}</h5>`;
+      }
+      table += `</div>`;
+
+      //adds table to html
+      document.getElementById("currentsort").innerHTML = table;
+    }
+
+    // let columns=a;
+    // var len=document.getElementsByClassName("rows").length;
+    // var boxes=[];
+    // let even=false;
+    // for(i=0; i<len;i++){
+    //   var box=document.getElementsByClassName("rows")[i];
+    //    console.log(parseInt(box.value));
+    //    boxes.push(box.value);
+    //    if((parseInt(boxes[i]))%2==0){
+    //      even=true;
+    //   }
+    //   if(boxes[i] > columns || boxes[i] <= 0) {
+    //     $("#currentsort").html("Your number of columns cannot exceed the inputted range and cannot be negative or zero.");
+    //     return
+    //   }
+    //   if(boxes[i] == "") {
+    //     return
+    //   }
+    //   }
+    // //if even run an error message
+    // if(columns%2==0){
+    //   $("#currentsort").html("QMethodology table with even number of columns cannot be generated. Please change range input so that the length of the range between maximum and minimum values are odd.");
+    // }
+    // //if the columns per row is even
+    // else if(even){
+    //   $("#currentsort").html("QMethodology table can only be generated of rows with odd number of columns. Please change column inputs so that each row has an odd number of columns.");
+    // }
+    // else{
+    //   //sends the collected info into the next function
+    //   let tablearr=createtable(columns, boxes);
+
+    //   //creates table
+    //   var thead='<table style="width:100%">\n';
+    //   var tab='';
+    //   for(i=0; i<len;i++){
+    //     tab +='<tr style="height:50px">';
+    //     for(b=0;b<columns;b++){
+    //       if((parseInt(tablearr[i][b]))==1){
+    //       tab +='<td style="border-style:solid; border-color:dodgerblue"></td>';
+    //       }
+    //       else{
+    //         tab += '<td></td>';
+    //       }
+    //     }
+    //     tab+='</tr>';
+    //   }
+    //   var tfoot='</table>';
+    //   //adds table to html
+    //   document.getElementById('currentsort').innerHTML=thead+tab+tfoot;
+
+    //   let rows = $(".rows");
+    //   let sum = 0;
+    //   for(var i = 0; i < rows.length; i++) {
+    //     sum = sum + parseInt(rows[i].value);
+    // }
+    //   $("#grid-count").html("Total boxes in grid = " + sum);
+    // }
+  }
+
+  function createtable(rangest, rows) {
+    //finds how many rows we have
+    let row = rows.length;
+
+    var arr = [];
+    let count = 0;
+    //while count is less than length of array passed
+    while (count < row) {
+      //deal becomes the amount of boxes in this row
+      let deal = rows[count];
+
+      //if deal is equal to the number of max columns
+      if (deal == rangest) {
+        let i = 0;
+        //while i has not reached max number of columns
+
+        arr[count] = [];
+        while (i != rangest) {
+          arr[count][i] = 1;
+          i = i + 1;
+          //if i reaches the max number of columns
+          if (i == rangest) {
+            break;
+          }
+        }
+      }
+      //if deal is not equal to max columns
+      else {
+        //this gets me how many columns are missing
+        //max columns - current needed columns
+        arr[count] = [];
+        let missing = rangest - deal;
+        //this tells how many to avoid on each side
+        // let avoid1= int(missing/2);
+        let avoid1 = missing / 2;
+        let avoid2 = avoid1;
+
+        let p = 0;
+        //while avoid is not 0
+        while (avoid1 != 0) {
+          arr[count][p] = 2;
+          avoid1 = avoid1 - 1;
+          p = p + 1;
+          //if avoid1 is 0
+          if (avoid1 == 0) {
+            break;
+          }
+        }
+
+        let n = p;
+        var checker1 = parseInt(deal) + parseInt(p);
+        //while n is not equal to deal +p
+        while (n != checker1) {
+          //arr[count]=[];
+          arr[count][n] = 1;
+          n = n + 1;
+          //if n= deal+p, break loop
+          if (n == deal + p) {
+            break;
+          }
+        }
+
+        let m = n;
+        //while avoid2 is not equal to 0
+        while (avoid2 != 0) {
+          // arr[count]=[];
+          arr[count][m] = 2;
+          avoid2 = avoid2 - 1;
+          m = m + 1;
+          if (avoid2 == 0) {
+            break;
+          }
+        }
+      }
+      count = count + 1;
+      if (count == row) {
+        break;
+      }
+    }
+    return arr;
+  }
+</script>
+{% endblock %}

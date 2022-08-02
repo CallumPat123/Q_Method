@@ -1,0 +1,57 @@
+{% extends "base_admin.html" %} {% block content %}
+<script
+  type="text/javascript"
+  src="{{ url_for('static',filename='js/admin_downloads.js') }}"
+  charset="UTF-8"
+></script>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static',filename='styles/admin_downloads.css') }}"
+/>
+
+<div class="container">
+  <div class="row">
+    <h2>User Responses</h2>
+  </div>
+
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Response ID</th>
+          <th scope="col">Time started</th>
+          <th scope="col">Time Finished</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for response in responses %}
+        <tr>
+          <td>{{response.user_id}}</td>
+          <td>{{response.timestart}}</td>
+          <td>{{response.timeend}}</td>
+          <!-- something like this -->
+        </tr>
+
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+<!-- JavaScript at the end of the document so the pages load faster -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
