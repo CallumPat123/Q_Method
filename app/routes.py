@@ -248,7 +248,7 @@ def editsurvey(survey_id):
     #display data in modify page passing the tuple as parameter in render_template method
     return render_template("editsurvey.html",sum=count,frames=frames, survey=survey)
 
-@app.route("/surveyUpdate/<survey_id>", methods=["PATCH"])
+@app.route("/surveyUpdate/<survey_id>", methods=["PUT"])
 def surveyUpdate(survey_id):
     print("UPDATe")
     print(survey_id)
