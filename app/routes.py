@@ -271,10 +271,9 @@ def surveyUpdate(survey_id):
 
     print("UPDATe")
     print(update.instructions)
-    try:
-        update.instructions = instructions
-    except:
-        print("dictionary is immutable")
+    
+    update.instructions = instructions
+    
     
     # Status
     publish = request.form['publish']
