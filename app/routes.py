@@ -251,7 +251,7 @@ def editsurvey(survey_id):
 @app.route("/surveyUpdate/<survey_id>", methods=["POST"])
 def surveyUpdate(survey_id):
     print("UPDATe")
-    print(survey_id)
+   
     #store values recieved from HTML form in local variables
     user_id = current_user.id
     form = SurveyForm()
@@ -274,7 +274,7 @@ def surveyUpdate(survey_id):
     #     print("Conditions doesn't exist")
     
     print("UPDATe")
-    print(survey_id)
+    print(request.form["publish"])
 
     update.instructions = instructions
     
@@ -284,6 +284,7 @@ def surveyUpdate(survey_id):
         publish = True
     else:
         publish = False
+
 
     update.publish = publish
     print("UPDATe1")
