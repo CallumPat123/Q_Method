@@ -297,14 +297,14 @@ def surveyUpdate(survey_id):
         survey_range.append(index)
         index += 1
     update.range = survey_range
- print("UPDATe2")
+    print("UPDATe2")
     # Cols
     columns = request.form.getlist('cols')
     print(request.form)
     columns = columns[0].split(",")
     cols = [int(x) for x in columns]
     update.cols = cols
- print("UPDATe3")
+    print("UPDATe3")
     # Registration
     final_register = []
     register = request.form.getlist('register')
@@ -318,7 +318,7 @@ def surveyUpdate(survey_id):
             final_register.append(options_filtered)
             if max_length < len(options_filtered):
                 max_length = len(options_filtered)
-     print("UPDATe4")
+    print("UPDATe4")
     # Makes result double array rectangular
     for array in final_register:
         while len(array) < max_length:
