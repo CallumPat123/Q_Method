@@ -286,7 +286,7 @@ def surveyUpdate(survey_id):
         publish = False
 
     update.publish = publish
-
+    print("UPDATe1")
     rangeform = request.form.getlist('range')
     survey_range = [int(x) for x in rangeform]
     #inbuilt range function doesnt work, DIY
@@ -297,14 +297,14 @@ def surveyUpdate(survey_id):
         survey_range.append(index)
         index += 1
     update.range = survey_range
-
+ print("UPDATe2")
     # Cols
     columns = request.form.getlist('cols')
     print(request.form)
     columns = columns[0].split(",")
     cols = [int(x) for x in columns]
     update.cols = cols
-
+ print("UPDATe3")
     # Registration
     final_register = []
     register = request.form.getlist('register')
@@ -318,14 +318,14 @@ def surveyUpdate(survey_id):
             final_register.append(options_filtered)
             if max_length < len(options_filtered):
                 max_length = len(options_filtered)
-    
+     print("UPDATe4")
     # Makes result double array rectangular
     for array in final_register:
         while len(array) < max_length:
             array.append("")
     
     update.register = final_register
-
+    print("UPDATe5")
 
 
     # Statements
@@ -338,7 +338,7 @@ def surveyUpdate(survey_id):
         lines_filtered.append(string)
 
     update.statements = lines_filtered
-
+    print("UPDATe6")
     # Questionnaire
     questionnaire = request.form.getlist('questionnaire')
     final_questionnaire = []
@@ -358,7 +358,7 @@ def surveyUpdate(survey_id):
 
     update.questionnaire = final_questionnaire
 
-
+    print("UPDATe7")
     # Criteria
     criteria = []
     criteria.append(request.form['criteria-negative'])
@@ -367,6 +367,7 @@ def surveyUpdate(survey_id):
     
     #Execute update query
     db.session.commit()
+     print("UPDATe8")
     #NEED TO UPDATE RENDER_TEMPLATE TO SURVEY VIEW PAGE
     return redirect(url_for('admin_view_surveys'))
 
