@@ -274,7 +274,7 @@ def surveyUpdate(survey_id):
     #     print("Conditions doesn't exist")
     
     print("UPDATe")
-    print(request.form["publish"])
+    print(request.form)
 
     update.instructions = instructions
     
