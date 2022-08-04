@@ -267,15 +267,10 @@ def surveyUpdate(survey_id):
     instructions.append([request.form['instructions-2']])
     instructions.append([request.form['instructions-3']])
     instructions.append([request.form['instructions-4']])
+    instructions.append([request.form['instructions-5']])
 
-    # try:
-    #     instructions.append([request.form['instructions-5']])
-    # except: 
-    #     print("Conditions doesn't exist")
-    
     print("UPDATe")
-    
-
+    print(update)
     update.instructions = instructions
     
     # Status
