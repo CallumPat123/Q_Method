@@ -92,10 +92,9 @@
               {% if survey.instructions|length == 7 %}
               <div class="instruction-input">
                 <h6>Condition of Instruction</h6>
-                <textarea name="instructions-2" id="instructions-1" class="form-control input-group">{{survey.instructions[3][0]}}</textarea>
+                <textarea name="instructions-2" id="instructions-1" class="form-control input-group">{{survey.instructions[3][0]}}
+                </textarea>
               </div>
-              {% endif %}
-  
               <div class="instruction-input">
                 <h6>PAGE 2</h6>
                 <textarea name="instructions-3" id="instructions-2" class="form-control input-group">{{survey.instructions[4][0]}}</textarea>
@@ -110,6 +109,25 @@
                 <h6>PAGE 4</h6>
                 <textarea name="instructions-5" id="instructions-4" class="form-control input-group">{{survey.instructions[6][0]}}</textarea>
               </div>
+              {% else %}
+  
+              <div class="instruction-input">
+                <h6>PAGE 2</h6>
+                <textarea name="instructions-3" id="instructions-2" class="form-control input-group">{{survey.instructions[3][0]}}</textarea>
+              </div>
+  
+              <div class="instruction-input">
+                <h6>PAGE 3</h6>
+                <textarea name="instructions-4" id="instructions-3" class="form-control input-group">{{survey.instructions[4][0]}}</textarea>
+              </div>
+  
+            
+              <div class="instruction-input">
+                <h6>PAGE 4</h6>
+                <textarea name="instructions-5" id="instructions-4" class="form-control input-group">{{survey.instructions[5][0]}}</textarea>
+              </div>
+              {%endif%}
+             
 
               <br>
               <div>
