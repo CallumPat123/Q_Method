@@ -1,7 +1,0 @@
-FLASK_ENV=development
-
-DB_USERNAME = "callum"
-DB_PASSWORD = "12345"
-DB_SERVER = "localhost"
-DB_PORT = "5432"
-DB_DATABASE = "postgres"
