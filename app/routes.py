@@ -267,6 +267,7 @@ def surveyUpdate(survey_id):
     instructions.append([request.form['instructions-4']])
     instructions.append([request.form['instructions-5']])
 
+    print(instructions)
     update.instructions = instructions
     
     # Status
