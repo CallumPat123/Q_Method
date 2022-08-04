@@ -2,7 +2,7 @@
 
 {% block content %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<form action="{{ url_for('surveyUpdate',survey_id = survey.survey_id)}}" method="PUT" onsubmit="return validate_fields();"> 
+<form action="{{ url_for('surveyUpdate',survey_id = survey.survey_id)}}" method="POST" onsubmit="return validate_fields();"> 
 <style>
   .block-container{
     width: auto;
