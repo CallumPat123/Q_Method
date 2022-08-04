@@ -38,11 +38,11 @@
 
 </style>
 
-<div class="container" style="margin-top: 5%">
+<div class="container" style="margin-top: 3%">
     <div class="row">
       <div class="col-md-12">
         <div class="panel panel-default">
-          <div class="panel-heading">Update Survey Details:</div>
+          <div class="panel-heading" style="margin-bottom: 20px;"> <h3>Update Survey Details:</h3></div>
           <div class="panel-group">
               <div class="header">
                 <h5>Survey Title: </h5>
@@ -50,8 +50,7 @@
                   <input class="form-control input-group" name="survey_name" id="survey_name" type="text" value="{{survey.survey_name}}" required />
                 </div>
               </div>
-              <br>
-              <div>        
+              <div style="margin-top:15px">        
                 <h5>Survey Published?</h5>
                 {% if survey.publish == "1" %}
                 <input type="radio" name="publish" value="1" checked="checked"/> True
@@ -61,9 +60,8 @@
                 <input type="radio" name="publish" value="2" checked="checked"/> False
                 {% endif %}
               </div>
-              <br>
 
-              <div>
+              <div style="margin-top:15px">
                 <h4>Instructions</h4>
               </div>
               <div class="btn-group">
@@ -76,62 +74,62 @@
               <button type="button" class="btn btn-primary" onclick="display_instruction(6)"> Part 4 </button>
             </div>
               <div class="instruction-input">
-                <h6>START</h6>
+                <h5 style="margin-top:15px">Start</h5>
                 <textarea name="instructions-start" id="instructions-start" class="form-control input-group">{{survey.instructions[0][0]}}</textarea>
               </div>
   
               <div class="instruction-input">
-                <h6>SURVEY ID INFORMATION</h6>
+                <h5 style="margin-top:15px">SURVEY ID INFORMATION</h5>
                 <textarea name="instructions-id" id="instructions-id" class="form-control input-group">{{survey.instructions[1][0]}}</textarea>
               </div>
   
               <div class="instruction-input">
-                <h6>PAGE 1</h6>
+                <h5 style="margin-top:15px">PAGE 1</h5>
                 <textarea name="instructions-1" id="instructions-1" class="form-control input-group">{{survey.instructions[2][0]}}</textarea>
               </div>
               {% if survey.instructions|length == 7 %}
               <div class="instruction-input">
-                <h6>Condition of Instruction</h6>
+                <h5 style="margin-top:15px">Condition of Instruction</h5>
                 <textarea name="instructions-2" id="instructions-1" class="form-control input-group">{{survey.instructions[3][0]}}
                 </textarea>
               </div>
               <div class="instruction-input">
-                <h6>PAGE 2</h6>
+                <h5 style="margin-top:15px">PAGE 2</h5>
                 <textarea name="instructions-3" id="instructions-2" class="form-control input-group">{{survey.instructions[4][0]}}</textarea>
               </div>
   
               <div class="instruction-input">
-                <h6>PAGE 3</h6>
+                <h5 style="margin-top:15px">PAGE 3</h5>
                 <textarea name="instructions-4" id="instructions-3" class="form-control input-group">{{survey.instructions[5][0]}}</textarea>
               </div>
   
               <div class="instruction-input">
-                <h6>PAGE 4</h6>
+                <h5 style="margin-top:15px">PAGE 4</h5>
                 <textarea name="instructions-5" id="instructions-4" class="form-control input-group">{{survey.instructions[6][0]}}</textarea>
               </div>
               {% else %}
   
               <div class="instruction-input">
-                <h6>PAGE 2</h6>
+                <h5 style="margin-top:15px">PAGE 2</h5>
                 <textarea name="instructions-3" id="instructions-2" class="form-control input-group">{{survey.instructions[3][0]}}</textarea>
               </div>
   
               <div class="instruction-input">
-                <h6>PAGE 3</h6>
+                <h5 style="margin-top:15px">PAGE 3</h5>
                 <textarea name="instructions-4" id="instructions-3" class="form-control input-group">{{survey.instructions[4][0]}}</textarea>
               </div>
   
             
               <div class="instruction-input">
-                <h6>PAGE 4</h6>
+                <h5 style="margin-top:15px">PAGE 4</h5>
                 <textarea name="instructions-5" id="instructions-4" class="form-control input-group">{{survey.instructions[5][0]}}</textarea>
               </div>
               {%endif%}
              
 
-              <br>
+          
               <div>
-                <h5>Range</h5>
+                <h5 style="margin-top:15px">Range</h5>
                 <div class="row">
                   <div class="col">
                     <input type='number' name='range' id='rangemin' class="form-control input-group" placeholder='Lower Range' value={{survey.range[0]}} required/>
@@ -283,7 +281,7 @@
               <!-- Sort of Works -->
               <br>
               <div>
-                <h5>Statements</h5>
+                <h5 style="margin-top:15px">Statements</h5>
                 <p> Please input all statements here seperated each by a new line. It may be easier to write all the statements in a seperate document before copy and pasting here.</p>
                 <p class="text-right"> Number of statements: <span id="statements-notice">{{ survey.statements|length }}</span></p>
                 <textarea id="statements-input" name='statements' class="form-control input-group" required>
@@ -306,7 +304,7 @@
               <!-- WORKS -->
               <br>
               <div>
-                <h5>Sorting Criteria</h5>
+                <h5 style="margin-top:15px">Sorting Criteria</h5>
                 <input type='text' name='criteria-negative' class="form-control input-group" style="border-color: red;" value={{survey.criteria[0]}} required>
                 <input type='text' name='criteria-neutral' class="form-control input-group" style="border-color: rgb(116, 116, 0);" value={{survey.criteria[1]}} required>
                 <input type='text' name='criteria-positive' class="form-control input-group" style="border-color: green;" value={{survey.criteria[2]}} required>
@@ -322,7 +320,7 @@
               -->
               <br>
               <div>
-                <h5>Questionnaire</h5>
+                <h5 style="margin-top:15px">Questionnaire</h5>
                 <p> Leave the fields blank if you do not wish to ask on their Q-sort. Additional short answer questions can be made by clicking 'Add Question' </p>
                 <div id=questionnaire>
                 {%- for q in survey.questionnaire -%}
