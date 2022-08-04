@@ -270,6 +270,7 @@ def surveyUpdate(survey_id):
     instructions.append([request.form['instructions-5']])
 
     print("UPDATe")
+    print(update.get("survey_name"))
     print(update.instructions)
     
     update.instructions = instructions
