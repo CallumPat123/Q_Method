@@ -268,11 +268,11 @@ def surveyUpdate(survey_id):
     instructions.append([request.form['instructions-3']])
     instructions.append([request.form['instructions-4']])
 
-    try {
+    try:
         instructions.append([request.form['instructions-5']])
-    } catch(err){
-        print(err)
-    }
+     except: 
+        print("Conditions doesn't exist")
+    
  
 
     update.instructions = instructions
