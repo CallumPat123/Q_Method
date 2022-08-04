@@ -89,10 +89,12 @@
                 <h6>PAGE 1</h6>
                 <textarea name="instructions-1" id="instructions-1" class="form-control input-group">{{survey.instructions[2][0]}}</textarea>
               </div>
+              {% if survey.instructions|length == 7 %}
               <div class="instruction-input">
                 <h6>Condition of Instruction</h6>
                 <textarea name="instructions-2" id="instructions-1" class="form-control input-group">{{survey.instructions[3][0]}}</textarea>
               </div>
+              {% endif %}
   
               <div class="instruction-input">
                 <h6>PAGE 2</h6>
