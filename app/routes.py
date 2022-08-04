@@ -246,6 +246,7 @@ def editsurvey(survey_id):
     
     #edit=db.engine.execute("SELECT * FROM \"Survey Fin\" where survey_id=survey_id",{"survey_id":survey_id})
     #display data in modify page passing the tuple as parameter in render_template method
+    print(survey)
     return render_template("editsurvey.html",sum=count,frames=frames, survey=survey)
 
 @app.route("/surveyUpdate/<survey_id>", methods=["POST"])
@@ -267,7 +268,6 @@ def surveyUpdate(survey_id):
     instructions.append([request.form['instructions-4']])
     instructions.append([request.form['instructions-5']])
 
-    print(instructions, request.form)
     update.instructions = instructions
     
     # Status

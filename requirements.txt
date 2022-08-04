@@ -32,8 +32,8 @@ lml==0.1.0
 Mako==1.1.5
 MarkupSafe==2.0.1
 passlib==1.7.4
-# psycopg2==2.9.1
-# psycopg2-binary==2.9.1
+psycopg2==2.9.1
+psycopg2-binary==2.9.1
 pycparser==2.20
 pyexcel==0.6.7
 pyexcel-io==0.6.4
