@@ -270,7 +270,7 @@ def surveyUpdate(survey_id):
 
     try:
         instructions.append([request.form['instructions-5']])
-     except: 
+    except: 
         print("Conditions doesn't exist")
     
  
