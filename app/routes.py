@@ -367,7 +367,7 @@ def surveyUpdate(survey_id):
     
     #Execute update query
     db.session.commit()
-     print("UPDATe8")
+    print("UPDATe8")
     #NEED TO UPDATE RENDER_TEMPLATE TO SURVEY VIEW PAGE
     return redirect(url_for('admin_view_surveys'))
 
