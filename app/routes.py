@@ -251,34 +251,31 @@ def editsurvey(survey_id):
 
 @app.route("/surveyUpdate/<survey_id>", methods=["POST"])
 def surveyUpdate(survey_id):
-    print(request.form)
     #store values recieved from HTML form in local variables
     user_id = current_user.id
     form = SurveyForm()
     survey = SurveyFin.query.filter_by(survey_id = survey_id)
-    print(request.form.getlist("instructions-start"))
-    print(request.form.to_dict())
-
+  
     instructions = []
         # First page
-    instructions.append([request.form['instructions-start']])
-    instructions.append([request.form['instructions-id']])
-    instructions.append([request.form['instructions-1']])
-    instructions.append([request.form['instructions-2']])
-    instructions.append([request.form['instructions-3']])
-    instructions.append([request.form['instructions-4']])
-    instructions.append([request.form['instructions-5']])
+    instructions.append([request.form.getlist['instructions-start']])
+    instructions.append([request.form.getlist['instructions-id']])
+    instructions.append([request.form.getlist['instructions-1']])
+    instructions.append([request.form.getlist['instructions-2']])
+    instructions.append([request.form.getlist['instructions-3']])
+    instructions.append([request.form.getlist['instructions-4']])
+    instructions.append([request.form.getlist['instructions-5']])
     
     print("HELLO")
     # Status
-    publish = request.form['publish']
+    publish = request.form.getlist['publish']
     if publish == '1':
         publish = True
     else:
         publish = False
 
     print("HELLO")
-    rangeform = request.form.getlist('range')
+    rangeform = request.form.getlist.getlist('range')
     survey_range = [int(x) for x in rangeform]
     #inbuilt range function doesnt work, DIY
     index = survey_range[0]
@@ -291,8 +288,8 @@ def surveyUpdate(survey_id):
 
 
 #   Cols
-    columns = request.form.getlist('cols')
-    print(request.form)
+    columns = request.form.getlist.getlist('cols')
+    print(request.form.getlist)
     columns = columns[0].split(",")
     cols = [int(x) for x in columns]
    
@@ -300,7 +297,7 @@ def surveyUpdate(survey_id):
     print("HELLO")
 #     # Registration
     final_register = []
-    register = request.form.getlist('register')
+    register = request.form.getlist.getlist('register')
     max_length = 1
     for question in register:
         options = question.splitlines()
@@ -319,7 +316,7 @@ def surveyUpdate(survey_id):
   
     print("HELLO")
 #     # Statements
-    statements = request.form['statements']
+    statements = request.form.getlist['statements']
     lines = statements.splitlines()
     lines_filtered = []
     for string in lines:
@@ -328,14 +325,14 @@ def surveyUpdate(survey_id):
         lines_filtered.append(string)
     print("HELLO")
 #     # Questionnaire
-    questionnaire = request.form.getlist('questionnaire')
+    questionnaire = request.form.getlist.getlist('questionnaire')
     final_questionnaire = []
 #     # Least
-    least = request.form['least-questionnaire']
+    least = request.form.getlist['least-questionnaire']
     if not least.replace(" ", "") == "":
         final_questionnaire.append([least, "least agree"])
 #     # Most
-    most = request.form['most-questionnaire']
+    most = request.form.getlist['most-questionnaire']
     if not most.replace(" ", "") == "":
         final_questionnaire.append([most, "most agree"])
 
@@ -347,12 +344,12 @@ def surveyUpdate(survey_id):
     print("HELLO")
 #     # Criteria
     criteria = []
-    criteria.append(request.form['criteria-negative'])
-    criteria.append(request.form['criteria-neutral'])
-    criteria.append(request.form['criteria-positive'])
+    criteria.append(request.form.getlist['criteria-negative'])
+    criteria.append(request.form.getlist['criteria-neutral'])
+    criteria.append(request.form.getlist['criteria-positive'])
     
     print("HELLO")
-    survey.update({'survey_name': request.form['survey_name'], "instructions": instructions, 'publish':publish, 'range': survey_range, 'cols': cols, 'register': final_register, 'statements': lines_filtered, "questionnaire": final_questionnaire, 'criteria': criteria})
+    survey.update({'survey_name': request.form.getlist['survey_name'], "instructions": instructions, 'publish':publish, 'range': survey_range, 'cols': cols, 'register': final_register, 'statements': lines_filtered, "questionnaire": final_questionnaire, 'criteria': criteria})
 
 #     #Execute update query
     db.session.commit()
