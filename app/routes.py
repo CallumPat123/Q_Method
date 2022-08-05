@@ -273,7 +273,6 @@ def surveyUpdate(survey_id):
     else:
         publish = False
 
-    print("HELLO")
     rangeform = request.form.getlist('range')
     survey_range = [int(x) for x in rangeform]
     #inbuilt range function doesnt work, DIY
@@ -288,12 +287,12 @@ def surveyUpdate(survey_id):
 
 #   Cols
     columns = request.form.getlist('cols')
-    print(request.form.getlist)
+  
     columns = columns[0].split(",")
     cols = [int(x) for x in columns]
    
 
-    print("HELLO")
+    
 #     # Registration
     final_register = []
     register = request.form.getlist('register')
@@ -312,8 +311,7 @@ def surveyUpdate(survey_id):
     for array in final_register:
         while len(array) < max_length:
             array.append("")
-  
-    print("HELLO")
+
 #     # Statements
     statements = request.form.getlist('statements')[0]
     
@@ -324,7 +322,7 @@ def surveyUpdate(survey_id):
         if string.replace(" ", "") == "":
             continue
         lines_filtered.append(string)
-    print("HELLO")
+
 #     # Questionnaire
     questionnaire = request.form.getlist('questionnaire')
     final_questionnaire = []
