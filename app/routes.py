@@ -352,8 +352,9 @@ def surveyUpdate(survey_id):
     criteria.append(request.form['criteria-neutral'])
     criteria.append(request.form['criteria-positive'])
     
-  
+    print("HELLO")
     survey.update({'survey_name': request.form['survey_name'], "instructions": instructions, 'publish':publish, 'range': survey_range, 'cols': cols, 'register': final_register, 'statements': lines_filtered, "questionnaire": final_questionnaire, 'criteria': criteria})
+
 #     #Execute update query
     db.session.commit()
 
