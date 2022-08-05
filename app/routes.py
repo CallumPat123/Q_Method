@@ -258,13 +258,13 @@ def surveyUpdate(survey_id):
   
     instructions = []
         # First page
-    instructions.append([request.form.getlist('instructions-start')[0]])
-    instructions.append([request.form.getlist('instructions-id')[0]])
-    instructions.append([request.form.getlist('instructions-1')[0]])
-    instructions.append([request.form.getlist('instructions-2')[0]])
-    instructions.append([request.form.getlist('instructions-3')[0]])
-    instructions.append([request.form.getlist('instructions-4')[0]])
-    instructions.append([request.form.getlist('instructions-5')[0]])
+    instructions.append(request.form.getlist('instructions-start'))
+    instructions.append(request.form.getlist('instructions-id'))
+    instructions.append(request.form.getlist('instructions-1'))
+    instructions.append(request.form.getlist('instructions-2'))
+    instructions.append(request.form.getlist('instructions-3'))
+    instructions.append(request.form.getlist('instructions-4'))
+    instructions.append(request.form.getlist('instructions-5'))
     
     # Status
     publish = request.form.getlist('publish')
