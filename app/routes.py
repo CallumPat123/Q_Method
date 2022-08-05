@@ -244,7 +244,8 @@ def editsurvey(survey_id):
     for x in survey.cols:
         frames += "1fr " 
     count = sum(survey.cols)
-    print(survey.instructions)
+    print(survey)
+    print(survey.instructions.length)
     #edit=db.engine.execute("SELECT * FROM \"Survey Fin\" where survey_id=survey_id",{"survey_id":survey_id})
     #display data in modify page passing the tuple as parameter in render_template method
     return render_template("editsurvey.html",sum=count,frames=frames, survey=survey)
@@ -256,7 +257,7 @@ def surveyUpdate(survey_id):
     form = SurveyForm()
     survey = SurveyFin.query.filter_by(survey_id = survey_id)
   
-    print(request.form)
+    print(survey.instructions)
     instructions = []
         # First page
     instructions.append(request.form.getlist('instructions-start'))
