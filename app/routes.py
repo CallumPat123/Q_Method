@@ -15,6 +15,7 @@ import xlwt
 import sqlite3
 import numpy as np
 from excel_methods import  create_value_id_dict,create_statement_id_dict, create_id_value_dict, get_statement_value_list
+from sqlalchemy import update
 
 @app.route('/')
 @app.route('/index')
@@ -250,14 +251,14 @@ def editsurvey(survey_id):
 
 @app.route("/surveyUpdate/<survey_id>", methods=["POST"])
 def surveyUpdate(survey_id):
-    print("UPDATe")
-    print(request.form)
+ 
     #store values recieved from HTML form in local variables
     user_id = current_user.id
     form = SurveyForm()
-    update = SurveyFin.query.filter_by(survey_id = survey_id).first()
-    survey_id = survey_id
-    update.survey_name = request.form['survey_name']
+    survey = SurveyFin.query.filter_by(survey_id = survey_id)
+ 
+#     survey_id = survey_id
+#     update.survey_name = request.form['survey_name']
 
     instructions = []
         # First page
@@ -268,12 +269,6 @@ def surveyUpdate(survey_id):
     instructions.append([request.form['instructions-3']])
     instructions.append([request.form['instructions-4']])
     instructions.append([request.form['instructions-5']])
-
-    print("UPDATe")
-    print(update.get("survey_name"))
-    print(update.instructions)
-    
-    update.instructions = instructions
     
     
     # Status
@@ -283,9 +278,7 @@ def surveyUpdate(survey_id):
     else:
         publish = False
 
-
-    update.publish = publish
-    print("UPDATe1")
+ 
     rangeform = request.form.getlist('range')
     survey_range = [int(x) for x in rangeform]
     #inbuilt range function doesnt work, DIY
@@ -295,16 +288,18 @@ def surveyUpdate(survey_id):
     while(index <= end_range):
         survey_range.append(index)
         index += 1
-    update.range = survey_range
-    print("UPDATe2")
-    # Cols
+   
+
+
+#   Cols
     columns = request.form.getlist('cols')
     print(request.form)
     columns = columns[0].split(",")
     cols = [int(x) for x in columns]
-    update.cols = cols
-    print("UPDATe3")
-    # Registration
+   
+
+
+#     # Registration
     final_register = []
     register = request.form.getlist('register')
     max_length = 1
@@ -317,17 +312,14 @@ def surveyUpdate(survey_id):
             final_register.append(options_filtered)
             if max_length < len(options_filtered):
                 max_length = len(options_filtered)
-    print("UPDATe4")
-    # Makes result double array rectangular
+   
+#     # Makes result double array rectangular
     for array in final_register:
         while len(array) < max_length:
             array.append("")
-    
-    update.register = final_register
-    print("UPDATe5")
+  
 
-
-    # Statements
+#     # Statements
     statements = request.form['statements']
     lines = statements.splitlines()
     lines_filtered = []
@@ -335,17 +327,15 @@ def surveyUpdate(survey_id):
         if string.replace(" ", "") == "":
             continue
         lines_filtered.append(string)
-
-    update.statements = lines_filtered
-    print("UPDATe6")
-    # Questionnaire
+         
+#     # Questionnaire
     questionnaire = request.form.getlist('questionnaire')
     final_questionnaire = []
-    # Least
+#     # Least
     least = request.form['least-questionnaire']
     if not least.replace(" ", "") == "":
         final_questionnaire.append([least, "least agree"])
-    # Most
+#     # Most
     most = request.form['most-questionnaire']
     if not most.replace(" ", "") == "":
         final_questionnaire.append([most, "most agree"])
@@ -355,71 +345,71 @@ def surveyUpdate(survey_id):
             continue
         final_questionnaire.append([question, ""])
 
-    update.questionnaire = final_questionnaire
 
-    print("UPDATe7")
-    # Criteria
+#     # Criteria
     criteria = []
     criteria.append(request.form['criteria-negative'])
     criteria.append(request.form['criteria-neutral'])
     criteria.append(request.form['criteria-positive'])
     
-    #Execute update query
+  
+    survey.update({'survey_name': request.form['survey_name'], "instructions": instructions, 'publish':publish, 'range': survey_range, 'cols': cols, 'register': final_register, 'statements': lines_filtered, "questionnaire": final_questionnaire, 'criteria': criteria})
+#     #Execute update query
     db.session.commit()
-    print("UPDATe8")
-    #NEED TO UPDATE RENDER_TEMPLATE TO SURVEY VIEW PAGE
+
+#     #NEED TO UPDATE RENDER_TEMPLATE TO SURVEY VIEW PAGE
     return redirect(url_for('admin_view_surveys'))
 
 
-#Gets values from the survey edit page, and updates the database
-#Need to update route and render_template
-#@app.route("/surveyUpdate/<survey_id>", methods=["POST"])
-#def surveyUpdate(survey_id):
-    #store values recieved from HTML form in local variables
-    form = SurveyForm()
-    user_id = current_user.id
-    survey_id = SurveyFin.survey_id
-    survey_name = request.form['survey_name']
-    instructions = request.form.getlist('instructions')
-    publish = bool(request.form['publish'])
-    rangeform = request.form.getlist('range')
-    survey_range = [int(x) for x in rangeform]
+# #Gets values from the survey edit page, and updates the database
+# #Need to update route and render_template
+# #@app.route("/surveyUpdate/<survey_id>", methods=["POST"])
+# #def surveyUpdate(survey_id):
+#     #store values recieved from HTML form in local variables
+#     form = SurveyForm()
+#     user_id = current_user.id
+#     survey_id = SurveyFin.survey_id
+#     survey_name = request.form['survey_name']
+#     instructions = request.form.getlist('instructions')
+#     publish = bool(request.form['publish'])
+#     rangeform = request.form.getlist('range')
+#     survey_range = [int(x) for x in rangeform]
     
-    #inbuilt range function doesnt work, DIY
-    index = survey_range[0]
-    end_range = survey_range[1]
-    survey_range = []  
-    while(index <= end_range):
-        survey_range.append(index)
-        index += 1
+#     #inbuilt range function doesnt work, DIY
+#     index = survey_range[0]
+#     end_range = survey_range[1]
+#     survey_range = []  
+#     while(index <= end_range):
+#         survey_range.append(index)
+#         index += 1
 
-    columns = request.form.getlist('cols')
+#     columns = request.form.getlist('cols')
 
-    columns = columns[0].split(",")
-    cols = [int(x) for x in columns]
-    #TODO add multi-choice support for below
-    register = request.form.getlist('register')
-    final_register = []
-    for question in register:
-        arr = []
-        arr.append(question)
-        final_register.append(arr)
-    statements = request.form.getlist('statements')
-    questionnaire = request.form.getlist('questionnaire')
-    final_questionnaire = []
-    for question in questionnaire:
-        arr = []
-        arr.append(question)
-        final_questionnaire.append(arr)
-    print (questionnaire)
-    criteria = request.form.getlist('criteria')
-    #create string update query with the values from form
-    strSQl= "update \"Survey Fin\" set survey_name='"+survey_name+"', instructions='"+instructions+"',publish='"+publish+"', range=" +survey_range+"' ,cols='"+cols+"', register='"+final_register+"', statements='"+statements+"', publish='"+publish+"', user_id='"+user_id+"', questionnaire='"+final_questionnaire+"', criteria='"+criteria+" where survey_id="+str(survey_id)
-    #Execute update query
-    db.engine.execute(strSQl) 
-    #commit to database
-    db.commit() 
-    #NEED TO UPDATE RENDER_TEMPLATE TO SURVEY VIEW PAGE
+#     columns = columns[0].split(",")
+#     cols = [int(x) for x in columns]
+#     #TODO add multi-choice support for below
+#     register = request.form.getlist('register')
+#     final_register = []
+#     for question in register:
+#         arr = []
+#         arr.append(question)
+#         final_register.append(arr)
+#     statements = request.form.getlist('statements')
+#     questionnaire = request.form.getlist('questionnaire')
+#     final_questionnaire = []
+#     for question in questionnaire:
+#         arr = []
+#         arr.append(question)
+#         final_questionnaire.append(arr)
+#     print (questionnaire)
+#     criteria = request.form.getlist('criteria')
+#     #create string update query with the values from form
+#     strSQl= "update \"Survey Fin\" set survey_name='"+survey_name+"', instructions='"+instructions+"',publish='"+publish+"', range=" +survey_range+"' ,cols='"+cols+"', register='"+final_register+"', statements='"+statements+"', publish='"+publish+"', user_id='"+user_id+"', questionnaire='"+final_questionnaire+"', criteria='"+criteria+" where survey_id="+str(survey_id)
+#     #Execute update query
+#     db.engine.execute(strSQl) 
+#     #commit to database
+    db.session.commit() 
+#     #NEED TO UPDATE RENDER_TEMPLATE TO SURVEY VIEW PAGE
     return render_template("admin_view_surveys.html")
 
 
