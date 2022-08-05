@@ -315,8 +315,9 @@ def surveyUpdate(survey_id):
   
     print("HELLO")
 #     # Statements
-    statements = request.form.getlist('statements')[0]
-    print(statements[0])
+    statements = request.form.getlist('statements')
+    print(statements[0][0])
+    print(' '.join(statements))
     
     lines = statements.splitlines()
     lines_filtered = []
