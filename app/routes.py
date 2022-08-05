@@ -328,6 +328,7 @@ def surveyUpdate(survey_id):
     final_questionnaire = []
 #     # Least
     least = request.form.getlist('least-questionnaire')[0]
+    print("LEAST")
     print(least)
     print(least[0])
     if not least.replace(" ", "") == "":
@@ -342,14 +343,14 @@ def surveyUpdate(survey_id):
             continue
         final_questionnaire.append([question, ""])
 
-    print("HELLO")
+
 #     # Criteria
     criteria = []
     criteria.append(request.form.getlist('criteria-negative'))
     criteria.append(request.form.getlist('criteria-neutral'))
     criteria.append(request.form.getlist('criteria-positive'))
     
-    print("HELLO")
+
     survey.update({'survey_name': request.form.getlist('survey_name'), "instructions": instructions, 'publish':publish, 'range': survey_range, 'cols': cols, 'register': final_register, 'statements': lines_filtered, "questionnaire": final_questionnaire, 'criteria': criteria})
 
 #     #Execute update query
