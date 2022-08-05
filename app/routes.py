@@ -251,12 +251,12 @@ def editsurvey(survey_id):
 
 @app.route("/surveyUpdate/<survey_id>", methods=["POST"])
 def surveyUpdate(survey_id):
- 
+    print(request.form)
     #store values recieved from HTML form in local variables
     user_id = current_user.id
     form = SurveyForm()
     survey = SurveyFin.query.filter_by(survey_id = survey_id)
- 
+    print("HELLO")
 #     survey_id = survey_id
 #     update.survey_name = request.form['survey_name']
 
