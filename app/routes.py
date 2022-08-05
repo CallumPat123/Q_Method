@@ -317,7 +317,7 @@ def surveyUpdate(survey_id):
 #     # Statements
     statements = request.form.getlist('statements')[0]
     
-    
+
     lines = statements.splitlines()
     lines_filtered = []
     for string in lines:
@@ -329,11 +329,13 @@ def surveyUpdate(survey_id):
     questionnaire = request.form.getlist('questionnaire')
     final_questionnaire = []
 #     # Least
-    least = request.form.getlist('least-questionnaire')
+    least = request.form.getlist('least-questionnaire')[0]
+    print(least)
+    print(least[0])
     if not least.replace(" ", "") == "":
         final_questionnaire.append([least, "least agree"])
 #     # Most
-    most = request.form.getlist('most-questionnaire')
+    most = request.form.getlist('most-questionnaire')[0]
     if not most.replace(" ", "") == "":
         final_questionnaire.append([most, "most agree"])
 
