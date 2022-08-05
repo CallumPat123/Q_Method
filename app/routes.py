@@ -245,7 +245,7 @@ def editsurvey(survey_id):
         frames += "1fr " 
     count = sum(survey.cols)
     print(survey)
-    print(survey.instructions.length)
+    print(len(survey.instructions))
     #edit=db.engine.execute("SELECT * FROM \"Survey Fin\" where survey_id=survey_id",{"survey_id":survey_id})
     #display data in modify page passing the tuple as parameter in render_template method
     return render_template("editsurvey.html",sum=count,frames=frames, survey=survey)
