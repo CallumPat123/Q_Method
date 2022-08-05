@@ -102,6 +102,7 @@
       survey_url = curr_url + "/" + "survey" + "/"
       str_survey_id = String(survey_id).replace(/\s+/g, '').replace('+','').replace('+','')
       survey_url = survey_url + str_survey_id
+      console.log(survey_url)
       navigator.clipboard.writeText(survey_url)
       alert("Copied link");
     }
