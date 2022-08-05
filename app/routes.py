@@ -256,6 +256,7 @@ def surveyUpdate(survey_id):
     form = SurveyForm()
     survey = SurveyFin.query.filter_by(survey_id = survey_id)
   
+    print(request.form.getlist('instructions-start'))
     instructions = []
         # First page
     instructions.append(request.form.getlist('instructions-start'))
