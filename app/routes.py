@@ -256,9 +256,8 @@ def surveyUpdate(survey_id):
     user_id = current_user.id
     form = SurveyForm()
     survey = SurveyFin.query.filter_by(survey_id = survey_id)
-    print("HELLO")
-#     survey_id = survey_id
-#     update.survey_name = request.form['survey_name']
+    print(request.form.getlist("instructions-start"))
+    print(request.form.to_dict())
 
     instructions = []
         # First page
