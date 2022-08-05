@@ -256,7 +256,7 @@ def surveyUpdate(survey_id):
     form = SurveyForm()
     survey = SurveyFin.query.filter_by(survey_id = survey_id)
   
-    print(request.form.getlist('instructions-start'))
+    print(request.form)
     instructions = []
         # First page
     instructions.append(request.form.getlist('instructions-start'))
@@ -352,10 +352,10 @@ def surveyUpdate(survey_id):
     criteria.append(request.form.getlist('criteria-positive')[0])
     
 
-    survey.update({'survey_name': request.form.getlist('survey_name')[0], "instructions": instructions, 'publish':publish, 'range': survey_range, 'cols': cols, 'register': final_register, 'statements': lines_filtered, "questionnaire": final_questionnaire, 'criteria': criteria})
+#     survey.update({'survey_name': request.form.getlist('survey_name')[0], "instructions": instructions, 'publish':publish, 'range': survey_range, 'cols': cols, 'register': final_register, 'statements': lines_filtered, "questionnaire": final_questionnaire, 'criteria': criteria})
 
-#     #Execute update query
-    db.session.commit()
+# #     #Execute update query
+#     db.session.commit()
 
 #     #NEED TO UPDATE RENDER_TEMPLATE TO SURVEY VIEW PAGE
     return redirect(url_for('admin_view_surveys'))
