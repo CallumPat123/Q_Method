@@ -258,13 +258,13 @@ def surveyUpdate(survey_id):
   
     instructions = []
         # First page
-    instructions.append([request.form.getlist('instructions-start')])
-    instructions.append([request.form.getlist('instructions-id')])
-    instructions.append([request.form.getlist('instructions-1')])
-    instructions.append([request.form.getlist('instructions-2')])
-    instructions.append([request.form.getlist('instructions-3')])
-    instructions.append([request.form.getlist('instructions-4')])
-    instructions.append([request.form.getlist('instructions-5')])
+    instructions.append([request.form.getlist('instructions-start')[0]])
+    instructions.append([request.form.getlist('instructions-id')[0]])
+    instructions.append([request.form.getlist('instructions-1')[0]])
+    instructions.append([request.form.getlist('instructions-2')[0]])
+    instructions.append([request.form.getlist('instructions-3')[0]])
+    instructions.append([request.form.getlist('instructions-4')[0]])
+    instructions.append([request.form.getlist('instructions-5')[0]])
     
     # Status
     publish = request.form.getlist('publish')
@@ -346,12 +346,12 @@ def surveyUpdate(survey_id):
 
 #     # Criteria
     criteria = []
-    criteria.append(request.form.getlist('criteria-negative'))
-    criteria.append(request.form.getlist('criteria-neutral'))
-    criteria.append(request.form.getlist('criteria-positive'))
+    criteria.append(request.form.getlist('criteria-negative')[0])
+    criteria.append(request.form.getlist('criteria-neutral')[0])
+    criteria.append(request.form.getlist('criteria-positive')[0])
     
 
-    survey.update({'survey_name': request.form.getlist('survey_name'), "instructions": instructions, 'publish':publish, 'range': survey_range, 'cols': cols, 'register': final_register, 'statements': lines_filtered, "questionnaire": final_questionnaire, 'criteria': criteria})
+    survey.update({'survey_name': request.form.getlist('survey_name')[0], "instructions": instructions, 'publish':publish, 'range': survey_range, 'cols': cols, 'register': final_register, 'statements': lines_filtered, "questionnaire": final_questionnaire, 'criteria': criteria})
 
 #     #Execute update query
     db.session.commit()
