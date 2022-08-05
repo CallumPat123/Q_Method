@@ -270,7 +270,7 @@ def surveyUpdate(survey_id):
     instructions.append([request.form['instructions-4']])
     instructions.append([request.form['instructions-5']])
     
-    
+    print("HELLO")
     # Status
     publish = request.form['publish']
     if publish == '1':
@@ -278,7 +278,7 @@ def surveyUpdate(survey_id):
     else:
         publish = False
 
- 
+    print("HELLO")
     rangeform = request.form.getlist('range')
     survey_range = [int(x) for x in rangeform]
     #inbuilt range function doesnt work, DIY
@@ -298,7 +298,7 @@ def surveyUpdate(survey_id):
     cols = [int(x) for x in columns]
    
 
-
+    print("HELLO")
 #     # Registration
     final_register = []
     register = request.form.getlist('register')
@@ -318,7 +318,7 @@ def surveyUpdate(survey_id):
         while len(array) < max_length:
             array.append("")
   
-
+    print("HELLO")
 #     # Statements
     statements = request.form['statements']
     lines = statements.splitlines()
@@ -327,7 +327,7 @@ def surveyUpdate(survey_id):
         if string.replace(" ", "") == "":
             continue
         lines_filtered.append(string)
-         
+    print("HELLO")
 #     # Questionnaire
     questionnaire = request.form.getlist('questionnaire')
     final_questionnaire = []
@@ -345,7 +345,7 @@ def surveyUpdate(survey_id):
             continue
         final_questionnaire.append([question, ""])
 
-
+    print("HELLO")
 #     # Criteria
     criteria = []
     criteria.append(request.form['criteria-negative'])
